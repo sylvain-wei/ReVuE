@@ -39,6 +39,7 @@
 </p>
 
 <p align="center">
+  <a href="https://sylvain-wei.github.io/ReVuE/"><b>Project Website ↗</b></a> &nbsp;·&nbsp;
   <a href="#from-visual-evidence-to-better-supervision">Overview</a> &nbsp;·&nbsp;
   <a href="#two-islands-not-one">Token-level case</a> &nbsp;·&nbsp;
   <a href="#main-results">Results</a> &nbsp;·&nbsp;
@@ -57,7 +58,7 @@
 
 The overview pairs HRBench 8K results with an evidence-use example: crop the blue car, read its plate, and map the plate number to the answer. The student retains its original interaction history; reflection guides the teacher during training.
 
-<sub>[View the complete figure](website/assets/figures/plate-evidence-chain.svg) · [Interactive animation](https://sylvain-wei.github.io/ReVuE/) · [Figure PDF](website/assets/figures/plate-evidence-chain.pdf)</sub>
+<sub>[View the complete figure](website/assets/figures/plate-evidence-chain.svg) · [Interactive animation](https://sylvain-wei.github.io/ReVuE/#overview-figure) · [Figure PDF](website/assets/figures/plate-evidence-chain.pdf)</sub>
 
 ## Two islands, not one
 
@@ -69,7 +70,7 @@ The crop shows **two islands**, but the student describes one and answers **Sain
 
 Blue and orange show increased and decreased teacher support. Both evaluations score **the same student trajectory**; the animation reveals its tokens and score changes.
 
-<sub>[View the complete figure](website/assets/figures/two-islands.svg) · [Figure PDF](website/assets/figures/two-islands.pdf)</sub>
+<sub>[View the complete figure](website/assets/figures/two-islands.svg) · [Interactive animation](https://sylvain-wei.github.io/ReVuE/#islands-case) · [Figure PDF](website/assets/figures/two-islands.pdf)</sub>
 
 ## Main results
 
@@ -77,142 +78,196 @@ Accuracy (%), higher is better. **Bold** marks the best OPD result in each model
 
 ### Overview
 
-| Model / Method | Perception | Math | General |
-| :-- | --: | --: | --: |
-| **Off-the-Shelf Models** |  |  |  |
-| GPT-4o | 50.28 | 41.22 | 53.28 |
-| Gemini3.1FL | 43.89 | 62.63 | 63.57 |
-| Qwen2.5-32B | 63.89 | 51.90 | 59.29 |
-| Qwen3-30B-T | 63.26 | 56.71 | 64.45 |
-| InternVL-38B | 54.34 | 48.89 | 55.71 |
-| **Qwen2.5-VL-7B** |  |  |  |
-| Base Model | 57.77 | 46.34 | 50.53 |
-| Cold-start | 60.72 | 46.38 | 52.68 |
-| RL Expert | 63.89 | 47.56 | 53.60 |
-| RFT | 63.12 | 46.70 | 53.07 |
-| Vanilla OPD | 62.61 | 47.67 | 53.28 |
-| GT-Privileged | 62.26 | 47.49 | 53.23 |
-| Vision-OPD | 59.98 | 45.48 | 52.08 |
-| V-Zero | 62.08 | 46.99 | 52.79 |
-| VAD | 62.08 | 45.62 | 53.65 |
-| **ReVuE (Ours)** | **65.01** | **48.49** | **54.14** |
-| **InternVL3.5-4B-Instruct** |  |  |  |
-| Base Model | 49.32 | 42.00 | 47.78 |
-| Cold-start | 55.66 | 47.45 | 52.79 |
-| RL Expert | 58.20 | 47.60 | 54.38 |
-| RFT | 58.22 | 46.81 | 54.26 |
-| Vanilla OPD | 58.02 | 46.34 | 53.48 |
-| GT-Privileged | 57.36 | 46.09 | 53.91 |
-| Vision-OPD | 53.04 | 46.02 | 54.14 |
-| V-Zero | 54.45 | 47.56 | 53.99 |
-| VAD | 53.78 | 47.45 | 54.61 |
-| **ReVuE (Ours)** | **59.72** | **49.17** | **55.13** |
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2" align="left">Method</th>
+      <th colspan="3" align="center">Qwen2.5-VL-7B</th>
+      <th colspan="3" align="center">InternVL3.5-4B-Instruct</th>
+    </tr>
+    <tr>
+      <th align="right">Perception</th>
+      <th align="right">Math</th>
+      <th align="right">General</th>
+      <th align="right">Perception</th>
+      <th align="right">Math</th>
+      <th align="right">General</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td align="left">Base Model</td><td align="right">57.77</td><td align="right">46.34</td><td align="right">50.53</td><td align="right">49.32</td><td align="right">42.00</td><td align="right">47.78</td></tr>
+    <tr><td align="left">Cold-start</td><td align="right">60.72</td><td align="right">46.38</td><td align="right">52.68</td><td align="right">55.66</td><td align="right">47.45</td><td align="right">52.79</td></tr>
+    <tr><td align="left">RL Expert</td><td align="right">63.89</td><td align="right">47.56</td><td align="right">53.60</td><td align="right">58.20</td><td align="right">47.60</td><td align="right">54.38</td></tr>
+    <tr><td align="left">RFT</td><td align="right">63.12</td><td align="right">46.70</td><td align="right">53.07</td><td align="right">58.22</td><td align="right">46.81</td><td align="right">54.26</td></tr>
+    <tr><td align="left">Vanilla OPD</td><td align="right">62.61</td><td align="right">47.67</td><td align="right">53.28</td><td align="right">58.02</td><td align="right">46.34</td><td align="right">53.48</td></tr>
+    <tr><td align="left">GT-Privileged</td><td align="right">62.26</td><td align="right">47.49</td><td align="right">53.23</td><td align="right">57.36</td><td align="right">46.09</td><td align="right">53.91</td></tr>
+    <tr><td align="left">Vision-OPD</td><td align="right">59.98</td><td align="right">45.48</td><td align="right">52.08</td><td align="right">53.04</td><td align="right">46.02</td><td align="right">54.14</td></tr>
+    <tr><td align="left">V-Zero</td><td align="right">62.08</td><td align="right">46.99</td><td align="right">52.79</td><td align="right">54.45</td><td align="right">47.56</td><td align="right">53.99</td></tr>
+    <tr><td align="left">VAD</td><td align="right">62.08</td><td align="right">45.62</td><td align="right">53.65</td><td align="right">53.78</td><td align="right">47.45</td><td align="right">54.61</td></tr>
+    <tr><td align="left"><b>ReVuE (Ours)</b></td><td align="right"><b>65.01</b></td><td align="right"><b>48.49</b></td><td align="right"><b>54.14</b></td><td align="right"><b>59.72</b></td><td align="right"><b>49.17</b></td><td align="right"><b>55.13</b></td></tr>
+  </tbody>
+</table>
+
+<sub><a href="https://sylvain-wei.github.io/ReVuE/#results">Explore the interactive results table ↗</a></sub>
+
+<details>
+<summary><b>Off-the-shelf models — category averages</b></summary>
+
+<table>
+  <thead>
+    <tr><th align="left">Model</th><th align="right">Perception</th><th align="right">Math</th><th align="right">General</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>GPT-4o</td><td align="right">50.28</td><td align="right">41.22</td><td align="right">53.28</td></tr>
+    <tr><td>Gemini3.1FL</td><td align="right">43.89</td><td align="right">62.63</td><td align="right">63.57</td></tr>
+    <tr><td>Qwen2.5-32B</td><td align="right">63.89</td><td align="right">51.90</td><td align="right">59.29</td></tr>
+    <tr><td>Qwen3-30B-T</td><td align="right">63.26</td><td align="right">56.71</td><td align="right">64.45</td></tr>
+    <tr><td>InternVL-38B</td><td align="right">54.34</td><td align="right">48.89</td><td align="right">55.71</td></tr>
+  </tbody>
+</table>
+
+</details>
 
 <details>
 <summary><b>Perception — all benchmark results</b></summary>
 
-| Model / Method | HRBench 4K | HRBench 8K | V\*Bench | TreeBench | VisualProbe | Wtd. Avg. |
-| :-- | --: | --: | --: | --: | --: | --: |
-| **Off-the-Shelf Models** |  |  |  |  |  |  |
-| GPT-4o | 61.00 | 54.00 | 61.78 | 49.88 | 23.88 | 50.28 |
-| Gemini3.1FL | 46.00 | 43.00 | 64.92 | 51.85 | 27.96 | 43.89 |
-| Qwen2.5-32B | 75.13 | 69.25 | 78.01 | 48.40 | 45.05 | 63.89 |
-| Qwen3-30B-T | 77.13 | 71.38 | 80.10 | 45.43 | 36.89 | 63.26 |
-| InternVL-38B | 71.50 | 62.13 | 65.97 | 41.98 | 20.97 | 54.34 |
-| **Qwen2.5-VL-7B** |  |  |  |  |  |  |
-| Base Model | 69.00 | 63.50 | 75.39 | 37.04 | 41.17 | 57.77 |
-| Cold-start | 74.38 | 66.62 | 80.10 | 37.28 | 41.56 | 60.72 |
-| RL Expert | 75.50 | 71.75 | 83.77 | 40.25 | 44.85 | 63.89 |
-| RFT | 75.38 | 72.00 | 81.20 | 40.00 | 41.75 | 63.12 |
-| Vanilla OPD | 75.40 | 70.50 | 81.20 | 38.02 | 42.91 | 62.61 |
-| GT-Privileged | 73.62 | 70.50 | 79.58 | 39.75 | 43.10 | 62.26 |
-| Vision-OPD | 73.00 | 65.62 | 76.44 | 39.01 | 41.36 | 59.98 |
-| V-Zero | 75.62 | 69.50 | 78.01 | 37.28 | 43.10 | 62.08 |
-| VAD | 74.75 | 67.75 | 76.96 | **41.98** | 43.89 | 62.08 |
-| **ReVuE (Ours)** | **77.10** | **74.00** | **82.20** | 41.12 | **44.66** | **65.01** |
-| **InternVL3.5-4B-Instruct** |  |  |  |  |  |  |
-| Base Model | 62.00 | 55.00 | 68.59 | 40.49 | 20.58 | 49.32 |
-| Cold-start | 69.50 | 63.25 | 66.49 | 40.99 | 29.90 | 55.66 |
-| RL Expert | 72.62 | 64.62 | 71.73 | 40.74 | 34.56 | 58.20 |
-| RFT | 71.25 | 66.00 | 71.73 | 40.25 | 35.00 | 58.22 |
-| Vanilla OPD | 71.13 | 65.87 | **73.30** | 40.25 | 33.79 | 58.02 |
-| GT-Privileged | 71.25 | 64.88 | 70.16 | 39.75 | 33.20 | 57.36 |
-| Vision-OPD | 66.25 | 60.00 | 65.97 | 37.78 | 28.93 | 53.04 |
-| V-Zero | 68.13 | 61.75 | 67.02 | 40.25 | 28.35 | 54.45 |
-| VAD | 67.50 | 61.00 | 67.02 | 39.01 | 27.96 | 53.78 |
-| **ReVuE (Ours)** | **73.25** | **67.37** | **73.30** | **41.48** | **36.12** | **59.72** |
+<table>
+  <thead>
+    <tr>
+      <th align="left"><sub>Model / Method</sub></th>
+      <th align="right"><sub>HRBench 4K</sub></th>
+      <th align="right"><sub>HRBench 8K</sub></th>
+      <th align="right"><sub>V*Bench</sub></th>
+      <th align="right"><sub>TreeBench</sub></th>
+      <th align="right"><sub>VisualProbe</sub></th>
+      <th align="right"><sub>Wtd. Avg.</sub></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><th colspan="7" align="left"><sub>Off-the-Shelf Models</sub></th></tr>
+    <tr><td>GPT-4o</td><td align="right">61.00</td><td align="right">54.00</td><td align="right">61.78</td><td align="right">49.88</td><td align="right">23.88</td><td align="right">50.28</td></tr>
+    <tr><td>Gemini3.1FL</td><td align="right">46.00</td><td align="right">43.00</td><td align="right">64.92</td><td align="right">51.85</td><td align="right">27.96</td><td align="right">43.89</td></tr>
+    <tr><td>Qwen2.5-32B</td><td align="right">75.13</td><td align="right">69.25</td><td align="right">78.01</td><td align="right">48.40</td><td align="right">45.05</td><td align="right">63.89</td></tr>
+    <tr><td>Qwen3-30B-T</td><td align="right">77.13</td><td align="right">71.38</td><td align="right">80.10</td><td align="right">45.43</td><td align="right">36.89</td><td align="right">63.26</td></tr>
+    <tr><td>InternVL-38B</td><td align="right">71.50</td><td align="right">62.13</td><td align="right">65.97</td><td align="right">41.98</td><td align="right">20.97</td><td align="right">54.34</td></tr>
+    <tr><th colspan="7" align="left"><sub>Qwen2.5-VL-7B</sub></th></tr>
+    <tr><td>Base Model</td><td align="right">69.00</td><td align="right">63.50</td><td align="right">75.39</td><td align="right">37.04</td><td align="right">41.17</td><td align="right">57.77</td></tr>
+    <tr><td>Cold-start</td><td align="right">74.38</td><td align="right">66.62</td><td align="right">80.10</td><td align="right">37.28</td><td align="right">41.56</td><td align="right">60.72</td></tr>
+    <tr><td>RL Expert</td><td align="right">75.50</td><td align="right">71.75</td><td align="right">83.77</td><td align="right">40.25</td><td align="right">44.85</td><td align="right">63.89</td></tr>
+    <tr><td>RFT</td><td align="right">75.38</td><td align="right">72.00</td><td align="right">81.20</td><td align="right">40.00</td><td align="right">41.75</td><td align="right">63.12</td></tr>
+    <tr><td>Vanilla OPD</td><td align="right">75.40</td><td align="right">70.50</td><td align="right">81.20</td><td align="right">38.02</td><td align="right">42.91</td><td align="right">62.61</td></tr>
+    <tr><td>GT-Privileged</td><td align="right">73.62</td><td align="right">70.50</td><td align="right">79.58</td><td align="right">39.75</td><td align="right">43.10</td><td align="right">62.26</td></tr>
+    <tr><td>Vision-OPD</td><td align="right">73.00</td><td align="right">65.62</td><td align="right">76.44</td><td align="right">39.01</td><td align="right">41.36</td><td align="right">59.98</td></tr>
+    <tr><td>V-Zero</td><td align="right">75.62</td><td align="right">69.50</td><td align="right">78.01</td><td align="right">37.28</td><td align="right">43.10</td><td align="right">62.08</td></tr>
+    <tr><td>VAD</td><td align="right">74.75</td><td align="right">67.75</td><td align="right">76.96</td><td align="right"><b>41.98</b></td><td align="right">43.89</td><td align="right">62.08</td></tr>
+    <tr><td><b>ReVuE (Ours)</b></td><td align="right"><b>77.10</b></td><td align="right"><b>74.00</b></td><td align="right"><b>82.20</b></td><td align="right">41.12</td><td align="right"><b>44.66</b></td><td align="right"><b>65.01</b></td></tr>
+    <tr><th colspan="7" align="left"><sub>InternVL3.5-4B-Instruct</sub></th></tr>
+    <tr><td>Base Model</td><td align="right">62.00</td><td align="right">55.00</td><td align="right">68.59</td><td align="right">40.49</td><td align="right">20.58</td><td align="right">49.32</td></tr>
+    <tr><td>Cold-start</td><td align="right">69.50</td><td align="right">63.25</td><td align="right">66.49</td><td align="right">40.99</td><td align="right">29.90</td><td align="right">55.66</td></tr>
+    <tr><td>RL Expert</td><td align="right">72.62</td><td align="right">64.62</td><td align="right">71.73</td><td align="right">40.74</td><td align="right">34.56</td><td align="right">58.20</td></tr>
+    <tr><td>RFT</td><td align="right">71.25</td><td align="right">66.00</td><td align="right">71.73</td><td align="right">40.25</td><td align="right">35.00</td><td align="right">58.22</td></tr>
+    <tr><td>Vanilla OPD</td><td align="right">71.13</td><td align="right">65.87</td><td align="right"><b>73.30</b></td><td align="right">40.25</td><td align="right">33.79</td><td align="right">58.02</td></tr>
+    <tr><td>GT-Privileged</td><td align="right">71.25</td><td align="right">64.88</td><td align="right">70.16</td><td align="right">39.75</td><td align="right">33.20</td><td align="right">57.36</td></tr>
+    <tr><td>Vision-OPD</td><td align="right">66.25</td><td align="right">60.00</td><td align="right">65.97</td><td align="right">37.78</td><td align="right">28.93</td><td align="right">53.04</td></tr>
+    <tr><td>V-Zero</td><td align="right">68.13</td><td align="right">61.75</td><td align="right">67.02</td><td align="right">40.25</td><td align="right">28.35</td><td align="right">54.45</td></tr>
+    <tr><td>VAD</td><td align="right">67.50</td><td align="right">61.00</td><td align="right">67.02</td><td align="right">39.01</td><td align="right">27.96</td><td align="right">53.78</td></tr>
+    <tr><td><b>ReVuE (Ours)</b></td><td align="right"><b>73.25</b></td><td align="right"><b>67.37</b></td><td align="right"><b>73.30</b></td><td align="right"><b>41.48</b></td><td align="right"><b>36.12</b></td><td align="right"><b>59.72</b></td></tr>
+  </tbody>
+</table>
 
 </details>
 
 <details>
 <summary><b>Math — all benchmark results</b></summary>
 
-| Model / Method | MathVista | MathVerse | VisuLogic | Wtd. Avg. |
-| :-- | --: | --: | --: | --: |
-| **Off-the-Shelf Models** |  |  |  |  |
-| GPT-4o | 58.83 | 39.21 | 25.20 | 41.22 |
-| Gemini3.1FL | 80.80 | 77.92 | 32.40 | 62.63 |
-| Qwen2.5-32B | 77.00 | 53.05 | 25.90 | 51.90 |
-| Qwen3-30B-T | 80.20 | 66.12 | 25.80 | 56.71 |
-| InternVL-38B | 70.90 | 48.48 | 27.20 | 48.89 |
-| **Qwen2.5-VL-7B** |  |  |  |  |
-| Base Model | 69.10 | 44.04 | 25.40 | 46.34 |
-| Cold-start | 68.00 | 44.29 | 26.40 | 46.38 |
-| RL Expert | 70.60 | 45.43 | 26.20 | 47.56 |
-| RFT | 69.50 | 45.81 | 24.60 | 46.70 |
-| Vanilla OPD | 70.60 | 46.07 | 26.00 | 47.67 |
-| GT-Privileged | 71.20 | 45.69 | 25.20 | 47.49 |
-| Vision-OPD | 67.70 | 42.39 | 25.70 | 45.48 |
-| V-Zero | 69.80 | 43.91 | **26.60** | 46.99 |
-| VAD | 69.00 | 45.56 | 22.30 | 45.62 |
-| **ReVuE (Ours)** | **71.60** | **47.08** | 26.50 | **48.49** |
-| **InternVL3.5-4B-Instruct** |  |  |  |  |
-| Base Model | 68.50 | 28.93 | 25.80 | 42.00 |
-| Cold-start | 69.30 | 47.21 | 25.80 | 47.45 |
-| RL Expert | 69.30 | 46.32 | 26.90 | 47.60 |
-| RFT | 70.00 | 45.94 | 24.30 | 46.81 |
-| Vanilla OPD | 68.40 | 43.40 | 26.60 | 46.34 |
-| GT-Privileged | 71.30 | 39.34 | 26.20 | 46.09 |
-| Vision-OPD | 66.60 | 44.54 | 26.60 | 46.02 |
-| V-Zero | 68.80 | 46.95 | 26.80 | 47.56 |
-| VAD | 68.30 | 46.07 | 27.70 | 47.45 |
-| **ReVuE (Ours)** | **71.60** | **47.46** | **28.10** | **49.17** |
+<table>
+  <thead>
+    <tr>
+      <th align="left"><sub>Model / Method</sub></th>
+      <th align="right"><sub>MathVista</sub></th>
+      <th align="right"><sub>MathVerse</sub></th>
+      <th align="right"><sub>VisuLogic</sub></th>
+      <th align="right"><sub>Wtd. Avg.</sub></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><th colspan="5" align="left"><sub>Off-the-Shelf Models</sub></th></tr>
+    <tr><td>GPT-4o</td><td align="right">58.83</td><td align="right">39.21</td><td align="right">25.20</td><td align="right">41.22</td></tr>
+    <tr><td>Gemini3.1FL</td><td align="right">80.80</td><td align="right">77.92</td><td align="right">32.40</td><td align="right">62.63</td></tr>
+    <tr><td>Qwen2.5-32B</td><td align="right">77.00</td><td align="right">53.05</td><td align="right">25.90</td><td align="right">51.90</td></tr>
+    <tr><td>Qwen3-30B-T</td><td align="right">80.20</td><td align="right">66.12</td><td align="right">25.80</td><td align="right">56.71</td></tr>
+    <tr><td>InternVL-38B</td><td align="right">70.90</td><td align="right">48.48</td><td align="right">27.20</td><td align="right">48.89</td></tr>
+    <tr><th colspan="5" align="left"><sub>Qwen2.5-VL-7B</sub></th></tr>
+    <tr><td>Base Model</td><td align="right">69.10</td><td align="right">44.04</td><td align="right">25.40</td><td align="right">46.34</td></tr>
+    <tr><td>Cold-start</td><td align="right">68.00</td><td align="right">44.29</td><td align="right">26.40</td><td align="right">46.38</td></tr>
+    <tr><td>RL Expert</td><td align="right">70.60</td><td align="right">45.43</td><td align="right">26.20</td><td align="right">47.56</td></tr>
+    <tr><td>RFT</td><td align="right">69.50</td><td align="right">45.81</td><td align="right">24.60</td><td align="right">46.70</td></tr>
+    <tr><td>Vanilla OPD</td><td align="right">70.60</td><td align="right">46.07</td><td align="right">26.00</td><td align="right">47.67</td></tr>
+    <tr><td>GT-Privileged</td><td align="right">71.20</td><td align="right">45.69</td><td align="right">25.20</td><td align="right">47.49</td></tr>
+    <tr><td>Vision-OPD</td><td align="right">67.70</td><td align="right">42.39</td><td align="right">25.70</td><td align="right">45.48</td></tr>
+    <tr><td>V-Zero</td><td align="right">69.80</td><td align="right">43.91</td><td align="right"><b>26.60</b></td><td align="right">46.99</td></tr>
+    <tr><td>VAD</td><td align="right">69.00</td><td align="right">45.56</td><td align="right">22.30</td><td align="right">45.62</td></tr>
+    <tr><td><b>ReVuE (Ours)</b></td><td align="right"><b>71.60</b></td><td align="right"><b>47.08</b></td><td align="right">26.50</td><td align="right"><b>48.49</b></td></tr>
+    <tr><th colspan="5" align="left"><sub>InternVL3.5-4B-Instruct</sub></th></tr>
+    <tr><td>Base Model</td><td align="right">68.50</td><td align="right">28.93</td><td align="right">25.80</td><td align="right">42.00</td></tr>
+    <tr><td>Cold-start</td><td align="right">69.30</td><td align="right">47.21</td><td align="right">25.80</td><td align="right">47.45</td></tr>
+    <tr><td>RL Expert</td><td align="right">69.30</td><td align="right">46.32</td><td align="right">26.90</td><td align="right">47.60</td></tr>
+    <tr><td>RFT</td><td align="right">70.00</td><td align="right">45.94</td><td align="right">24.30</td><td align="right">46.81</td></tr>
+    <tr><td>Vanilla OPD</td><td align="right">68.40</td><td align="right">43.40</td><td align="right">26.60</td><td align="right">46.34</td></tr>
+    <tr><td>GT-Privileged</td><td align="right">71.30</td><td align="right">39.34</td><td align="right">26.20</td><td align="right">46.09</td></tr>
+    <tr><td>Vision-OPD</td><td align="right">66.60</td><td align="right">44.54</td><td align="right">26.60</td><td align="right">46.02</td></tr>
+    <tr><td>V-Zero</td><td align="right">68.80</td><td align="right">46.95</td><td align="right">26.80</td><td align="right">47.56</td></tr>
+    <tr><td>VAD</td><td align="right">68.30</td><td align="right">46.07</td><td align="right">27.70</td><td align="right">47.45</td></tr>
+    <tr><td><b>ReVuE (Ours)</b></td><td align="right"><b>71.60</b></td><td align="right"><b>47.46</b></td><td align="right"><b>28.10</b></td><td align="right"><b>49.17</b></td></tr>
+  </tbody>
+</table>
 
 </details>
 
 <details>
 <summary><b>General — all benchmark results</b></summary>
 
-| Model / Method | HallusionBench | ChartQA-Pro | InfographicVQA | Wtd. Avg. |
-| :-- | --: | --: | --: | --: |
-| **Off-the-Shelf Models** |  |  |  |  |
-| GPT-4o | 51.37 | 28.67 | 71.17 | 53.28 |
-| Gemini3.1FL | 59.92 | 37.03 | 83.50 | 63.57 |
-| Qwen2.5-32B | 50.74 | 30.02 | 83.10 | 59.29 |
-| Qwen3-30B-T | 61.82 | 35.46 | 85.68 | 64.45 |
-| InternVL-38B | 50.74 | 26.98 | 77.70 | 55.71 |
-| **Qwen2.5-VL-7B** |  |  |  |  |
-| Base Model | 40.91 | 20.79 | 75.10 | 50.53 |
-| Cold-start | 41.73 | 21.12 | 79.05 | 52.68 |
-| RL Expert | 43.83 | 21.69 | 79.74 | 53.60 |
-| RFT | 42.33 | 21.18 | 79.57 | 53.07 |
-| Vanilla OPD | 42.88 | 21.69 | 79.44 | 53.28 |
-| GT-Privileged | 43.45 | 20.84 | 79.70 | 53.23 |
-| Vision-OPD | 39.89 | 20.79 | 78.75 | 52.08 |
-| V-Zero | 42.16 | 21.08 | 79.12 | 52.79 |
-| VAD | 44.24 | 21.73 | 79.65 | 53.65 |
-| **ReVuE (Ours)** | **45.12** | **21.81** | **80.27** | **54.14** |
-| **InternVL3.5-4B-Instruct** |  |  |  |  |
-| Base Model | 40.04 | 26.01 | 66.04 | 47.78 |
-| Cold-start | 48.50 | 26.24 | 72.98 | 52.79 |
-| RL Expert | 46.92 | 30.59 | 73.93 | 54.38 |
-| RFT | 47.78 | 29.39 | 74.17 | 54.26 |
-| Vanilla OPD | 46.85 | 30.46 | 72.16 | 53.48 |
-| GT-Privileged | 49.29 | 29.90 | 72.48 | 53.91 |
-| Vision-OPD | 44.57 | 30.46 | **74.47** | 54.14 |
-| V-Zero | 49.03 | 28.65 | 73.61 | 53.99 |
-| VAD | 48.05 | 31.44 | 73.36 | 54.61 |
-| **ReVuE (Ours)** | **49.38** | **32.27** | 73.35 | **55.13** |
+<table>
+  <thead>
+    <tr>
+      <th align="left"><sub>Model / Method</sub></th>
+      <th align="right"><sub>HallusionBench</sub></th>
+      <th align="right"><sub>ChartQA-Pro</sub></th>
+      <th align="right"><sub>InfographicVQA</sub></th>
+      <th align="right"><sub>Wtd. Avg.</sub></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><th colspan="5" align="left"><sub>Off-the-Shelf Models</sub></th></tr>
+    <tr><td>GPT-4o</td><td align="right">51.37</td><td align="right">28.67</td><td align="right">71.17</td><td align="right">53.28</td></tr>
+    <tr><td>Gemini3.1FL</td><td align="right">59.92</td><td align="right">37.03</td><td align="right">83.50</td><td align="right">63.57</td></tr>
+    <tr><td>Qwen2.5-32B</td><td align="right">50.74</td><td align="right">30.02</td><td align="right">83.10</td><td align="right">59.29</td></tr>
+    <tr><td>Qwen3-30B-T</td><td align="right">61.82</td><td align="right">35.46</td><td align="right">85.68</td><td align="right">64.45</td></tr>
+    <tr><td>InternVL-38B</td><td align="right">50.74</td><td align="right">26.98</td><td align="right">77.70</td><td align="right">55.71</td></tr>
+    <tr><th colspan="5" align="left"><sub>Qwen2.5-VL-7B</sub></th></tr>
+    <tr><td>Base Model</td><td align="right">40.91</td><td align="right">20.79</td><td align="right">75.10</td><td align="right">50.53</td></tr>
+    <tr><td>Cold-start</td><td align="right">41.73</td><td align="right">21.12</td><td align="right">79.05</td><td align="right">52.68</td></tr>
+    <tr><td>RL Expert</td><td align="right">43.83</td><td align="right">21.69</td><td align="right">79.74</td><td align="right">53.60</td></tr>
+    <tr><td>RFT</td><td align="right">42.33</td><td align="right">21.18</td><td align="right">79.57</td><td align="right">53.07</td></tr>
+    <tr><td>Vanilla OPD</td><td align="right">42.88</td><td align="right">21.69</td><td align="right">79.44</td><td align="right">53.28</td></tr>
+    <tr><td>GT-Privileged</td><td align="right">43.45</td><td align="right">20.84</td><td align="right">79.70</td><td align="right">53.23</td></tr>
+    <tr><td>Vision-OPD</td><td align="right">39.89</td><td align="right">20.79</td><td align="right">78.75</td><td align="right">52.08</td></tr>
+    <tr><td>V-Zero</td><td align="right">42.16</td><td align="right">21.08</td><td align="right">79.12</td><td align="right">52.79</td></tr>
+    <tr><td>VAD</td><td align="right">44.24</td><td align="right">21.73</td><td align="right">79.65</td><td align="right">53.65</td></tr>
+    <tr><td><b>ReVuE (Ours)</b></td><td align="right"><b>45.12</b></td><td align="right"><b>21.81</b></td><td align="right"><b>80.27</b></td><td align="right"><b>54.14</b></td></tr>
+    <tr><th colspan="5" align="left"><sub>InternVL3.5-4B-Instruct</sub></th></tr>
+    <tr><td>Base Model</td><td align="right">40.04</td><td align="right">26.01</td><td align="right">66.04</td><td align="right">47.78</td></tr>
+    <tr><td>Cold-start</td><td align="right">48.50</td><td align="right">26.24</td><td align="right">72.98</td><td align="right">52.79</td></tr>
+    <tr><td>RL Expert</td><td align="right">46.92</td><td align="right">30.59</td><td align="right">73.93</td><td align="right">54.38</td></tr>
+    <tr><td>RFT</td><td align="right">47.78</td><td align="right">29.39</td><td align="right">74.17</td><td align="right">54.26</td></tr>
+    <tr><td>Vanilla OPD</td><td align="right">46.85</td><td align="right">30.46</td><td align="right">72.16</td><td align="right">53.48</td></tr>
+    <tr><td>GT-Privileged</td><td align="right">49.29</td><td align="right">29.90</td><td align="right">72.48</td><td align="right">53.91</td></tr>
+    <tr><td>Vision-OPD</td><td align="right">44.57</td><td align="right">30.46</td><td align="right"><b>74.47</b></td><td align="right">54.14</td></tr>
+    <tr><td>V-Zero</td><td align="right">49.03</td><td align="right">28.65</td><td align="right">73.61</td><td align="right">53.99</td></tr>
+    <tr><td>VAD</td><td align="right">48.05</td><td align="right">31.44</td><td align="right">73.36</td><td align="right">54.61</td></tr>
+    <tr><td><b>ReVuE (Ours)</b></td><td align="right"><b>49.38</b></td><td align="right"><b>32.27</b></td><td align="right">73.35</td><td align="right"><b>55.13</b></td></tr>
+  </tbody>
+</table>
 
 </details>
 
