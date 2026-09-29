@@ -1,0 +1,15 @@
+ReVuE: On-Policy Visual Evidence Distillation
+Copyright 2026 The ReVuE Authors.
+
+Original ReVuE code and original code modifications are licensed under the
+Apache License, Version 2.0. The full license text is provided in LICENSE.
+
+This repository includes third-party software and materials. Their copyright
+notices and license terms remain applicable to those portions. Attribution,
+license locations, and descriptions of local modifications are provided in
+THIRD_PARTY_NOTICES.md, licenses/, and the relevant source files.
+
+The code license does not apply to the paper, figures, photographs, branding,
+fonts, datasets, or model weights. Those materials remain subject to their
+own terms where provided; this notice grants no additional rights to them.
+See assets/README.md for visual-asset attribution.

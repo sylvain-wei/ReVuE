@@ -32,7 +32,7 @@
 <p align="center">
   <a href="website/assets/documents/revue-paper.pdf"><img src="https://img.shields.io/badge/Paper-Technical_Report-B31B1B?style=flat-square" alt="Paper: Technical report"></a>
   <a href="https://sylvain-wei.github.io/ReVuE/"><img src="https://img.shields.io/badge/Website-Project_Page-275EE8?style=flat-square" alt="Project website"></a>
-  <a href="#license-and-acknowledgments"><img src="https://img.shields.io/badge/License-Pending-lightgrey?style=flat-square" alt="License selection pending"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/sylvain-wei/ReVuE?style=flat-square" alt="License: Apache-2.0"></a>
   <a href="docs/ENVIRONMENT.md"><img src="https://img.shields.io/badge/Python-3.10-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 3.10 target environment"></a>
   <a href="docs/ENVIRONMENT.md"><img src="https://img.shields.io/badge/CUDA-12.6-76B900?style=flat-square&logo=nvidia&logoColor=white" alt="CUDA 12.6 target environment"></a>
   <a href="https://github.com/sylvain-wei/ReVuE/actions/workflows/static-checks.yml"><img src="https://github.com/sylvain-wei/ReVuE/actions/workflows/static-checks.yml/badge.svg" alt="Static checks workflow"></a>
@@ -416,7 +416,9 @@ This release supplies the main method; standalone comparison-method implementati
 
 ## License and acknowledgments
 
-A general open-source license for original ReVuE code is pending selection. Existing third-party licenses remain in force; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [licenses/](licenses/).
+Original ReVuE code and original code modifications are licensed under the [Apache License 2.0](LICENSE). Copyright 2026 The ReVuE Authors.
+
+Third-party code and other materials retain their respective licenses and notices; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [licenses/](licenses/). The code license does not apply to the paper, figures, photographs, branding, fonts, datasets, or model weights; these remain subject to their own terms where provided. See [NOTICE](NOTICE) for the code-license scope and [assets/README.md](assets/README.md) for visual-asset attribution.
 
 ReVuE builds on [Thyme](https://github.com/Kwai-Keye/Thyme), [ms-swift](https://github.com/modelscope/ms-swift), and [VLMEvalKit](https://github.com/open-compass/VLMEvalKit). We thank the benchmark and framework authors whose work makes these experiments possible.
 

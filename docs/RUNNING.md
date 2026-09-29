@@ -235,11 +235,12 @@ requires the actual model/data resources in a fresh environment.
 
 ## 7. Licenses and attribution
 
-See [third-party notices](../THIRD_PARTY_NOTICES.md), [license copies](../licenses/),
+Original ReVuE code and original code modifications are licensed under the
+[Apache License 2.0](../LICENSE); see [NOTICE](../NOTICE) for scope and attribution.
+Third-party portions retain their respective terms. See
+[third-party notices](../THIRD_PARTY_NOTICES.md), [license copies](../licenses/),
 the [Thyme license](../thyme-infer/Thyme/LICENSE), and the
 [VLMEvalKit license](../thyme-infer/Thyme/eval/VLMEvalKit/LICENSE).
-The archived source package used the statement "released for research use with this paper."
-This statement does not supply a general open-source license for original ReVuE code,
-and it does not restrict or replace third-party licenses. See the repository root
-for the current licensing status. Modified vendored files retain their historical
-release-modification notices.
+Modified vendored files retain their historical release-modification notices.
+The code license does not apply to the paper, figures, photographs, branding,
+fonts, datasets, or model weights; these remain subject to their own terms where provided.
