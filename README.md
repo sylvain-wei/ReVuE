@@ -4,8 +4,6 @@
 
 <h1 align="center">On-Policy Visual Evidence Distillation</h1>
 
-<hr>
-
 <p align="center">
   Shaohang Wei<sup>1‡*</sup>,
   Feifan Song<sup>1</sup>,
@@ -33,7 +31,7 @@
 
 <p align="center">
   <a href="website/assets/documents/revue-paper.pdf"><img src="https://img.shields.io/badge/Paper-Technical_Report-B31B1B?style=flat-square" alt="Paper: Technical report"></a>
-  <a href="website/"><img src="https://img.shields.io/badge/Website-Source-275EE8?style=flat-square" alt="Website source"></a>
+  <a href="https://sylvain-wei.github.io/ReVuE/"><img src="https://img.shields.io/badge/Website-Project_Page-275EE8?style=flat-square" alt="Project website"></a>
   <a href="#license-and-acknowledgments"><img src="https://img.shields.io/badge/License-Pending-lightgrey?style=flat-square" alt="License selection pending"></a>
   <a href="docs/ENVIRONMENT.md"><img src="https://img.shields.io/badge/Python-3.10-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 3.10 target environment"></a>
   <a href="docs/ENVIRONMENT.md"><img src="https://img.shields.io/badge/CUDA-12.6-76B900?style=flat-square&logo=nvidia&logoColor=white" alt="CUDA 12.6 target environment"></a>
@@ -59,7 +57,7 @@
 
 The overview pairs HRBench 8K results with an evidence-use example: crop the blue car, read its plate, and map the plate number to the answer. The student retains its original interaction history; reflection guides the teacher during training.
 
-<sub>[View the complete figure](website/assets/figures/plate-evidence-chain.svg) · [Interactive animation source](website/) · [Figure PDF](website/assets/figures/plate-evidence-chain.pdf)</sub>
+<sub>[View the complete figure](website/assets/figures/plate-evidence-chain.svg) · [Interactive animation](https://sylvain-wei.github.io/ReVuE/) · [Figure PDF](website/assets/figures/plate-evidence-chain.pdf)</sub>
 
 ## Two islands, not one
 

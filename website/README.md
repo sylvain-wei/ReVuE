@@ -2,6 +2,8 @@
 
 The interactive companion to **On-Policy Visual Evidence Distillation**, with staged figure animations, token-by-token evidence examples, complete benchmark tables, and the technical report. The site is static and needs no package installation or build step.
 
+Live site: <https://sylvain-wei.github.io/ReVuE/>
+
 ## Preview locally
 
 From the repository root:
@@ -18,6 +20,8 @@ Open <http://127.0.0.1:8000>. Use a local server because the page loads its cont
 2. Open **Actions → Project website → Run workflow** on `main`.
 3. Use the deployment URL reported by GitHub. Update the README Website badge only after the deployment is available.
 
+Subsequent pushes to `main` that change `website/` or the Pages workflow redeploy the site automatically.
+
 The workflow in [pages.yml](../.github/workflows/pages.yml) uploads only this website directory. See [GitHub's custom workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
 ## Files
@@ -28,7 +32,7 @@ The workflow in [pages.yml](../.github/workflows/pages.yml) uploads only this we
 - `assets/fonts/`: Local Space Grotesk and its OFL license.
 - `assets/figures/`: Static SVG figures and original PDFs.
 - `assets/animations/`: Staged and standalone animations, with timing metadata.
-- `assets/documents/revue-paper.pdf`: Technical report. The original PDF still contains provisional Website / Code button destinations; the site's Code button links to this repository.
+- `assets/documents/revue-paper.pdf`: Technical report. The public copy's Website and Code buttons link to the deployed project website and this repository; the report content and layout are unchanged.
 
 The overview reveals the upper result panels, then **Acquire → Read → Ground → error attribution**. The island example keeps its map and crop visible while revealing 132 tokens and their score changes. Both teacher evaluations score the same fixed student trajectory. Pause, replay, and show-all controls are available; reduced-motion preferences show complete figures.
 

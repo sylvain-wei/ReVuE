@@ -1,6 +1,8 @@
 cff-version: 1.2.0
 message: "If you use ReVuE, please cite the technical report below."
 type: software
+repository-code: "https://github.com/sylvain-wei/ReVuE"
+url: "https://sylvain-wei.github.io/ReVuE/"
 title: "ReVuE: On-Policy Visual Evidence Distillation"
 authors:
   - family-names: "Wei"
@@ -29,6 +31,7 @@ authors:
     given-names: "Houfeng"
 preferred-citation:
   type: report
+  url: "https://sylvain-wei.github.io/ReVuE/assets/documents/revue-paper.pdf"
   title: "On-Policy Visual Evidence Distillation"
   year: 2026
   authors:
