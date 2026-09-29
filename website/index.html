@@ -9,11 +9,30 @@
   <link rel="icon" type="image/svg+xml" href="assets/branding/avatar.svg?v=2">
   <link rel="apple-touch-icon" href="assets/branding/avatar.png?v=2">
   <link rel="preload" href="assets/fonts/space-grotesk.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20260930">
+  <script src="app.js?v=20260930" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#abstract">Skip to the abstract</a>
+  <details class="floating-toc" open>
+    <summary class="toc-toggle">
+      <svg class="toc-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 4h10M3 8h7M3 12h10"/></svg>
+      <span>Contents</span>
+      <svg class="toc-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg>
+    </summary>
+    <nav class="toc-panel" aria-label="Table of contents">
+      <ol>
+        <li><a href="#overview"><span aria-hidden="true">01</span>Overview</a></li>
+        <li><a href="#abstract"><span aria-hidden="true">02</span>Abstract</a></li>
+        <li><a href="#approach"><span aria-hidden="true">03</span>Method</a></li>
+        <li><a href="#islands-case"><span aria-hidden="true">04</span>Token example</a></li>
+        <li><a href="#results"><span aria-hidden="true">05</span>Results</a></li>
+        <li><a href="#findings-flow"><span aria-hidden="true">06</span>Analysis</a></li>
+        <li><a href="#cases"><span aria-hidden="true">07</span>Case studies</a></li>
+        <li><a href="#citation"><span aria-hidden="true">08</span>Citation</a></li>
+      </ol>
+    </nav>
+  </details>
   <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <symbol id="icon-paper" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9zM14 3v6h6M8 13h8M8 17h6"/></symbol>
     <symbol id="icon-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></symbol>
@@ -25,7 +44,7 @@
     <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
   </svg>
   <main>
-    <header class="hero container">
+    <header class="hero container" id="overview">
       <img class="hero-logo" src="assets/branding/revue-logo.svg" alt="ReVuE" width="1518" height="378">
       <h1>On-Policy Visual Evidence Distillation</h1>
       <div class="author-block" id="authors" aria-label="Authors and affiliations">

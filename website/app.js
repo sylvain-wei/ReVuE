@@ -6,6 +6,25 @@
   const state = { family: 'Qwen2.5-VL-7B', metric: 'Overview' };
   let content;
 
+  const toc = $('.floating-toc');
+  const tocToggle = $('.toc-toggle', toc);
+  toc.addEventListener('click', event => {
+    if (event.target.closest('.toc-panel a')) {
+      toc.open = false;
+      tocToggle.focus({preventScroll:true});
+    }
+  });
+  document.addEventListener('click', event => {
+    if (toc.open && !toc.contains(event.target)) toc.open = false;
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && toc.open) {
+      event.preventDefault();
+      toc.open = false;
+      tocToggle.focus({preventScroll:true});
+    }
+  });
+
   function columnsForView() {
     return content.results.columns.filter(column => state.metric === 'Overview' ? column.id.endsWith('_avg') : column.category === state.metric);
   }
