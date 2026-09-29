@@ -1,0 +1,7859 @@
+{
+  "overview": {
+    "sourceSha256": "d478a8ab7190b267e698098f7923384cd98b22113f1205a0083a8223d6436452",
+    "viewBox": [
+      0.0,
+      0.0,
+      411.0,
+      241.33335
+    ],
+    "staged": "overview-staged.svg",
+    "animated": "overview-animated.svg",
+    "loopDurationMs": 15000,
+    "persistentBoxes": [
+      [
+        0,
+        0,
+        411,
+        17
+      ]
+    ],
+    "stages": [
+      {
+        "label": "Visual evidence as supervision",
+        "durationMs": 1800,
+        "boxes": [
+          [
+            0,
+            17,
+            177,
+            93
+          ]
+        ],
+        "stage": 1
+      },
+      {
+        "label": "Tool use and accuracy",
+        "durationMs": 1800,
+        "boxes": [
+          [
+            177,
+            17,
+            122,
+            93
+          ]
+        ],
+        "stage": 2
+      },
+      {
+        "label": "Accuracy and response length",
+        "durationMs": 1800,
+        "boxes": [
+          [
+            299,
+            17,
+            112,
+            93
+          ]
+        ],
+        "stage": 3
+      },
+      {
+        "label": "Acquire evidence",
+        "durationMs": 2000,
+        "boxes": [
+          [
+            0,
+            110,
+            171.5,
+            131.33335
+          ]
+        ],
+        "stage": 4
+      },
+      {
+        "label": "Read evidence",
+        "durationMs": 2000,
+        "boxes": [
+          [
+            171.5,
+            110,
+            113,
+            99
+          ]
+        ],
+        "stage": 5
+      },
+      {
+        "label": "Ground evidence",
+        "durationMs": 2000,
+        "boxes": [
+          [
+            284.5,
+            110,
+            126.5,
+            99
+          ]
+        ],
+        "stage": 6
+      },
+      {
+        "label": "Error attribution",
+        "durationMs": 3600,
+        "boxes": [
+          [
+            171.5,
+            209,
+            239.5,
+            32.33335
+          ]
+        ],
+        "stage": 7
+      }
+    ],
+    "focusBoxes": [],
+    "originalTextNumbersPathsAndEvidencePreserved": true,
+    "idPrefix": "overview-"
+  },
+  "islands": {
+    "sourceSha256": "d8aeee4063045909fbbb40b36a0184da24dbdae9b4113b23ee9ac66ae54e4f43",
+    "viewBox": [
+      0.0,
+      0.0,
+      830.2,
+      193.9
+    ],
+    "staged": "islands-staged.svg",
+    "animated": "islands-animated.svg",
+    "loopDurationMs": 7720.0,
+    "persistentBoxes": [],
+    "stages": [
+      {
+        "label": "Question, map, and student crop",
+        "durationMs": 1100,
+        "boxes": [
+          [
+            0,
+            0,
+            314,
+            193.9
+          ],
+          [
+            314,
+            0,
+            516.2,
+            26.2
+          ]
+        ],
+        "persistentScene": true,
+        "stage": 1
+      },
+      {
+        "token": "Upon",
+        "wordBbox": [
+          323.79999,
+          26.70862,
+          352.07019,
+          41.21202
+        ],
+        "highlightBbox": [
+          323.79999,
+          28.24699,
+          352.29999,
+          42.979
+        ],
+        "boxes": [
+          [
+            322.79999,
+            26.2,
+            30.5,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 1,
+        "phaseIndex": 1,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 1 / 102",
+        "stage": 2
+      },
+      {
+        "token": "analyzing",
+        "wordBbox": [
+          357.47498,
+          26.70862,
+          407.9194,
+          41.21202
+        ],
+        "highlightBbox": [
+          354.29999,
+          28.24699,
+          408.54999,
+          42.979
+        ],
+        "boxes": [
+          [
+            353.29999,
+            26.2,
+            56.25,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 2,
+        "phaseIndex": 2,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 2 / 102",
+        "stage": 3
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          413.72498,
+          26.70862,
+          430.24771,
+          41.21202
+        ],
+        "highlightBbox": [
+          410.54999,
+          28.24699,
+          430.54999,
+          42.979
+        ],
+        "boxes": [
+          [
+            409.54999,
+            26.2,
+            22.0,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 3,
+        "phaseIndex": 3,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 3 / 102",
+        "stage": 4
+      },
+      {
+        "token": "cropped",
+        "wordBbox": [
+          435.72498,
+          26.70862,
+          477.5715,
+          41.21202
+        ],
+        "highlightBbox": [
+          432.54999,
+          28.24699,
+          477.79999,
+          42.979
+        ],
+        "boxes": [
+          [
+            431.54999,
+            26.2,
+            47.25,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 4,
+        "phaseIndex": 4,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 4 / 102",
+        "stage": 5
+      },
+      {
+        "token": "image",
+        "wordBbox": [
+          482.97498,
+          26.66174,
+          514.28046,
+          41.16515
+        ],
+        "highlightBbox": [
+          479.79999,
+          28.24699,
+          514.79999,
+          42.979
+        ],
+        "boxes": [
+          [
+            478.79999,
+            26.2,
+            37.0,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 5,
+        "phaseIndex": 5,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 5 / 102",
+        "stage": 6
+      },
+      {
+        "token": ",",
+        "wordBbox": [
+          516.79999,
+          26.70862,
+          519.59399,
+          41.21202
+        ],
+        "highlightBbox": [
+          516.79999,
+          28.24699,
+          519.54999,
+          42.979
+        ],
+        "boxes": [
+          [
+            515.79999,
+            26.2,
+            4.75,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 6,
+        "phaseIndex": 6,
+        "durationMs": 30.833333333333332,
+        "label": "Student reasoning \u00b7 6 / 102",
+        "stage": 7
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          524.72498,
+          26.70862,
+          541.24768,
+          41.21202
+        ],
+        "highlightBbox": [
+          521.54999,
+          28.24699,
+          541.54999,
+          42.979
+        ],
+        "boxes": [
+          [
+            520.54999,
+            26.2,
+            22.0,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 7,
+        "phaseIndex": 7,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 7 / 102",
+        "stage": 8
+      },
+      {
+        "token": "highlighted",
+        "wordBbox": [
+          546.72498,
+          26.70862,
+          606.27527,
+          41.21202
+        ],
+        "highlightBbox": [
+          543.54999,
+          28.24699,
+          606.79999,
+          42.979
+        ],
+        "boxes": [
+          [
+            542.54999,
+            26.2,
+            65.25,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 8,
+        "phaseIndex": 8,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 8 / 102",
+        "stage": 9
+      },
+      {
+        "token": "country",
+        "wordBbox": [
+          611.97498,
+          26.70862,
+          652.71661,
+          41.21202
+        ],
+        "highlightBbox": [
+          608.79999,
+          28.24699,
+          653.29999,
+          42.979
+        ],
+        "boxes": [
+          [
+            607.79999,
+            26.2,
+            46.5,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 9,
+        "phaseIndex": 9,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 9 / 102",
+        "stage": 10
+      },
+      {
+        "token": "is",
+        "wordBbox": [
+          658.47498,
+          26.70862,
+          666.86969,
+          41.21202
+        ],
+        "highlightBbox": [
+          655.29999,
+          28.24699,
+          667.04999,
+          42.979
+        ],
+        "boxes": [
+          [
+            654.29999,
+            26.2,
+            13.75,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 10,
+        "phaseIndex": 10,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 10 / 102",
+        "stage": 11
+      },
+      {
+        "token": "a",
+        "wordBbox": [
+          672.22498,
+          26.70862,
+          678.02887,
+          41.21202
+        ],
+        "highlightBbox": [
+          669.04999,
+          28.24699,
+          678.17499,
+          42.979
+        ],
+        "boxes": [
+          [
+            668.04999,
+            26.2,
+            11.125,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 11,
+        "phaseIndex": 11,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 11 / 102",
+        "stage": 12
+      },
+      {
+        "token": "small",
+        "wordBbox": [
+          683.34998,
+          26.70862,
+          710.84546,
+          41.21202
+        ],
+        "highlightBbox": [
+          680.17499,
+          28.24699,
+          711.29999,
+          42.979
+        ],
+        "boxes": [
+          [
+            679.17499,
+            26.2,
+            33.125,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 12,
+        "phaseIndex": 12,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 12 / 102",
+        "stage": 13
+      },
+      {
+        "token": "island",
+        "wordBbox": [
+          716.47498,
+          26.70862,
+          747.336,
+          41.21202
+        ],
+        "highlightBbox": [
+          713.29999,
+          28.24699,
+          747.67499,
+          42.979
+        ],
+        "boxes": [
+          [
+            712.29999,
+            26.2,
+            36.375,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 13,
+        "phaseIndex": 13,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 13 / 102",
+        "stage": 14
+      },
+      {
+        "token": "located",
+        "wordBbox": [
+          752.84998,
+          26.70862,
+          789.95941,
+          41.21202
+        ],
+        "highlightBbox": [
+          749.67499,
+          28.24699,
+          790.29999,
+          42.979
+        ],
+        "boxes": [
+          [
+            748.67499,
+            26.2,
+            42.625,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 14,
+        "phaseIndex": 14,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 14 / 102",
+        "stage": 15
+      },
+      {
+        "token": "in",
+        "wordBbox": [
+          795.47498,
+          26.70862,
+          805.80011,
+          41.21202
+        ],
+        "highlightBbox": [
+          792.29999,
+          28.24699,
+          806.04999,
+          42.979
+        ],
+        "boxes": [
+          [
+            791.29999,
+            26.2,
+            15.75,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 15,
+        "phaseIndex": 15,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 15 / 102",
+        "stage": 16
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          326.97498,
+          42.96461,
+          343.49771,
+          57.46802
+        ],
+        "highlightBbox": [
+          323.79999,
+          44.50299,
+          343.79999,
+          59.235
+        ],
+        "boxes": [
+          [
+            322.79999,
+            43.741,
+            22.0,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 16,
+        "phaseIndex": 16,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 16 / 102",
+        "stage": 17
+      },
+      {
+        "token": "eastern",
+        "wordBbox": [
+          348.97498,
+          42.96461,
+          386.7067,
+          57.46802
+        ],
+        "highlightBbox": [
+          345.79999,
+          44.50299,
+          387.29999,
+          59.235
+        ],
+        "boxes": [
+          [
+            344.79999,
+            43.741,
+            43.5,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 17,
+        "phaseIndex": 17,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 17 / 102",
+        "stage": 18
+      },
+      {
+        "token": "Caribbean",
+        "wordBbox": [
+          392.47498,
+          42.96461,
+          445.53558,
+          57.46802
+        ],
+        "highlightBbox": [
+          389.29999,
+          44.50299,
+          446.29999,
+          59.235
+        ],
+        "boxes": [
+          [
+            388.29999,
+            43.741,
+            59.0,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 18,
+        "phaseIndex": 18,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 18 / 102",
+        "stage": 19
+      },
+      {
+        "token": ".",
+        "wordBbox": [
+          448.29999,
+          42.96461,
+          451.09399,
+          57.46802
+        ],
+        "highlightBbox": [
+          448.29999,
+          44.50299,
+          451.17499,
+          59.235
+        ],
+        "boxes": [
+          [
+            447.29999,
+            43.741,
+            4.875,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 19,
+        "phaseIndex": 19,
+        "durationMs": 30.833333333333332,
+        "label": "Student reasoning \u00b7 19 / 102",
+        "stage": 20
+      },
+      {
+        "token": "The",
+        "wordBbox": [
+          456.34998,
+          42.96461,
+          476.44141,
+          57.46802
+        ],
+        "highlightBbox": [
+          453.17499,
+          44.50299,
+          476.67499,
+          59.235
+        ],
+        "boxes": [
+          [
+            452.17499,
+            43.741,
+            25.5,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 20,
+        "phaseIndex": 20,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 20 / 102",
+        "stage": 21
+      },
+      {
+        "token": "shape",
+        "wordBbox": [
+          481.84998,
+          42.96461,
+          511.7077,
+          57.46802
+        ],
+        "highlightBbox": [
+          478.67499,
+          44.50299,
+          512.04999,
+          59.235
+        ],
+        "boxes": [
+          [
+            477.67499,
+            43.741,
+            35.375,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 21,
+        "phaseIndex": 21,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 21 / 102",
+        "stage": 22
+      },
+      {
+        "token": "and",
+        "wordBbox": [
+          517.22498,
+          42.96461,
+          536.3385,
+          57.46802
+        ],
+        "highlightBbox": [
+          514.04999,
+          44.50299,
+          536.54999,
+          59.235
+        ],
+        "boxes": [
+          [
+            513.04999,
+            43.741,
+            24.5,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 22,
+        "phaseIndex": 22,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 22 / 102",
+        "stage": 23
+      },
+      {
+        "token": "position",
+        "wordBbox": [
+          541.72498,
+          42.96461,
+          583.85089,
+          57.46802
+        ],
+        "highlightBbox": [
+          538.54999,
+          44.50299,
+          584.29999,
+          59.235
+        ],
+        "boxes": [
+          [
+            537.54999,
+            43.741,
+            47.75,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 23,
+        "phaseIndex": 23,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 23 / 102",
+        "stage": 24
+      },
+      {
+        "token": "of",
+        "wordBbox": [
+          589.47498,
+          42.96461,
+          599.81281,
+          57.46802
+        ],
+        "highlightBbox": [
+          586.29999,
+          44.50299,
+          599.92499,
+          59.235
+        ],
+        "boxes": [
+          [
+            585.29999,
+            43.741,
+            15.625,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 24,
+        "phaseIndex": 24,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 24 / 102",
+        "stage": 25
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          605.09998,
+          42.96461,
+          621.62268,
+          57.46802
+        ],
+        "highlightBbox": [
+          601.92499,
+          44.50299,
+          621.92499,
+          59.235
+        ],
+        "boxes": [
+          [
+            600.92499,
+            43.741,
+            22.0,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 25,
+        "phaseIndex": 25,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 25 / 102",
+        "stage": 26
+      },
+      {
+        "token": "highlighted",
+        "wordBbox": [
+          627.09998,
+          42.96461,
+          686.65027,
+          57.46802
+        ],
+        "highlightBbox": [
+          623.92499,
+          44.50299,
+          687.17499,
+          59.235
+        ],
+        "boxes": [
+          [
+            622.92499,
+            43.741,
+            65.25,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 26,
+        "phaseIndex": 26,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 26 / 102",
+        "stage": 27
+      },
+      {
+        "token": "area",
+        "wordBbox": [
+          692.34998,
+          42.96461,
+          714.35907,
+          57.46802
+        ],
+        "highlightBbox": [
+          689.17499,
+          44.50299,
+          714.67499,
+          59.235
+        ],
+        "boxes": [
+          [
+            688.17499,
+            43.741,
+            27.5,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 27,
+        "phaseIndex": 27,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 27 / 102",
+        "stage": 28
+      },
+      {
+        "token": "suggest",
+        "wordBbox": [
+          719.84998,
+          42.91774,
+          758.88977,
+          57.42114
+        ],
+        "highlightBbox": [
+          716.67499,
+          44.50299,
+          759.42499,
+          59.235
+        ],
+        "boxes": [
+          [
+            715.67499,
+            43.741,
+            44.75,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 28,
+        "phaseIndex": 28,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 28 / 102",
+        "stage": 29
+      },
+      {
+        "token": "it",
+        "wordBbox": [
+          764.59998,
+          42.96461,
+          772.05487,
+          57.46802
+        ],
+        "highlightBbox": [
+          761.42499,
+          44.50299,
+          772.29999,
+          59.235
+        ],
+        "boxes": [
+          [
+            760.42499,
+            43.741,
+            12.875,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 29,
+        "phaseIndex": 29,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 29 / 102",
+        "stage": 30
+      },
+      {
+        "token": "is",
+        "wordBbox": [
+          777.47498,
+          42.96461,
+          785.86969,
+          57.46802
+        ],
+        "highlightBbox": [
+          774.29999,
+          44.50299,
+          786.04999,
+          59.235
+        ],
+        "boxes": [
+          [
+            773.29999,
+            43.741,
+            13.75,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 30,
+        "phaseIndex": 30,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 30 / 102",
+        "stage": 31
+      },
+      {
+        "token": "one",
+        "wordBbox": [
+          791.22498,
+          42.96461,
+          810.1861,
+          57.46802
+        ],
+        "highlightBbox": [
+          788.04999,
+          44.50299,
+          810.42499,
+          59.235
+        ],
+        "boxes": [
+          [
+            787.04999,
+            43.741,
+            24.375,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 31,
+        "phaseIndex": 31,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 31 / 102",
+        "stage": 32
+      },
+      {
+        "token": "of",
+        "wordBbox": [
+          326.97498,
+          59.22063,
+          337.31281,
+          73.72403
+        ],
+        "highlightBbox": [
+          323.79999,
+          60.759,
+          337.42499,
+          75.491
+        ],
+        "boxes": [
+          [
+            322.79999,
+            59.997,
+            15.625,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 32,
+        "phaseIndex": 32,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 32 / 102",
+        "stage": 33
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          342.59998,
+          59.22063,
+          359.12271,
+          73.72403
+        ],
+        "highlightBbox": [
+          339.42499,
+          60.759,
+          359.42499,
+          75.491
+        ],
+        "boxes": [
+          [
+            338.42499,
+            59.997,
+            22.0,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 33,
+        "phaseIndex": 33,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 33 / 102",
+        "stage": 34
+      },
+      {
+        "token": "smaller",
+        "wordBbox": [
+          364.59998,
+          59.22063,
+          402.4968,
+          73.72403
+        ],
+        "highlightBbox": [
+          361.42499,
+          60.759,
+          403.04999,
+          75.491
+        ],
+        "boxes": [
+          [
+            360.42499,
+            59.997,
+            43.625,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 34,
+        "phaseIndex": 34,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 34 / 102",
+        "stage": 35
+      },
+      {
+        "token": "islands",
+        "wordBbox": [
+          408.22498,
+          59.22063,
+          444.039,
+          73.72403
+        ],
+        "highlightBbox": [
+          405.04999,
+          60.759,
+          444.42499,
+          75.491
+        ],
+        "boxes": [
+          [
+            404.04999,
+            59.997,
+            41.375,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 35,
+        "phaseIndex": 35,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 35 / 102",
+        "stage": 36
+      },
+      {
+        "token": "in",
+        "wordBbox": [
+          449.59998,
+          59.22063,
+          459.92508,
+          73.72403
+        ],
+        "highlightBbox": [
+          446.42499,
+          60.759,
+          460.17499,
+          75.491
+        ],
+        "boxes": [
+          [
+            445.42499,
+            59.997,
+            15.75,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 36,
+        "phaseIndex": 36,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 36 / 102",
+        "stage": 37
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          465.34998,
+          59.22063,
+          481.87271,
+          73.72403
+        ],
+        "highlightBbox": [
+          462.17499,
+          60.759,
+          482.17499,
+          75.491
+        ],
+        "boxes": [
+          [
+            461.17499,
+            59.997,
+            22.0,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 37,
+        "phaseIndex": 37,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 37 / 102",
+        "stage": 38
+      },
+      {
+        "token": "region",
+        "wordBbox": [
+          487.34998,
+          59.17375,
+          520.82721,
+          73.67715
+        ],
+        "highlightBbox": [
+          484.17499,
+          60.759,
+          521.17499,
+          75.491
+        ],
+        "boxes": [
+          [
+            483.17499,
+            59.997,
+            39.0,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 38,
+        "phaseIndex": 38,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 38 / 102",
+        "stage": 39
+      },
+      {
+        "token": ".",
+        "wordBbox": [
+          523.17499,
+          59.22063,
+          525.96899,
+          73.72403
+        ],
+        "highlightBbox": [
+          523.17499,
+          60.759,
+          526.04999,
+          75.491
+        ],
+        "boxes": [
+          [
+            522.17499,
+            59.997,
+            4.875,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 39,
+        "phaseIndex": 39,
+        "durationMs": 30.833333333333332,
+        "label": "Student reasoning \u00b7 39 / 102",
+        "stage": 40
+      },
+      {
+        "token": "Compar",
+        "wordBbox": [
+          531.22498,
+          59.22063,
+          572.9826,
+          73.72403
+        ],
+        "highlightBbox": [
+          528.04999,
+          60.759,
+          573.42499,
+          75.491
+        ],
+        "boxes": [
+          [
+            527.04999,
+            59.997,
+            47.375,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 40,
+        "phaseIndex": 40,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 40 / 102",
+        "stage": 41
+      },
+      {
+        "token": "ing",
+        "wordBbox": [
+          575.42499,
+          59.17375,
+          592.10004,
+          73.67715
+        ],
+        "highlightBbox": [
+          575.42499,
+          60.759,
+          592.29999,
+          75.491
+        ],
+        "boxes": [
+          [
+            574.42499,
+            59.997,
+            18.875,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 41,
+        "phaseIndex": 41,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 41 / 102",
+        "stage": 42
+      },
+      {
+        "token": "it",
+        "wordBbox": [
+          597.47498,
+          59.22063,
+          604.92987,
+          73.72403
+        ],
+        "highlightBbox": [
+          594.29999,
+          60.759,
+          605.17499,
+          75.491
+        ],
+        "boxes": [
+          [
+            593.29999,
+            59.997,
+            12.875,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 42,
+        "phaseIndex": 42,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 42 / 102",
+        "stage": 43
+      },
+      {
+        "token": "with",
+        "wordBbox": [
+          610.34998,
+          59.22063,
+          634.12439,
+          73.72403
+        ],
+        "highlightBbox": [
+          607.17499,
+          60.759,
+          634.42499,
+          75.491
+        ],
+        "boxes": [
+          [
+            606.17499,
+            59.997,
+            29.25,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 43,
+        "phaseIndex": 43,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 43 / 102",
+        "stage": 44
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          639.59998,
+          59.22063,
+          656.12268,
+          73.72403
+        ],
+        "highlightBbox": [
+          636.42499,
+          60.759,
+          656.42499,
+          75.491
+        ],
+        "boxes": [
+          [
+            635.42499,
+            59.997,
+            22.0,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 44,
+        "phaseIndex": 44,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 44 / 102",
+        "stage": 45
+      },
+      {
+        "token": "given",
+        "wordBbox": [
+          661.59998,
+          59.17375,
+          690.26392,
+          73.67715
+        ],
+        "highlightBbox": [
+          658.42499,
+          60.759,
+          690.67499,
+          75.491
+        ],
+        "boxes": [
+          [
+            657.42499,
+            59.997,
+            34.25,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 45,
+        "phaseIndex": 45,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 45 / 102",
+        "stage": 46
+      },
+      {
+        "token": "options",
+        "wordBbox": [
+          695.84998,
+          59.22063,
+          734.53418,
+          73.72403
+        ],
+        "highlightBbox": [
+          692.67499,
+          60.759,
+          734.92499,
+          75.491
+        ],
+        "boxes": [
+          [
+            691.67499,
+            59.997,
+            44.25,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 46,
+        "phaseIndex": 46,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 46 / 102",
+        "stage": 47
+      },
+      {
+        "token": ",",
+        "wordBbox": [
+          736.92499,
+          59.22063,
+          739.71899,
+          73.72403
+        ],
+        "highlightBbox": [
+          736.92499,
+          60.759,
+          739.67499,
+          75.491
+        ],
+        "boxes": [
+          [
+            735.92499,
+            59.997,
+            4.75,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 47,
+        "phaseIndex": 47,
+        "durationMs": 30.833333333333332,
+        "label": "Student reasoning \u00b7 47 / 102",
+        "stage": 48
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          744.84998,
+          59.22063,
+          761.37268,
+          73.72403
+        ],
+        "highlightBbox": [
+          741.67499,
+          60.759,
+          761.67499,
+          75.491
+        ],
+        "boxes": [
+          [
+            740.67499,
+            59.997,
+            22.0,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 48,
+        "phaseIndex": 48,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 48 / 102",
+        "stage": 49
+      },
+      {
+        "token": "highlighted",
+        "wordBbox": [
+          326.97498,
+          75.47662,
+          386.5253,
+          89.98003
+        ],
+        "highlightBbox": [
+          323.79999,
+          77.015,
+          387.04999,
+          91.74699
+        ],
+        "boxes": [
+          [
+            322.79999,
+            76.253,
+            65.25,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 49,
+        "phaseIndex": 49,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 49 / 102",
+        "stage": 50
+      },
+      {
+        "token": "country",
+        "wordBbox": [
+          392.22498,
+          75.47662,
+          432.96658,
+          89.98003
+        ],
+        "highlightBbox": [
+          389.04999,
+          77.015,
+          433.54999,
+          91.74699
+        ],
+        "boxes": [
+          [
+            388.04999,
+            76.253,
+            46.5,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 50,
+        "phaseIndex": 50,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 50 / 102",
+        "stage": 51
+      },
+      {
+        "token": "matches",
+        "wordBbox": [
+          438.72498,
+          75.47662,
+          481.47321,
+          89.98003
+        ],
+        "highlightBbox": [
+          435.54999,
+          77.015,
+          482.17499,
+          91.74699
+        ],
+        "boxes": [
+          [
+            434.54999,
+            76.253,
+            48.625,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 51,
+        "phaseIndex": 51,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 51 / 102",
+        "stage": 52
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          487.34998,
+          75.47662,
+          503.87271,
+          89.98003
+        ],
+        "highlightBbox": [
+          484.17499,
+          77.015,
+          504.17499,
+          91.74699
+        ],
+        "boxes": [
+          [
+            483.17499,
+            76.253,
+            22.0,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 52,
+        "phaseIndex": 52,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 52 / 102",
+        "stage": 53
+      },
+      {
+        "token": "geographical",
+        "wordBbox": [
+          509.34998,
+          75.47662,
+          576.11389,
+          89.98003
+        ],
+        "highlightBbox": [
+          506.17499,
+          77.015,
+          576.67499,
+          91.74699
+        ],
+        "boxes": [
+          [
+            505.17499,
+            76.253,
+            72.5,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 53,
+        "phaseIndex": 53,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 53 / 102",
+        "stage": 54
+      },
+      {
+        "token": "features",
+        "wordBbox": [
+          581.84998,
+          75.47662,
+          623.37897,
+          89.98003
+        ],
+        "highlightBbox": [
+          578.67499,
+          77.015,
+          624.04999,
+          91.74699
+        ],
+        "boxes": [
+          [
+            577.67499,
+            76.253,
+            47.375,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 54,
+        "phaseIndex": 54,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 54 / 102",
+        "stage": 55
+      },
+      {
+        "token": "of",
+        "wordBbox": [
+          629.22498,
+          75.47662,
+          639.56281,
+          89.98003
+        ],
+        "highlightBbox": [
+          626.04999,
+          77.015,
+          639.67499,
+          91.74699
+        ],
+        "boxes": [
+          [
+            625.04999,
+            76.253,
+            15.625,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 55,
+        "phaseIndex": 55,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 55 / 102",
+        "stage": 56
+      },
+      {
+        "token": "Saint",
+        "wordBbox": [
+          644.84998,
+          75.47662,
+          671.15167,
+          89.98003
+        ],
+        "highlightBbox": [
+          641.67499,
+          77.015,
+          671.54999,
+          91.74699
+        ],
+        "boxes": [
+          [
+            640.67499,
+            76.253,
+            31.875,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 56,
+        "phaseIndex": 56,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 56 / 102",
+        "stage": 57
+      },
+      {
+        "token": "Lucia",
+        "wordBbox": [
+          676.72498,
+          75.47662,
+          704.83008,
+          89.98003
+        ],
+        "highlightBbox": [
+          673.54999,
+          77.015,
+          705.29999,
+          91.74699
+        ],
+        "boxes": [
+          [
+            672.54999,
+            76.253,
+            33.75,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 57,
+        "phaseIndex": 57,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 57 / 102",
+        "stage": 58
+      },
+      {
+        "token": ".",
+        "wordBbox": [
+          707.29999,
+          75.47662,
+          710.09399,
+          89.98003
+        ],
+        "highlightBbox": [
+          707.29999,
+          77.015,
+          710.17499,
+          91.74699
+        ],
+        "boxes": [
+          [
+            706.29999,
+            76.253,
+            4.875,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 58,
+        "phaseIndex": 58,
+        "durationMs": 30.833333333333332,
+        "label": "Student reasoning \u00b7 58 / 102",
+        "stage": 59
+      },
+      {
+        "token": "Saint",
+        "wordBbox": [
+          715.34998,
+          75.47662,
+          741.65167,
+          89.98003
+        ],
+        "highlightBbox": [
+          712.17499,
+          77.015,
+          742.04999,
+          91.74699
+        ],
+        "boxes": [
+          [
+            711.17499,
+            76.253,
+            31.875,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 59,
+        "phaseIndex": 59,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 59 / 102",
+        "stage": 60
+      },
+      {
+        "token": "Lucia",
+        "wordBbox": [
+          747.22498,
+          75.47662,
+          775.33008,
+          89.98003
+        ],
+        "highlightBbox": [
+          744.04999,
+          77.015,
+          775.79999,
+          91.74699
+        ],
+        "boxes": [
+          [
+            743.04999,
+            76.253,
+            33.75,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 60,
+        "phaseIndex": 60,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 60 / 102",
+        "stage": 61
+      },
+      {
+        "token": "is",
+        "wordBbox": [
+          780.97498,
+          75.47662,
+          789.36969,
+          89.98003
+        ],
+        "highlightBbox": [
+          777.79999,
+          77.015,
+          789.54999,
+          91.74699
+        ],
+        "boxes": [
+          [
+            776.79999,
+            76.253,
+            13.75,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 61,
+        "phaseIndex": 61,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 61 / 102",
+        "stage": 62
+      },
+      {
+        "token": "known",
+        "wordBbox": [
+          326.97498,
+          91.73262,
+          363.13187,
+          106.23602
+        ],
+        "highlightBbox": [
+          323.79999,
+          93.271,
+          363.54999,
+          108.00299
+        ],
+        "boxes": [
+          [
+            322.79999,
+            92.509,
+            41.75,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 62,
+        "phaseIndex": 62,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 62 / 102",
+        "stage": 63
+      },
+      {
+        "token": "for",
+        "wordBbox": [
+          368.72498,
+          91.73262,
+          383.78717,
+          106.23602
+        ],
+        "highlightBbox": [
+          365.54999,
+          93.271,
+          383.92499,
+          108.00299
+        ],
+        "boxes": [
+          [
+            364.54999,
+            92.509,
+            20.375,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 63,
+        "phaseIndex": 63,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 63 / 102",
+        "stage": 64
+      },
+      {
+        "token": "its",
+        "wordBbox": [
+          389.09998,
+          91.73262,
+          401.5079,
+          106.23602
+        ],
+        "highlightBbox": [
+          385.92499,
+          93.271,
+          401.79999,
+          108.00299
+        ],
+        "boxes": [
+          [
+            384.92499,
+            92.509,
+            17.875,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 64,
+        "phaseIndex": 64,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 64 / 102",
+        "stage": 65
+      },
+      {
+        "token": "distinctive",
+        "wordBbox": [
+          406.97498,
+          91.73262,
+          461.01349,
+          106.23602
+        ],
+        "highlightBbox": [
+          403.79999,
+          93.271,
+          461.79999,
+          108.00299
+        ],
+        "boxes": [
+          [
+            402.79999,
+            92.509,
+            60.0,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 65,
+        "phaseIndex": 65,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 65 / 102",
+        "stage": 66
+      },
+      {
+        "token": "shape",
+        "wordBbox": [
+          466.97498,
+          91.73262,
+          496.8327,
+          106.23602
+        ],
+        "highlightBbox": [
+          463.79999,
+          93.271,
+          497.17499,
+          108.00299
+        ],
+        "boxes": [
+          [
+            462.79999,
+            92.509,
+            35.375,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 66,
+        "phaseIndex": 66,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 66 / 102",
+        "stage": 67
+      },
+      {
+        "token": "and",
+        "wordBbox": [
+          502.34998,
+          91.73262,
+          521.4635,
+          106.23602
+        ],
+        "highlightBbox": [
+          499.17499,
+          93.271,
+          521.67499,
+          108.00299
+        ],
+        "boxes": [
+          [
+            498.17499,
+            92.509,
+            24.5,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 67,
+        "phaseIndex": 67,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 67 / 102",
+        "stage": 68
+      },
+      {
+        "token": "location",
+        "wordBbox": [
+          526.84998,
+          91.73262,
+          568.58221,
+          106.23602
+        ],
+        "highlightBbox": [
+          523.67499,
+          93.271,
+          569.04999,
+          108.00299
+        ],
+        "boxes": [
+          [
+            522.67499,
+            92.509,
+            47.375,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 68,
+        "phaseIndex": 68,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 68 / 102",
+        "stage": 69
+      },
+      {
+        "token": "in",
+        "wordBbox": [
+          574.22498,
+          91.73262,
+          584.55011,
+          106.23602
+        ],
+        "highlightBbox": [
+          571.04999,
+          93.271,
+          584.79999,
+          108.00299
+        ],
+        "boxes": [
+          [
+            570.04999,
+            92.509,
+            15.75,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 69,
+        "phaseIndex": 69,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 69 / 102",
+        "stage": 70
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          589.97498,
+          91.73262,
+          606.49768,
+          106.23602
+        ],
+        "highlightBbox": [
+          586.79999,
+          93.271,
+          606.79999,
+          108.00299
+        ],
+        "boxes": [
+          [
+            585.79999,
+            92.509,
+            22.0,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 70,
+        "phaseIndex": 70,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 70 / 102",
+        "stage": 71
+      },
+      {
+        "token": "eastern",
+        "wordBbox": [
+          611.97498,
+          91.73262,
+          649.70673,
+          106.23602
+        ],
+        "highlightBbox": [
+          608.79999,
+          93.271,
+          650.29999,
+          108.00299
+        ],
+        "boxes": [
+          [
+            607.79999,
+            92.509,
+            43.5,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 71,
+        "phaseIndex": 71,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 71 / 102",
+        "stage": 72
+      },
+      {
+        "token": "Caribbean",
+        "wordBbox": [
+          655.47498,
+          91.73262,
+          708.53558,
+          106.23602
+        ],
+        "highlightBbox": [
+          652.29999,
+          93.271,
+          709.29999,
+          108.00299
+        ],
+        "boxes": [
+          [
+            651.29999,
+            92.509,
+            59.0,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 72,
+        "phaseIndex": 72,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 72 / 102",
+        "stage": 73
+      },
+      {
+        "token": ",",
+        "wordBbox": [
+          711.29999,
+          91.73262,
+          714.09399,
+          106.23602
+        ],
+        "highlightBbox": [
+          711.29999,
+          93.271,
+          714.04999,
+          108.00299
+        ],
+        "boxes": [
+          [
+            710.29999,
+            92.509,
+            4.75,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 73,
+        "phaseIndex": 73,
+        "durationMs": 30.833333333333332,
+        "label": "Student reasoning \u00b7 73 / 102",
+        "stage": 74
+      },
+      {
+        "token": "which",
+        "wordBbox": [
+          719.22498,
+          91.73262,
+          751.25439,
+          106.23602
+        ],
+        "highlightBbox": [
+          716.04999,
+          93.271,
+          751.54999,
+          108.00299
+        ],
+        "boxes": [
+          [
+            715.04999,
+            92.509,
+            37.5,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 74,
+        "phaseIndex": 74,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 74 / 102",
+        "stage": 75
+      },
+      {
+        "token": "align",
+        "wordBbox": [
+          756.72498,
+          91.73262,
+          782.55682,
+          106.23602
+        ],
+        "highlightBbox": [
+          753.54999,
+          93.271,
+          782.92499,
+          108.00299
+        ],
+        "boxes": [
+          [
+            752.54999,
+            92.509,
+            31.375,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 75,
+        "phaseIndex": 75,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 75 / 102",
+        "stage": 76
+      },
+      {
+        "token": "s",
+        "wordBbox": [
+          784.92499,
+          91.73262,
+          789.87799,
+          106.23602
+        ],
+        "highlightBbox": [
+          784.92499,
+          93.271,
+          789.92499,
+          108.00299
+        ],
+        "boxes": [
+          [
+            783.92499,
+            92.509,
+            7.0,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 76,
+        "phaseIndex": 76,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 76 / 102",
+        "stage": 77
+      },
+      {
+        "token": "with",
+        "wordBbox": [
+          795.09998,
+          91.73262,
+          818.87439,
+          106.23602
+        ],
+        "highlightBbox": [
+          791.92499,
+          93.271,
+          819.17499,
+          108.00299
+        ],
+        "boxes": [
+          [
+            790.92499,
+            92.509,
+            29.25,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 77,
+        "phaseIndex": 77,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 77 / 102",
+        "stage": 78
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          326.97498,
+          107.98862,
+          343.49771,
+          122.49203
+        ],
+        "highlightBbox": [
+          323.79999,
+          109.52699,
+          343.79999,
+          124.259
+        ],
+        "boxes": [
+          [
+            322.79999,
+            108.765,
+            22.0,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 78,
+        "phaseIndex": 78,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 78 / 102",
+        "stage": 79
+      },
+      {
+        "token": "highlighted",
+        "wordBbox": [
+          348.97498,
+          107.98862,
+          408.5253,
+          122.49203
+        ],
+        "highlightBbox": [
+          345.79999,
+          109.52699,
+          409.04999,
+          124.259
+        ],
+        "boxes": [
+          [
+            344.79999,
+            108.765,
+            65.25,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 79,
+        "phaseIndex": 79,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 79 / 102",
+        "stage": 80
+      },
+      {
+        "token": "area",
+        "wordBbox": [
+          414.22498,
+          107.98862,
+          436.23407,
+          122.49203
+        ],
+        "highlightBbox": [
+          411.04999,
+          109.52699,
+          436.54999,
+          124.259
+        ],
+        "boxes": [
+          [
+            410.04999,
+            108.765,
+            27.5,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 80,
+        "phaseIndex": 80,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 80 / 102",
+        "stage": 81
+      },
+      {
+        "token": "in",
+        "wordBbox": [
+          441.72498,
+          107.98862,
+          452.05008,
+          122.49203
+        ],
+        "highlightBbox": [
+          438.54999,
+          109.52699,
+          452.29999,
+          124.259
+        ],
+        "boxes": [
+          [
+            437.54999,
+            108.765,
+            15.75,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 81,
+        "phaseIndex": 81,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 81 / 102",
+        "stage": 82
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          457.47498,
+          107.98862,
+          473.99771,
+          122.49203
+        ],
+        "highlightBbox": [
+          454.29999,
+          109.52699,
+          474.29999,
+          124.259
+        ],
+        "boxes": [
+          [
+            453.29999,
+            108.765,
+            22.0,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 82,
+        "phaseIndex": 82,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 82 / 102",
+        "stage": 83
+      },
+      {
+        "token": "image",
+        "wordBbox": [
+          479.47498,
+          107.94175,
+          510.78049,
+          122.44515
+        ],
+        "highlightBbox": [
+          476.29999,
+          109.52699,
+          511.29999,
+          124.259
+        ],
+        "boxes": [
+          [
+            475.29999,
+            108.765,
+            37.0,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 83,
+        "phaseIndex": 83,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 83 / 102",
+        "stage": 84
+      },
+      {
+        "token": ".",
+        "wordBbox": [
+          513.29999,
+          107.98862,
+          516.09399,
+          122.49203
+        ],
+        "highlightBbox": [
+          513.29999,
+          109.52699,
+          516.17499,
+          124.259
+        ],
+        "boxes": [
+          [
+            512.29999,
+            108.765,
+            4.875,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 84,
+        "phaseIndex": 84,
+        "durationMs": 30.833333333333332,
+        "label": "Student reasoning \u00b7 84 / 102",
+        "stage": 85
+      },
+      {
+        "token": "The",
+        "wordBbox": [
+          521.34998,
+          107.98862,
+          541.44135,
+          122.49203
+        ],
+        "highlightBbox": [
+          518.17499,
+          109.52699,
+          541.67499,
+          124.259
+        ],
+        "boxes": [
+          [
+            517.17499,
+            108.765,
+            25.5,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 85,
+        "phaseIndex": 85,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 85 / 102",
+        "stage": 86
+      },
+      {
+        "token": "cropped",
+        "wordBbox": [
+          546.84998,
+          107.98862,
+          588.69647,
+          122.49203
+        ],
+        "highlightBbox": [
+          543.67499,
+          109.52699,
+          588.92499,
+          124.259
+        ],
+        "boxes": [
+          [
+            542.67499,
+            108.765,
+            47.25,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 86,
+        "phaseIndex": 86,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 86 / 102",
+        "stage": 87
+      },
+      {
+        "token": "image",
+        "wordBbox": [
+          594.09998,
+          107.94175,
+          625.40546,
+          122.44515
+        ],
+        "highlightBbox": [
+          590.92499,
+          109.52699,
+          625.92499,
+          124.259
+        ],
+        "boxes": [
+          [
+            589.92499,
+            108.765,
+            37.0,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 87,
+        "phaseIndex": 87,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 87 / 102",
+        "stage": 88
+      },
+      {
+        "token": "provides",
+        "wordBbox": [
+          631.09998,
+          107.98862,
+          675.62622,
+          122.49203
+        ],
+        "highlightBbox": [
+          627.92499,
+          109.52699,
+          675.92499,
+          124.259
+        ],
+        "boxes": [
+          [
+            626.92499,
+            108.765,
+            50.0,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 88,
+        "phaseIndex": 88,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 88 / 102",
+        "stage": 89
+      },
+      {
+        "token": "a",
+        "wordBbox": [
+          681.09998,
+          107.98862,
+          686.90387,
+          122.49203
+        ],
+        "highlightBbox": [
+          677.92499,
+          109.52699,
+          687.04999,
+          124.259
+        ],
+        "boxes": [
+          [
+            676.92499,
+            108.765,
+            11.125,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 89,
+        "phaseIndex": 89,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 89 / 102",
+        "stage": 90
+      },
+      {
+        "token": "clearer",
+        "wordBbox": [
+          692.22498,
+          107.98862,
+          727.61993,
+          122.49203
+        ],
+        "highlightBbox": [
+          689.04999,
+          109.52699,
+          728.04999,
+          124.259
+        ],
+        "boxes": [
+          [
+            688.04999,
+            108.765,
+            41.0,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 90,
+        "phaseIndex": 90,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 90 / 102",
+        "stage": 91
+      },
+      {
+        "token": "view",
+        "wordBbox": [
+          733.22498,
+          107.98862,
+          758.1424,
+          122.49203
+        ],
+        "highlightBbox": [
+          730.04999,
+          109.52699,
+          758.42499,
+          124.259
+        ],
+        "boxes": [
+          [
+            729.04999,
+            108.765,
+            30.375,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 91,
+        "phaseIndex": 91,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 91 / 102",
+        "stage": 92
+      },
+      {
+        "token": ",",
+        "wordBbox": [
+          760.42499,
+          107.98862,
+          763.21899,
+          122.49203
+        ],
+        "highlightBbox": [
+          760.42499,
+          109.52699,
+          763.17499,
+          124.259
+        ],
+        "boxes": [
+          [
+            759.42499,
+            108.765,
+            4.75,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 92,
+        "phaseIndex": 92,
+        "durationMs": 30.833333333333332,
+        "label": "Student reasoning \u00b7 92 / 102",
+        "stage": 93
+      },
+      {
+        "token": "confirming",
+        "wordBbox": [
+          326.97498,
+          124.24461,
+          384.50601,
+          138.74802
+        ],
+        "highlightBbox": [
+          323.79999,
+          125.783,
+          385.29999,
+          140.515
+        ],
+        "boxes": [
+          [
+            322.79999,
+            125.021,
+            63.5,
+            17.479
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 7,
+        "tokenIndex": 93,
+        "phaseIndex": 93,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 93 / 102",
+        "stage": 94
+      },
+      {
+        "token": "that",
+        "wordBbox": [
+          390.47498,
+          124.24461,
+          411.13791,
+          138.74802
+        ],
+        "highlightBbox": [
+          387.29999,
+          125.783,
+          411.54999,
+          140.515
+        ],
+        "boxes": [
+          [
+            386.29999,
+            125.021,
+            26.25,
+            17.479
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 7,
+        "tokenIndex": 94,
+        "phaseIndex": 94,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 94 / 102",
+        "stage": 95
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          416.72498,
+          124.24461,
+          433.24771,
+          138.74802
+        ],
+        "highlightBbox": [
+          413.54999,
+          125.783,
+          433.54999,
+          140.515
+        ],
+        "boxes": [
+          [
+            412.54999,
+            125.021,
+            22.0,
+            17.479
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 7,
+        "tokenIndex": 95,
+        "phaseIndex": 95,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 95 / 102",
+        "stage": 96
+      },
+      {
+        "token": "highlighted",
+        "wordBbox": [
+          438.72498,
+          124.24461,
+          498.2753,
+          138.74802
+        ],
+        "highlightBbox": [
+          435.54999,
+          125.783,
+          498.79999,
+          140.515
+        ],
+        "boxes": [
+          [
+            434.54999,
+            125.021,
+            65.25,
+            17.479
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 7,
+        "tokenIndex": 96,
+        "phaseIndex": 96,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 96 / 102",
+        "stage": 97
+      },
+      {
+        "token": "country",
+        "wordBbox": [
+          503.97498,
+          124.24461,
+          544.71661,
+          138.74802
+        ],
+        "highlightBbox": [
+          500.79999,
+          125.783,
+          545.29999,
+          140.515
+        ],
+        "boxes": [
+          [
+            499.79999,
+            125.021,
+            46.5,
+            17.479
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 7,
+        "tokenIndex": 97,
+        "phaseIndex": 97,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 97 / 102",
+        "stage": 98
+      },
+      {
+        "token": "is",
+        "wordBbox": [
+          550.47498,
+          124.24461,
+          558.86969,
+          138.74802
+        ],
+        "highlightBbox": [
+          547.29999,
+          125.783,
+          559.04999,
+          140.515
+        ],
+        "boxes": [
+          [
+            546.29999,
+            125.021,
+            13.75,
+            17.479
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 7,
+        "tokenIndex": 98,
+        "phaseIndex": 98,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 98 / 102",
+        "stage": 99
+      },
+      {
+        "token": "indeed",
+        "wordBbox": [
+          564.22498,
+          124.24461,
+          598.75629,
+          138.74802
+        ],
+        "highlightBbox": [
+          561.04999,
+          125.783,
+          599.04999,
+          140.515
+        ],
+        "boxes": [
+          [
+            560.04999,
+            125.021,
+            40.0,
+            17.479
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 7,
+        "tokenIndex": 99,
+        "phaseIndex": 99,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 99 / 102",
+        "stage": 100
+      },
+      {
+        "token": "Saint",
+        "wordBbox": [
+          604.22498,
+          124.24461,
+          630.52667,
+          138.74802
+        ],
+        "highlightBbox": [
+          601.04999,
+          125.783,
+          630.92499,
+          140.515
+        ],
+        "boxes": [
+          [
+            600.04999,
+            125.021,
+            31.875,
+            17.479
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 7,
+        "tokenIndex": 100,
+        "phaseIndex": 100,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 100 / 102",
+        "stage": 101
+      },
+      {
+        "token": "Lucia",
+        "wordBbox": [
+          636.09998,
+          124.24461,
+          664.20508,
+          138.74802
+        ],
+        "highlightBbox": [
+          632.92499,
+          125.783,
+          664.67499,
+          140.515
+        ],
+        "boxes": [
+          [
+            631.92499,
+            125.021,
+            33.75,
+            17.479
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 7,
+        "tokenIndex": 101,
+        "phaseIndex": 101,
+        "durationMs": 18.333333333333332,
+        "label": "Student reasoning \u00b7 101 / 102",
+        "stage": 102
+      },
+      {
+        "token": ".",
+        "wordBbox": [
+          666.67499,
+          124.24461,
+          669.46899,
+          138.74802
+        ],
+        "highlightBbox": [
+          666.67499,
+          125.783,
+          669.54999,
+          140.515
+        ],
+        "boxes": [
+          [
+            665.67499,
+            125.021,
+            4.875,
+            17.479
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 7,
+        "tokenIndex": 102,
+        "phaseIndex": 102,
+        "durationMs": 30.833333333333332,
+        "label": "Student reasoning \u00b7 102 / 102",
+        "stage": 103
+      },
+      {
+        "label": "Final answer",
+        "durationMs": 450,
+        "boxes": [
+          [
+            314,
+            142.5,
+            516.2,
+            16
+          ]
+        ],
+        "phase": "answer-header",
+        "stage": 104
+      },
+      {
+        "token": "The",
+        "wordBbox": [
+          326.97498,
+          158.97662,
+          347.06641,
+          173.48003
+        ],
+        "highlightBbox": [
+          323.79999,
+          160.515,
+          347.29999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            322.79999,
+            158.5,
+            25.5,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 103,
+        "phaseIndex": 1,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 1 / 30",
+        "stage": 105
+      },
+      {
+        "token": "country",
+        "wordBbox": [
+          352.47498,
+          158.97662,
+          393.21658,
+          173.48003
+        ],
+        "highlightBbox": [
+          349.29999,
+          160.515,
+          393.79999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            348.29999,
+            158.5,
+            46.5,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 104,
+        "phaseIndex": 2,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 2 / 30",
+        "stage": 106
+      },
+      {
+        "token": "highlighted",
+        "wordBbox": [
+          398.97498,
+          158.97662,
+          458.5253,
+          173.48003
+        ],
+        "highlightBbox": [
+          395.79999,
+          160.515,
+          459.04999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            394.79999,
+            158.5,
+            65.25,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 105,
+        "phaseIndex": 3,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 3 / 30",
+        "stage": 107
+      },
+      {
+        "token": "in",
+        "wordBbox": [
+          464.22498,
+          158.97662,
+          474.55008,
+          173.48003
+        ],
+        "highlightBbox": [
+          461.04999,
+          160.515,
+          474.79999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            460.04999,
+            158.5,
+            15.75,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 106,
+        "phaseIndex": 4,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 4 / 30",
+        "stage": 108
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          479.97498,
+          158.97662,
+          496.49771,
+          173.48003
+        ],
+        "highlightBbox": [
+          476.79999,
+          160.515,
+          496.79999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            475.79999,
+            158.5,
+            22.0,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 107,
+        "phaseIndex": 5,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 5 / 30",
+        "stage": 109
+      },
+      {
+        "token": "map",
+        "wordBbox": [
+          501.97498,
+          158.97662,
+          524.4032,
+          173.48003
+        ],
+        "highlightBbox": [
+          498.79999,
+          160.515,
+          524.79999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            497.79999,
+            158.5,
+            28.0,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 108,
+        "phaseIndex": 6,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 6 / 30",
+        "stage": 110
+      },
+      {
+        "token": "is",
+        "wordBbox": [
+          529.97498,
+          158.97662,
+          538.36969,
+          173.48003
+        ],
+        "highlightBbox": [
+          526.79999,
+          160.515,
+          538.54999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            525.79999,
+            158.5,
+            13.75,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 109,
+        "phaseIndex": 7,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 7 / 30",
+        "stage": 111
+      },
+      {
+        "token": "(",
+        "wordBbox": [
+          543.72498,
+          158.97662,
+          547.50958,
+          173.48003
+        ],
+        "highlightBbox": [
+          540.54999,
+          160.515,
+          547.67499,
+          175.24699
+        ],
+        "boxes": [
+          [
+            539.54999,
+            158.5,
+            9.125,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 110,
+        "phaseIndex": 8,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 8 / 30",
+        "stage": 112
+      },
+      {
+        "token": "D",
+        "wordBbox": [
+          549.67499,
+          158.97662,
+          558.5777,
+          173.48003
+        ],
+        "highlightBbox": [
+          549.67499,
+          160.515,
+          558.54999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            548.67499,
+            158.5,
+            10.875,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 111,
+        "phaseIndex": 9,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 9 / 30",
+        "stage": 113
+      },
+      {
+        "token": ")",
+        "wordBbox": [
+          560.54999,
+          158.97662,
+          564.33459,
+          173.48003
+        ],
+        "highlightBbox": [
+          560.54999,
+          160.515,
+          564.29999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            559.54999,
+            158.5,
+            5.75,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 112,
+        "phaseIndex": 10,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 10 / 30",
+        "stage": 114
+      },
+      {
+        "token": "Saint",
+        "wordBbox": [
+          569.47498,
+          158.97662,
+          595.77667,
+          173.48003
+        ],
+        "highlightBbox": [
+          566.29999,
+          160.515,
+          596.17499,
+          175.24699
+        ],
+        "boxes": [
+          [
+            565.29999,
+            158.5,
+            31.875,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 113,
+        "phaseIndex": 11,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 11 / 30",
+        "stage": 115
+      },
+      {
+        "token": "Lucia",
+        "wordBbox": [
+          601.34998,
+          158.97662,
+          629.45508,
+          173.48003
+        ],
+        "highlightBbox": [
+          598.17499,
+          160.515,
+          629.92499,
+          175.24699
+        ],
+        "boxes": [
+          [
+            597.17499,
+            158.5,
+            33.75,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 114,
+        "phaseIndex": 12,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 12 / 30",
+        "stage": 116
+      },
+      {
+        "token": ".",
+        "wordBbox": [
+          631.92499,
+          158.97662,
+          634.71899,
+          173.48003
+        ],
+        "highlightBbox": [
+          631.92499,
+          160.515,
+          634.79999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            630.92499,
+            158.5,
+            4.875,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 115,
+        "phaseIndex": 13,
+        "durationMs": 30.833333333333332,
+        "label": "Final answer \u00b7 13 / 30",
+        "stage": 117
+      },
+      {
+        "token": "The",
+        "wordBbox": [
+          639.97498,
+          158.97662,
+          660.06635,
+          173.48003
+        ],
+        "highlightBbox": [
+          636.79999,
+          160.515,
+          660.29999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            635.79999,
+            158.5,
+            25.5,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 116,
+        "phaseIndex": 14,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 14 / 30",
+        "stage": 118
+      },
+      {
+        "token": "green",
+        "wordBbox": [
+          665.47498,
+          158.92975,
+          694.78662,
+          173.43315
+        ],
+        "highlightBbox": [
+          662.29999,
+          160.515,
+          695.17499,
+          175.24699
+        ],
+        "boxes": [
+          [
+            661.29999,
+            158.5,
+            34.875,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 117,
+        "phaseIndex": 15,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 15 / 30",
+        "stage": 119
+      },
+      {
+        "token": "box",
+        "wordBbox": [
+          700.34998,
+          158.97662,
+          719.23492,
+          173.48003
+        ],
+        "highlightBbox": [
+          697.17499,
+          160.515,
+          719.42499,
+          175.24699
+        ],
+        "boxes": [
+          [
+            696.17499,
+            158.5,
+            24.25,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 118,
+        "phaseIndex": 16,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 16 / 30",
+        "stage": 120
+      },
+      {
+        "token": "is",
+        "wordBbox": [
+          724.59998,
+          158.97662,
+          732.99469,
+          173.48003
+        ],
+        "highlightBbox": [
+          721.42499,
+          160.515,
+          733.17499,
+          175.24699
+        ],
+        "boxes": [
+          [
+            720.42499,
+            158.5,
+            13.75,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 119,
+        "phaseIndex": 17,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 17 / 30",
+        "stage": 121
+      },
+      {
+        "token": "located",
+        "wordBbox": [
+          738.34998,
+          158.97662,
+          775.45941,
+          173.48003
+        ],
+        "highlightBbox": [
+          735.17499,
+          160.515,
+          775.79999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            734.17499,
+            158.5,
+            42.625,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 120,
+        "phaseIndex": 18,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 18 / 30",
+        "stage": 122
+      },
+      {
+        "token": "in",
+        "wordBbox": [
+          780.97498,
+          158.97662,
+          791.30011,
+          173.48003
+        ],
+        "highlightBbox": [
+          777.79999,
+          160.515,
+          791.54999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            776.79999,
+            158.5,
+            15.75,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 121,
+        "phaseIndex": 19,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 19 / 30",
+        "stage": 123
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          796.72498,
+          158.97662,
+          813.24768,
+          173.48003
+        ],
+        "highlightBbox": [
+          793.54999,
+          160.515,
+          813.54999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            792.54999,
+            158.5,
+            22.0,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 122,
+        "phaseIndex": 20,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 20 / 30",
+        "stage": 124
+      },
+      {
+        "token": "eastern",
+        "wordBbox": [
+          326.97498,
+          175.23262,
+          364.7067,
+          189.73602
+        ],
+        "highlightBbox": [
+          323.79999,
+          176.771,
+          365.29999,
+          191.50299
+        ],
+        "boxes": [
+          [
+            322.79999,
+            176.009,
+            43.5,
+            17.891
+          ]
+        ],
+        "phase": "answer",
+        "row": 9,
+        "tokenIndex": 123,
+        "phaseIndex": 21,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 21 / 30",
+        "stage": 125
+      },
+      {
+        "token": "Caribbean",
+        "wordBbox": [
+          370.47498,
+          175.23262,
+          423.53558,
+          189.73602
+        ],
+        "highlightBbox": [
+          367.29999,
+          176.771,
+          424.29999,
+          191.50299
+        ],
+        "boxes": [
+          [
+            366.29999,
+            176.009,
+            59.0,
+            17.891
+          ]
+        ],
+        "phase": "answer",
+        "row": 9,
+        "tokenIndex": 124,
+        "phaseIndex": 22,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 22 / 30",
+        "stage": 126
+      },
+      {
+        "token": ",",
+        "wordBbox": [
+          426.29999,
+          175.23262,
+          429.09399,
+          189.73602
+        ],
+        "highlightBbox": [
+          426.29999,
+          176.771,
+          429.04999,
+          191.50299
+        ],
+        "boxes": [
+          [
+            425.29999,
+            176.009,
+            4.75,
+            17.891
+          ]
+        ],
+        "phase": "answer",
+        "row": 9,
+        "tokenIndex": 125,
+        "phaseIndex": 23,
+        "durationMs": 30.833333333333332,
+        "label": "Final answer \u00b7 23 / 30",
+        "stage": 127
+      },
+      {
+        "token": "and",
+        "wordBbox": [
+          434.22498,
+          175.23262,
+          453.3385,
+          189.73602
+        ],
+        "highlightBbox": [
+          431.04999,
+          176.771,
+          453.54999,
+          191.50299
+        ],
+        "boxes": [
+          [
+            430.04999,
+            176.009,
+            24.5,
+            17.891
+          ]
+        ],
+        "phase": "answer",
+        "row": 9,
+        "tokenIndex": 126,
+        "phaseIndex": 24,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 24 / 30",
+        "stage": 128
+      },
+      {
+        "token": "Saint",
+        "wordBbox": [
+          458.72498,
+          175.23262,
+          485.0267,
+          189.73602
+        ],
+        "highlightBbox": [
+          455.54999,
+          176.771,
+          485.42499,
+          191.50299
+        ],
+        "boxes": [
+          [
+            454.54999,
+            176.009,
+            31.875,
+            17.891
+          ]
+        ],
+        "phase": "answer",
+        "row": 9,
+        "tokenIndex": 127,
+        "phaseIndex": 25,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 25 / 30",
+        "stage": 129
+      },
+      {
+        "token": "Lucia",
+        "wordBbox": [
+          490.59998,
+          175.23262,
+          518.70508,
+          189.73602
+        ],
+        "highlightBbox": [
+          487.42499,
+          176.771,
+          519.17499,
+          191.50299
+        ],
+        "boxes": [
+          [
+            486.42499,
+            176.009,
+            33.75,
+            17.891
+          ]
+        ],
+        "phase": "answer",
+        "row": 9,
+        "tokenIndex": 128,
+        "phaseIndex": 26,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 26 / 30",
+        "stage": 130
+      },
+      {
+        "token": "fits",
+        "wordBbox": [
+          524.34998,
+          175.23262,
+          540.69489,
+          189.73602
+        ],
+        "highlightBbox": [
+          521.17499,
+          176.771,
+          541.04999,
+          191.50299
+        ],
+        "boxes": [
+          [
+            520.17499,
+            176.009,
+            21.875,
+            17.891
+          ]
+        ],
+        "phase": "answer",
+        "row": 9,
+        "tokenIndex": 129,
+        "phaseIndex": 27,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 27 / 30",
+        "stage": 131
+      },
+      {
+        "token": "this",
+        "wordBbox": [
+          546.22498,
+          175.23262,
+          565.46552,
+          189.73602
+        ],
+        "highlightBbox": [
+          543.04999,
+          176.771,
+          565.79999,
+          191.50299
+        ],
+        "boxes": [
+          [
+            542.04999,
+            176.009,
+            24.75,
+            17.891
+          ]
+        ],
+        "phase": "answer",
+        "row": 9,
+        "tokenIndex": 130,
+        "phaseIndex": 28,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 28 / 30",
+        "stage": 132
+      },
+      {
+        "token": "description",
+        "wordBbox": [
+          570.97498,
+          175.23262,
+          628.9632,
+          189.73602
+        ],
+        "highlightBbox": [
+          567.79999,
+          176.771,
+          629.54999,
+          191.50299
+        ],
+        "boxes": [
+          [
+            566.79999,
+            176.009,
+            63.75,
+            17.891
+          ]
+        ],
+        "phase": "answer",
+        "row": 9,
+        "tokenIndex": 131,
+        "phaseIndex": 29,
+        "durationMs": 18.333333333333332,
+        "label": "Final answer \u00b7 29 / 30",
+        "stage": 133
+      },
+      {
+        "token": ".",
+        "wordBbox": [
+          631.54999,
+          175.23262,
+          634.34399,
+          189.73602
+        ],
+        "highlightBbox": [
+          631.54999,
+          176.771,
+          634.42499,
+          191.50299
+        ],
+        "boxes": [
+          [
+            630.54999,
+            176.009,
+            4.875,
+            17.891
+          ]
+        ],
+        "phase": "answer",
+        "row": 9,
+        "tokenIndex": 132,
+        "phaseIndex": 30,
+        "durationMs": 30.833333333333332,
+        "label": "Final answer \u00b7 30 / 30",
+        "stage": 134
+      },
+      {
+        "label": "Complete trajectory and token-impact legend",
+        "durationMs": 3600,
+        "boxes": [
+          [
+            0,
+            0,
+            830.2,
+            193.9
+          ]
+        ],
+        "originalFull": true,
+        "stage": 135
+      }
+    ],
+    "focusBoxes": [],
+    "originalTextNumbersPathsAndEvidencePreserved": true,
+    "idPrefix": "islands-",
+    "mode": "tokens",
+    "tokenStreaming": [
+      {
+        "token": "Upon",
+        "wordBbox": [
+          323.79999,
+          26.70862,
+          352.07019,
+          41.21202
+        ],
+        "highlightBbox": [
+          323.79999,
+          28.24699,
+          352.29999,
+          42.979
+        ],
+        "boxes": [
+          [
+            322.79999,
+            26.2,
+            30.5,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 1,
+        "phaseIndex": 1,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "analyzing",
+        "wordBbox": [
+          357.47498,
+          26.70862,
+          407.9194,
+          41.21202
+        ],
+        "highlightBbox": [
+          354.29999,
+          28.24699,
+          408.54999,
+          42.979
+        ],
+        "boxes": [
+          [
+            353.29999,
+            26.2,
+            56.25,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 2,
+        "phaseIndex": 2,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          413.72498,
+          26.70862,
+          430.24771,
+          41.21202
+        ],
+        "highlightBbox": [
+          410.54999,
+          28.24699,
+          430.54999,
+          42.979
+        ],
+        "boxes": [
+          [
+            409.54999,
+            26.2,
+            22.0,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 3,
+        "phaseIndex": 3,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "cropped",
+        "wordBbox": [
+          435.72498,
+          26.70862,
+          477.5715,
+          41.21202
+        ],
+        "highlightBbox": [
+          432.54999,
+          28.24699,
+          477.79999,
+          42.979
+        ],
+        "boxes": [
+          [
+            431.54999,
+            26.2,
+            47.25,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 4,
+        "phaseIndex": 4,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "image",
+        "wordBbox": [
+          482.97498,
+          26.66174,
+          514.28046,
+          41.16515
+        ],
+        "highlightBbox": [
+          479.79999,
+          28.24699,
+          514.79999,
+          42.979
+        ],
+        "boxes": [
+          [
+            478.79999,
+            26.2,
+            37.0,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 5,
+        "phaseIndex": 5,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": ",",
+        "wordBbox": [
+          516.79999,
+          26.70862,
+          519.59399,
+          41.21202
+        ],
+        "highlightBbox": [
+          516.79999,
+          28.24699,
+          519.54999,
+          42.979
+        ],
+        "boxes": [
+          [
+            515.79999,
+            26.2,
+            4.75,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 6,
+        "phaseIndex": 6,
+        "durationMs": 30.833333333333332
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          524.72498,
+          26.70862,
+          541.24768,
+          41.21202
+        ],
+        "highlightBbox": [
+          521.54999,
+          28.24699,
+          541.54999,
+          42.979
+        ],
+        "boxes": [
+          [
+            520.54999,
+            26.2,
+            22.0,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 7,
+        "phaseIndex": 7,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "highlighted",
+        "wordBbox": [
+          546.72498,
+          26.70862,
+          606.27527,
+          41.21202
+        ],
+        "highlightBbox": [
+          543.54999,
+          28.24699,
+          606.79999,
+          42.979
+        ],
+        "boxes": [
+          [
+            542.54999,
+            26.2,
+            65.25,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 8,
+        "phaseIndex": 8,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "country",
+        "wordBbox": [
+          611.97498,
+          26.70862,
+          652.71661,
+          41.21202
+        ],
+        "highlightBbox": [
+          608.79999,
+          28.24699,
+          653.29999,
+          42.979
+        ],
+        "boxes": [
+          [
+            607.79999,
+            26.2,
+            46.5,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 9,
+        "phaseIndex": 9,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "is",
+        "wordBbox": [
+          658.47498,
+          26.70862,
+          666.86969,
+          41.21202
+        ],
+        "highlightBbox": [
+          655.29999,
+          28.24699,
+          667.04999,
+          42.979
+        ],
+        "boxes": [
+          [
+            654.29999,
+            26.2,
+            13.75,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 10,
+        "phaseIndex": 10,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "a",
+        "wordBbox": [
+          672.22498,
+          26.70862,
+          678.02887,
+          41.21202
+        ],
+        "highlightBbox": [
+          669.04999,
+          28.24699,
+          678.17499,
+          42.979
+        ],
+        "boxes": [
+          [
+            668.04999,
+            26.2,
+            11.125,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 11,
+        "phaseIndex": 11,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "small",
+        "wordBbox": [
+          683.34998,
+          26.70862,
+          710.84546,
+          41.21202
+        ],
+        "highlightBbox": [
+          680.17499,
+          28.24699,
+          711.29999,
+          42.979
+        ],
+        "boxes": [
+          [
+            679.17499,
+            26.2,
+            33.125,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 12,
+        "phaseIndex": 12,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "island",
+        "wordBbox": [
+          716.47498,
+          26.70862,
+          747.336,
+          41.21202
+        ],
+        "highlightBbox": [
+          713.29999,
+          28.24699,
+          747.67499,
+          42.979
+        ],
+        "boxes": [
+          [
+            712.29999,
+            26.2,
+            36.375,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 13,
+        "phaseIndex": 13,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "located",
+        "wordBbox": [
+          752.84998,
+          26.70862,
+          789.95941,
+          41.21202
+        ],
+        "highlightBbox": [
+          749.67499,
+          28.24699,
+          790.29999,
+          42.979
+        ],
+        "boxes": [
+          [
+            748.67499,
+            26.2,
+            42.625,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 14,
+        "phaseIndex": 14,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "in",
+        "wordBbox": [
+          795.47498,
+          26.70862,
+          805.80011,
+          41.21202
+        ],
+        "highlightBbox": [
+          792.29999,
+          28.24699,
+          806.04999,
+          42.979
+        ],
+        "boxes": [
+          [
+            791.29999,
+            26.2,
+            15.75,
+            17.541
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 1,
+        "tokenIndex": 15,
+        "phaseIndex": 15,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          326.97498,
+          42.96461,
+          343.49771,
+          57.46802
+        ],
+        "highlightBbox": [
+          323.79999,
+          44.50299,
+          343.79999,
+          59.235
+        ],
+        "boxes": [
+          [
+            322.79999,
+            43.741,
+            22.0,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 16,
+        "phaseIndex": 16,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "eastern",
+        "wordBbox": [
+          348.97498,
+          42.96461,
+          386.7067,
+          57.46802
+        ],
+        "highlightBbox": [
+          345.79999,
+          44.50299,
+          387.29999,
+          59.235
+        ],
+        "boxes": [
+          [
+            344.79999,
+            43.741,
+            43.5,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 17,
+        "phaseIndex": 17,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "Caribbean",
+        "wordBbox": [
+          392.47498,
+          42.96461,
+          445.53558,
+          57.46802
+        ],
+        "highlightBbox": [
+          389.29999,
+          44.50299,
+          446.29999,
+          59.235
+        ],
+        "boxes": [
+          [
+            388.29999,
+            43.741,
+            59.0,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 18,
+        "phaseIndex": 18,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": ".",
+        "wordBbox": [
+          448.29999,
+          42.96461,
+          451.09399,
+          57.46802
+        ],
+        "highlightBbox": [
+          448.29999,
+          44.50299,
+          451.17499,
+          59.235
+        ],
+        "boxes": [
+          [
+            447.29999,
+            43.741,
+            4.875,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 19,
+        "phaseIndex": 19,
+        "durationMs": 30.833333333333332
+      },
+      {
+        "token": "The",
+        "wordBbox": [
+          456.34998,
+          42.96461,
+          476.44141,
+          57.46802
+        ],
+        "highlightBbox": [
+          453.17499,
+          44.50299,
+          476.67499,
+          59.235
+        ],
+        "boxes": [
+          [
+            452.17499,
+            43.741,
+            25.5,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 20,
+        "phaseIndex": 20,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "shape",
+        "wordBbox": [
+          481.84998,
+          42.96461,
+          511.7077,
+          57.46802
+        ],
+        "highlightBbox": [
+          478.67499,
+          44.50299,
+          512.04999,
+          59.235
+        ],
+        "boxes": [
+          [
+            477.67499,
+            43.741,
+            35.375,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 21,
+        "phaseIndex": 21,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "and",
+        "wordBbox": [
+          517.22498,
+          42.96461,
+          536.3385,
+          57.46802
+        ],
+        "highlightBbox": [
+          514.04999,
+          44.50299,
+          536.54999,
+          59.235
+        ],
+        "boxes": [
+          [
+            513.04999,
+            43.741,
+            24.5,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 22,
+        "phaseIndex": 22,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "position",
+        "wordBbox": [
+          541.72498,
+          42.96461,
+          583.85089,
+          57.46802
+        ],
+        "highlightBbox": [
+          538.54999,
+          44.50299,
+          584.29999,
+          59.235
+        ],
+        "boxes": [
+          [
+            537.54999,
+            43.741,
+            47.75,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 23,
+        "phaseIndex": 23,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "of",
+        "wordBbox": [
+          589.47498,
+          42.96461,
+          599.81281,
+          57.46802
+        ],
+        "highlightBbox": [
+          586.29999,
+          44.50299,
+          599.92499,
+          59.235
+        ],
+        "boxes": [
+          [
+            585.29999,
+            43.741,
+            15.625,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 24,
+        "phaseIndex": 24,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          605.09998,
+          42.96461,
+          621.62268,
+          57.46802
+        ],
+        "highlightBbox": [
+          601.92499,
+          44.50299,
+          621.92499,
+          59.235
+        ],
+        "boxes": [
+          [
+            600.92499,
+            43.741,
+            22.0,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 25,
+        "phaseIndex": 25,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "highlighted",
+        "wordBbox": [
+          627.09998,
+          42.96461,
+          686.65027,
+          57.46802
+        ],
+        "highlightBbox": [
+          623.92499,
+          44.50299,
+          687.17499,
+          59.235
+        ],
+        "boxes": [
+          [
+            622.92499,
+            43.741,
+            65.25,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 26,
+        "phaseIndex": 26,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "area",
+        "wordBbox": [
+          692.34998,
+          42.96461,
+          714.35907,
+          57.46802
+        ],
+        "highlightBbox": [
+          689.17499,
+          44.50299,
+          714.67499,
+          59.235
+        ],
+        "boxes": [
+          [
+            688.17499,
+            43.741,
+            27.5,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 27,
+        "phaseIndex": 27,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "suggest",
+        "wordBbox": [
+          719.84998,
+          42.91774,
+          758.88977,
+          57.42114
+        ],
+        "highlightBbox": [
+          716.67499,
+          44.50299,
+          759.42499,
+          59.235
+        ],
+        "boxes": [
+          [
+            715.67499,
+            43.741,
+            44.75,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 28,
+        "phaseIndex": 28,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "it",
+        "wordBbox": [
+          764.59998,
+          42.96461,
+          772.05487,
+          57.46802
+        ],
+        "highlightBbox": [
+          761.42499,
+          44.50299,
+          772.29999,
+          59.235
+        ],
+        "boxes": [
+          [
+            760.42499,
+            43.741,
+            12.875,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 29,
+        "phaseIndex": 29,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "is",
+        "wordBbox": [
+          777.47498,
+          42.96461,
+          785.86969,
+          57.46802
+        ],
+        "highlightBbox": [
+          774.29999,
+          44.50299,
+          786.04999,
+          59.235
+        ],
+        "boxes": [
+          [
+            773.29999,
+            43.741,
+            13.75,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 30,
+        "phaseIndex": 30,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "one",
+        "wordBbox": [
+          791.22498,
+          42.96461,
+          810.1861,
+          57.46802
+        ],
+        "highlightBbox": [
+          788.04999,
+          44.50299,
+          810.42499,
+          59.235
+        ],
+        "boxes": [
+          [
+            787.04999,
+            43.741,
+            24.375,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 2,
+        "tokenIndex": 31,
+        "phaseIndex": 31,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "of",
+        "wordBbox": [
+          326.97498,
+          59.22063,
+          337.31281,
+          73.72403
+        ],
+        "highlightBbox": [
+          323.79999,
+          60.759,
+          337.42499,
+          75.491
+        ],
+        "boxes": [
+          [
+            322.79999,
+            59.997,
+            15.625,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 32,
+        "phaseIndex": 32,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          342.59998,
+          59.22063,
+          359.12271,
+          73.72403
+        ],
+        "highlightBbox": [
+          339.42499,
+          60.759,
+          359.42499,
+          75.491
+        ],
+        "boxes": [
+          [
+            338.42499,
+            59.997,
+            22.0,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 33,
+        "phaseIndex": 33,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "smaller",
+        "wordBbox": [
+          364.59998,
+          59.22063,
+          402.4968,
+          73.72403
+        ],
+        "highlightBbox": [
+          361.42499,
+          60.759,
+          403.04999,
+          75.491
+        ],
+        "boxes": [
+          [
+            360.42499,
+            59.997,
+            43.625,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 34,
+        "phaseIndex": 34,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "islands",
+        "wordBbox": [
+          408.22498,
+          59.22063,
+          444.039,
+          73.72403
+        ],
+        "highlightBbox": [
+          405.04999,
+          60.759,
+          444.42499,
+          75.491
+        ],
+        "boxes": [
+          [
+            404.04999,
+            59.997,
+            41.375,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 35,
+        "phaseIndex": 35,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "in",
+        "wordBbox": [
+          449.59998,
+          59.22063,
+          459.92508,
+          73.72403
+        ],
+        "highlightBbox": [
+          446.42499,
+          60.759,
+          460.17499,
+          75.491
+        ],
+        "boxes": [
+          [
+            445.42499,
+            59.997,
+            15.75,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 36,
+        "phaseIndex": 36,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          465.34998,
+          59.22063,
+          481.87271,
+          73.72403
+        ],
+        "highlightBbox": [
+          462.17499,
+          60.759,
+          482.17499,
+          75.491
+        ],
+        "boxes": [
+          [
+            461.17499,
+            59.997,
+            22.0,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 37,
+        "phaseIndex": 37,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "region",
+        "wordBbox": [
+          487.34998,
+          59.17375,
+          520.82721,
+          73.67715
+        ],
+        "highlightBbox": [
+          484.17499,
+          60.759,
+          521.17499,
+          75.491
+        ],
+        "boxes": [
+          [
+            483.17499,
+            59.997,
+            39.0,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 38,
+        "phaseIndex": 38,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": ".",
+        "wordBbox": [
+          523.17499,
+          59.22063,
+          525.96899,
+          73.72403
+        ],
+        "highlightBbox": [
+          523.17499,
+          60.759,
+          526.04999,
+          75.491
+        ],
+        "boxes": [
+          [
+            522.17499,
+            59.997,
+            4.875,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 39,
+        "phaseIndex": 39,
+        "durationMs": 30.833333333333332
+      },
+      {
+        "token": "Compar",
+        "wordBbox": [
+          531.22498,
+          59.22063,
+          572.9826,
+          73.72403
+        ],
+        "highlightBbox": [
+          528.04999,
+          60.759,
+          573.42499,
+          75.491
+        ],
+        "boxes": [
+          [
+            527.04999,
+            59.997,
+            47.375,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 40,
+        "phaseIndex": 40,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "ing",
+        "wordBbox": [
+          575.42499,
+          59.17375,
+          592.10004,
+          73.67715
+        ],
+        "highlightBbox": [
+          575.42499,
+          60.759,
+          592.29999,
+          75.491
+        ],
+        "boxes": [
+          [
+            574.42499,
+            59.997,
+            18.875,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 41,
+        "phaseIndex": 41,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "it",
+        "wordBbox": [
+          597.47498,
+          59.22063,
+          604.92987,
+          73.72403
+        ],
+        "highlightBbox": [
+          594.29999,
+          60.759,
+          605.17499,
+          75.491
+        ],
+        "boxes": [
+          [
+            593.29999,
+            59.997,
+            12.875,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 42,
+        "phaseIndex": 42,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "with",
+        "wordBbox": [
+          610.34998,
+          59.22063,
+          634.12439,
+          73.72403
+        ],
+        "highlightBbox": [
+          607.17499,
+          60.759,
+          634.42499,
+          75.491
+        ],
+        "boxes": [
+          [
+            606.17499,
+            59.997,
+            29.25,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 43,
+        "phaseIndex": 43,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          639.59998,
+          59.22063,
+          656.12268,
+          73.72403
+        ],
+        "highlightBbox": [
+          636.42499,
+          60.759,
+          656.42499,
+          75.491
+        ],
+        "boxes": [
+          [
+            635.42499,
+            59.997,
+            22.0,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 44,
+        "phaseIndex": 44,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "given",
+        "wordBbox": [
+          661.59998,
+          59.17375,
+          690.26392,
+          73.67715
+        ],
+        "highlightBbox": [
+          658.42499,
+          60.759,
+          690.67499,
+          75.491
+        ],
+        "boxes": [
+          [
+            657.42499,
+            59.997,
+            34.25,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 45,
+        "phaseIndex": 45,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "options",
+        "wordBbox": [
+          695.84998,
+          59.22063,
+          734.53418,
+          73.72403
+        ],
+        "highlightBbox": [
+          692.67499,
+          60.759,
+          734.92499,
+          75.491
+        ],
+        "boxes": [
+          [
+            691.67499,
+            59.997,
+            44.25,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 46,
+        "phaseIndex": 46,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": ",",
+        "wordBbox": [
+          736.92499,
+          59.22063,
+          739.71899,
+          73.72403
+        ],
+        "highlightBbox": [
+          736.92499,
+          60.759,
+          739.67499,
+          75.491
+        ],
+        "boxes": [
+          [
+            735.92499,
+            59.997,
+            4.75,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 47,
+        "phaseIndex": 47,
+        "durationMs": 30.833333333333332
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          744.84998,
+          59.22063,
+          761.37268,
+          73.72403
+        ],
+        "highlightBbox": [
+          741.67499,
+          60.759,
+          761.67499,
+          75.491
+        ],
+        "boxes": [
+          [
+            740.67499,
+            59.997,
+            22.0,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 3,
+        "tokenIndex": 48,
+        "phaseIndex": 48,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "highlighted",
+        "wordBbox": [
+          326.97498,
+          75.47662,
+          386.5253,
+          89.98003
+        ],
+        "highlightBbox": [
+          323.79999,
+          77.015,
+          387.04999,
+          91.74699
+        ],
+        "boxes": [
+          [
+            322.79999,
+            76.253,
+            65.25,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 49,
+        "phaseIndex": 49,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "country",
+        "wordBbox": [
+          392.22498,
+          75.47662,
+          432.96658,
+          89.98003
+        ],
+        "highlightBbox": [
+          389.04999,
+          77.015,
+          433.54999,
+          91.74699
+        ],
+        "boxes": [
+          [
+            388.04999,
+            76.253,
+            46.5,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 50,
+        "phaseIndex": 50,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "matches",
+        "wordBbox": [
+          438.72498,
+          75.47662,
+          481.47321,
+          89.98003
+        ],
+        "highlightBbox": [
+          435.54999,
+          77.015,
+          482.17499,
+          91.74699
+        ],
+        "boxes": [
+          [
+            434.54999,
+            76.253,
+            48.625,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 51,
+        "phaseIndex": 51,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          487.34998,
+          75.47662,
+          503.87271,
+          89.98003
+        ],
+        "highlightBbox": [
+          484.17499,
+          77.015,
+          504.17499,
+          91.74699
+        ],
+        "boxes": [
+          [
+            483.17499,
+            76.253,
+            22.0,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 52,
+        "phaseIndex": 52,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "geographical",
+        "wordBbox": [
+          509.34998,
+          75.47662,
+          576.11389,
+          89.98003
+        ],
+        "highlightBbox": [
+          506.17499,
+          77.015,
+          576.67499,
+          91.74699
+        ],
+        "boxes": [
+          [
+            505.17499,
+            76.253,
+            72.5,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 53,
+        "phaseIndex": 53,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "features",
+        "wordBbox": [
+          581.84998,
+          75.47662,
+          623.37897,
+          89.98003
+        ],
+        "highlightBbox": [
+          578.67499,
+          77.015,
+          624.04999,
+          91.74699
+        ],
+        "boxes": [
+          [
+            577.67499,
+            76.253,
+            47.375,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 54,
+        "phaseIndex": 54,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "of",
+        "wordBbox": [
+          629.22498,
+          75.47662,
+          639.56281,
+          89.98003
+        ],
+        "highlightBbox": [
+          626.04999,
+          77.015,
+          639.67499,
+          91.74699
+        ],
+        "boxes": [
+          [
+            625.04999,
+            76.253,
+            15.625,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 55,
+        "phaseIndex": 55,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "Saint",
+        "wordBbox": [
+          644.84998,
+          75.47662,
+          671.15167,
+          89.98003
+        ],
+        "highlightBbox": [
+          641.67499,
+          77.015,
+          671.54999,
+          91.74699
+        ],
+        "boxes": [
+          [
+            640.67499,
+            76.253,
+            31.875,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 56,
+        "phaseIndex": 56,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "Lucia",
+        "wordBbox": [
+          676.72498,
+          75.47662,
+          704.83008,
+          89.98003
+        ],
+        "highlightBbox": [
+          673.54999,
+          77.015,
+          705.29999,
+          91.74699
+        ],
+        "boxes": [
+          [
+            672.54999,
+            76.253,
+            33.75,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 57,
+        "phaseIndex": 57,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": ".",
+        "wordBbox": [
+          707.29999,
+          75.47662,
+          710.09399,
+          89.98003
+        ],
+        "highlightBbox": [
+          707.29999,
+          77.015,
+          710.17499,
+          91.74699
+        ],
+        "boxes": [
+          [
+            706.29999,
+            76.253,
+            4.875,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 58,
+        "phaseIndex": 58,
+        "durationMs": 30.833333333333332
+      },
+      {
+        "token": "Saint",
+        "wordBbox": [
+          715.34998,
+          75.47662,
+          741.65167,
+          89.98003
+        ],
+        "highlightBbox": [
+          712.17499,
+          77.015,
+          742.04999,
+          91.74699
+        ],
+        "boxes": [
+          [
+            711.17499,
+            76.253,
+            31.875,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 59,
+        "phaseIndex": 59,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "Lucia",
+        "wordBbox": [
+          747.22498,
+          75.47662,
+          775.33008,
+          89.98003
+        ],
+        "highlightBbox": [
+          744.04999,
+          77.015,
+          775.79999,
+          91.74699
+        ],
+        "boxes": [
+          [
+            743.04999,
+            76.253,
+            33.75,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 60,
+        "phaseIndex": 60,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "is",
+        "wordBbox": [
+          780.97498,
+          75.47662,
+          789.36969,
+          89.98003
+        ],
+        "highlightBbox": [
+          777.79999,
+          77.015,
+          789.54999,
+          91.74699
+        ],
+        "boxes": [
+          [
+            776.79999,
+            76.253,
+            13.75,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 4,
+        "tokenIndex": 61,
+        "phaseIndex": 61,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "known",
+        "wordBbox": [
+          326.97498,
+          91.73262,
+          363.13187,
+          106.23602
+        ],
+        "highlightBbox": [
+          323.79999,
+          93.271,
+          363.54999,
+          108.00299
+        ],
+        "boxes": [
+          [
+            322.79999,
+            92.509,
+            41.75,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 62,
+        "phaseIndex": 62,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "for",
+        "wordBbox": [
+          368.72498,
+          91.73262,
+          383.78717,
+          106.23602
+        ],
+        "highlightBbox": [
+          365.54999,
+          93.271,
+          383.92499,
+          108.00299
+        ],
+        "boxes": [
+          [
+            364.54999,
+            92.509,
+            20.375,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 63,
+        "phaseIndex": 63,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "its",
+        "wordBbox": [
+          389.09998,
+          91.73262,
+          401.5079,
+          106.23602
+        ],
+        "highlightBbox": [
+          385.92499,
+          93.271,
+          401.79999,
+          108.00299
+        ],
+        "boxes": [
+          [
+            384.92499,
+            92.509,
+            17.875,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 64,
+        "phaseIndex": 64,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "distinctive",
+        "wordBbox": [
+          406.97498,
+          91.73262,
+          461.01349,
+          106.23602
+        ],
+        "highlightBbox": [
+          403.79999,
+          93.271,
+          461.79999,
+          108.00299
+        ],
+        "boxes": [
+          [
+            402.79999,
+            92.509,
+            60.0,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 65,
+        "phaseIndex": 65,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "shape",
+        "wordBbox": [
+          466.97498,
+          91.73262,
+          496.8327,
+          106.23602
+        ],
+        "highlightBbox": [
+          463.79999,
+          93.271,
+          497.17499,
+          108.00299
+        ],
+        "boxes": [
+          [
+            462.79999,
+            92.509,
+            35.375,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 66,
+        "phaseIndex": 66,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "and",
+        "wordBbox": [
+          502.34998,
+          91.73262,
+          521.4635,
+          106.23602
+        ],
+        "highlightBbox": [
+          499.17499,
+          93.271,
+          521.67499,
+          108.00299
+        ],
+        "boxes": [
+          [
+            498.17499,
+            92.509,
+            24.5,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 67,
+        "phaseIndex": 67,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "location",
+        "wordBbox": [
+          526.84998,
+          91.73262,
+          568.58221,
+          106.23602
+        ],
+        "highlightBbox": [
+          523.67499,
+          93.271,
+          569.04999,
+          108.00299
+        ],
+        "boxes": [
+          [
+            522.67499,
+            92.509,
+            47.375,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 68,
+        "phaseIndex": 68,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "in",
+        "wordBbox": [
+          574.22498,
+          91.73262,
+          584.55011,
+          106.23602
+        ],
+        "highlightBbox": [
+          571.04999,
+          93.271,
+          584.79999,
+          108.00299
+        ],
+        "boxes": [
+          [
+            570.04999,
+            92.509,
+            15.75,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 69,
+        "phaseIndex": 69,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          589.97498,
+          91.73262,
+          606.49768,
+          106.23602
+        ],
+        "highlightBbox": [
+          586.79999,
+          93.271,
+          606.79999,
+          108.00299
+        ],
+        "boxes": [
+          [
+            585.79999,
+            92.509,
+            22.0,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 70,
+        "phaseIndex": 70,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "eastern",
+        "wordBbox": [
+          611.97498,
+          91.73262,
+          649.70673,
+          106.23602
+        ],
+        "highlightBbox": [
+          608.79999,
+          93.271,
+          650.29999,
+          108.00299
+        ],
+        "boxes": [
+          [
+            607.79999,
+            92.509,
+            43.5,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 71,
+        "phaseIndex": 71,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "Caribbean",
+        "wordBbox": [
+          655.47498,
+          91.73262,
+          708.53558,
+          106.23602
+        ],
+        "highlightBbox": [
+          652.29999,
+          93.271,
+          709.29999,
+          108.00299
+        ],
+        "boxes": [
+          [
+            651.29999,
+            92.509,
+            59.0,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 72,
+        "phaseIndex": 72,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": ",",
+        "wordBbox": [
+          711.29999,
+          91.73262,
+          714.09399,
+          106.23602
+        ],
+        "highlightBbox": [
+          711.29999,
+          93.271,
+          714.04999,
+          108.00299
+        ],
+        "boxes": [
+          [
+            710.29999,
+            92.509,
+            4.75,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 73,
+        "phaseIndex": 73,
+        "durationMs": 30.833333333333332
+      },
+      {
+        "token": "which",
+        "wordBbox": [
+          719.22498,
+          91.73262,
+          751.25439,
+          106.23602
+        ],
+        "highlightBbox": [
+          716.04999,
+          93.271,
+          751.54999,
+          108.00299
+        ],
+        "boxes": [
+          [
+            715.04999,
+            92.509,
+            37.5,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 74,
+        "phaseIndex": 74,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "align",
+        "wordBbox": [
+          756.72498,
+          91.73262,
+          782.55682,
+          106.23602
+        ],
+        "highlightBbox": [
+          753.54999,
+          93.271,
+          782.92499,
+          108.00299
+        ],
+        "boxes": [
+          [
+            752.54999,
+            92.509,
+            31.375,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 75,
+        "phaseIndex": 75,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "s",
+        "wordBbox": [
+          784.92499,
+          91.73262,
+          789.87799,
+          106.23602
+        ],
+        "highlightBbox": [
+          784.92499,
+          93.271,
+          789.92499,
+          108.00299
+        ],
+        "boxes": [
+          [
+            783.92499,
+            92.509,
+            7.0,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 76,
+        "phaseIndex": 76,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "with",
+        "wordBbox": [
+          795.09998,
+          91.73262,
+          818.87439,
+          106.23602
+        ],
+        "highlightBbox": [
+          791.92499,
+          93.271,
+          819.17499,
+          108.00299
+        ],
+        "boxes": [
+          [
+            790.92499,
+            92.509,
+            29.25,
+            16.25599
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 5,
+        "tokenIndex": 77,
+        "phaseIndex": 77,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          326.97498,
+          107.98862,
+          343.49771,
+          122.49203
+        ],
+        "highlightBbox": [
+          323.79999,
+          109.52699,
+          343.79999,
+          124.259
+        ],
+        "boxes": [
+          [
+            322.79999,
+            108.765,
+            22.0,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 78,
+        "phaseIndex": 78,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "highlighted",
+        "wordBbox": [
+          348.97498,
+          107.98862,
+          408.5253,
+          122.49203
+        ],
+        "highlightBbox": [
+          345.79999,
+          109.52699,
+          409.04999,
+          124.259
+        ],
+        "boxes": [
+          [
+            344.79999,
+            108.765,
+            65.25,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 79,
+        "phaseIndex": 79,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "area",
+        "wordBbox": [
+          414.22498,
+          107.98862,
+          436.23407,
+          122.49203
+        ],
+        "highlightBbox": [
+          411.04999,
+          109.52699,
+          436.54999,
+          124.259
+        ],
+        "boxes": [
+          [
+            410.04999,
+            108.765,
+            27.5,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 80,
+        "phaseIndex": 80,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "in",
+        "wordBbox": [
+          441.72498,
+          107.98862,
+          452.05008,
+          122.49203
+        ],
+        "highlightBbox": [
+          438.54999,
+          109.52699,
+          452.29999,
+          124.259
+        ],
+        "boxes": [
+          [
+            437.54999,
+            108.765,
+            15.75,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 81,
+        "phaseIndex": 81,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          457.47498,
+          107.98862,
+          473.99771,
+          122.49203
+        ],
+        "highlightBbox": [
+          454.29999,
+          109.52699,
+          474.29999,
+          124.259
+        ],
+        "boxes": [
+          [
+            453.29999,
+            108.765,
+            22.0,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 82,
+        "phaseIndex": 82,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "image",
+        "wordBbox": [
+          479.47498,
+          107.94175,
+          510.78049,
+          122.44515
+        ],
+        "highlightBbox": [
+          476.29999,
+          109.52699,
+          511.29999,
+          124.259
+        ],
+        "boxes": [
+          [
+            475.29999,
+            108.765,
+            37.0,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 83,
+        "phaseIndex": 83,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": ".",
+        "wordBbox": [
+          513.29999,
+          107.98862,
+          516.09399,
+          122.49203
+        ],
+        "highlightBbox": [
+          513.29999,
+          109.52699,
+          516.17499,
+          124.259
+        ],
+        "boxes": [
+          [
+            512.29999,
+            108.765,
+            4.875,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 84,
+        "phaseIndex": 84,
+        "durationMs": 30.833333333333332
+      },
+      {
+        "token": "The",
+        "wordBbox": [
+          521.34998,
+          107.98862,
+          541.44135,
+          122.49203
+        ],
+        "highlightBbox": [
+          518.17499,
+          109.52699,
+          541.67499,
+          124.259
+        ],
+        "boxes": [
+          [
+            517.17499,
+            108.765,
+            25.5,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 85,
+        "phaseIndex": 85,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "cropped",
+        "wordBbox": [
+          546.84998,
+          107.98862,
+          588.69647,
+          122.49203
+        ],
+        "highlightBbox": [
+          543.67499,
+          109.52699,
+          588.92499,
+          124.259
+        ],
+        "boxes": [
+          [
+            542.67499,
+            108.765,
+            47.25,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 86,
+        "phaseIndex": 86,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "image",
+        "wordBbox": [
+          594.09998,
+          107.94175,
+          625.40546,
+          122.44515
+        ],
+        "highlightBbox": [
+          590.92499,
+          109.52699,
+          625.92499,
+          124.259
+        ],
+        "boxes": [
+          [
+            589.92499,
+            108.765,
+            37.0,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 87,
+        "phaseIndex": 87,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "provides",
+        "wordBbox": [
+          631.09998,
+          107.98862,
+          675.62622,
+          122.49203
+        ],
+        "highlightBbox": [
+          627.92499,
+          109.52699,
+          675.92499,
+          124.259
+        ],
+        "boxes": [
+          [
+            626.92499,
+            108.765,
+            50.0,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 88,
+        "phaseIndex": 88,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "a",
+        "wordBbox": [
+          681.09998,
+          107.98862,
+          686.90387,
+          122.49203
+        ],
+        "highlightBbox": [
+          677.92499,
+          109.52699,
+          687.04999,
+          124.259
+        ],
+        "boxes": [
+          [
+            676.92499,
+            108.765,
+            11.125,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 89,
+        "phaseIndex": 89,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "clearer",
+        "wordBbox": [
+          692.22498,
+          107.98862,
+          727.61993,
+          122.49203
+        ],
+        "highlightBbox": [
+          689.04999,
+          109.52699,
+          728.04999,
+          124.259
+        ],
+        "boxes": [
+          [
+            688.04999,
+            108.765,
+            41.0,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 90,
+        "phaseIndex": 90,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "view",
+        "wordBbox": [
+          733.22498,
+          107.98862,
+          758.1424,
+          122.49203
+        ],
+        "highlightBbox": [
+          730.04999,
+          109.52699,
+          758.42499,
+          124.259
+        ],
+        "boxes": [
+          [
+            729.04999,
+            108.765,
+            30.375,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 91,
+        "phaseIndex": 91,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": ",",
+        "wordBbox": [
+          760.42499,
+          107.98862,
+          763.21899,
+          122.49203
+        ],
+        "highlightBbox": [
+          760.42499,
+          109.52699,
+          763.17499,
+          124.259
+        ],
+        "boxes": [
+          [
+            759.42499,
+            108.765,
+            4.75,
+            16.256
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 6,
+        "tokenIndex": 92,
+        "phaseIndex": 92,
+        "durationMs": 30.833333333333332
+      },
+      {
+        "token": "confirming",
+        "wordBbox": [
+          326.97498,
+          124.24461,
+          384.50601,
+          138.74802
+        ],
+        "highlightBbox": [
+          323.79999,
+          125.783,
+          385.29999,
+          140.515
+        ],
+        "boxes": [
+          [
+            322.79999,
+            125.021,
+            63.5,
+            17.479
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 7,
+        "tokenIndex": 93,
+        "phaseIndex": 93,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "that",
+        "wordBbox": [
+          390.47498,
+          124.24461,
+          411.13791,
+          138.74802
+        ],
+        "highlightBbox": [
+          387.29999,
+          125.783,
+          411.54999,
+          140.515
+        ],
+        "boxes": [
+          [
+            386.29999,
+            125.021,
+            26.25,
+            17.479
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 7,
+        "tokenIndex": 94,
+        "phaseIndex": 94,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          416.72498,
+          124.24461,
+          433.24771,
+          138.74802
+        ],
+        "highlightBbox": [
+          413.54999,
+          125.783,
+          433.54999,
+          140.515
+        ],
+        "boxes": [
+          [
+            412.54999,
+            125.021,
+            22.0,
+            17.479
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 7,
+        "tokenIndex": 95,
+        "phaseIndex": 95,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "highlighted",
+        "wordBbox": [
+          438.72498,
+          124.24461,
+          498.2753,
+          138.74802
+        ],
+        "highlightBbox": [
+          435.54999,
+          125.783,
+          498.79999,
+          140.515
+        ],
+        "boxes": [
+          [
+            434.54999,
+            125.021,
+            65.25,
+            17.479
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 7,
+        "tokenIndex": 96,
+        "phaseIndex": 96,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "country",
+        "wordBbox": [
+          503.97498,
+          124.24461,
+          544.71661,
+          138.74802
+        ],
+        "highlightBbox": [
+          500.79999,
+          125.783,
+          545.29999,
+          140.515
+        ],
+        "boxes": [
+          [
+            499.79999,
+            125.021,
+            46.5,
+            17.479
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 7,
+        "tokenIndex": 97,
+        "phaseIndex": 97,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "is",
+        "wordBbox": [
+          550.47498,
+          124.24461,
+          558.86969,
+          138.74802
+        ],
+        "highlightBbox": [
+          547.29999,
+          125.783,
+          559.04999,
+          140.515
+        ],
+        "boxes": [
+          [
+            546.29999,
+            125.021,
+            13.75,
+            17.479
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 7,
+        "tokenIndex": 98,
+        "phaseIndex": 98,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "indeed",
+        "wordBbox": [
+          564.22498,
+          124.24461,
+          598.75629,
+          138.74802
+        ],
+        "highlightBbox": [
+          561.04999,
+          125.783,
+          599.04999,
+          140.515
+        ],
+        "boxes": [
+          [
+            560.04999,
+            125.021,
+            40.0,
+            17.479
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 7,
+        "tokenIndex": 99,
+        "phaseIndex": 99,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "Saint",
+        "wordBbox": [
+          604.22498,
+          124.24461,
+          630.52667,
+          138.74802
+        ],
+        "highlightBbox": [
+          601.04999,
+          125.783,
+          630.92499,
+          140.515
+        ],
+        "boxes": [
+          [
+            600.04999,
+            125.021,
+            31.875,
+            17.479
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 7,
+        "tokenIndex": 100,
+        "phaseIndex": 100,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "Lucia",
+        "wordBbox": [
+          636.09998,
+          124.24461,
+          664.20508,
+          138.74802
+        ],
+        "highlightBbox": [
+          632.92499,
+          125.783,
+          664.67499,
+          140.515
+        ],
+        "boxes": [
+          [
+            631.92499,
+            125.021,
+            33.75,
+            17.479
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 7,
+        "tokenIndex": 101,
+        "phaseIndex": 101,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": ".",
+        "wordBbox": [
+          666.67499,
+          124.24461,
+          669.46899,
+          138.74802
+        ],
+        "highlightBbox": [
+          666.67499,
+          125.783,
+          669.54999,
+          140.515
+        ],
+        "boxes": [
+          [
+            665.67499,
+            125.021,
+            4.875,
+            17.479
+          ]
+        ],
+        "phase": "reasoning",
+        "row": 7,
+        "tokenIndex": 102,
+        "phaseIndex": 102,
+        "durationMs": 30.833333333333332
+      },
+      {
+        "token": "The",
+        "wordBbox": [
+          326.97498,
+          158.97662,
+          347.06641,
+          173.48003
+        ],
+        "highlightBbox": [
+          323.79999,
+          160.515,
+          347.29999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            322.79999,
+            158.5,
+            25.5,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 103,
+        "phaseIndex": 1,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "country",
+        "wordBbox": [
+          352.47498,
+          158.97662,
+          393.21658,
+          173.48003
+        ],
+        "highlightBbox": [
+          349.29999,
+          160.515,
+          393.79999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            348.29999,
+            158.5,
+            46.5,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 104,
+        "phaseIndex": 2,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "highlighted",
+        "wordBbox": [
+          398.97498,
+          158.97662,
+          458.5253,
+          173.48003
+        ],
+        "highlightBbox": [
+          395.79999,
+          160.515,
+          459.04999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            394.79999,
+            158.5,
+            65.25,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 105,
+        "phaseIndex": 3,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "in",
+        "wordBbox": [
+          464.22498,
+          158.97662,
+          474.55008,
+          173.48003
+        ],
+        "highlightBbox": [
+          461.04999,
+          160.515,
+          474.79999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            460.04999,
+            158.5,
+            15.75,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 106,
+        "phaseIndex": 4,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          479.97498,
+          158.97662,
+          496.49771,
+          173.48003
+        ],
+        "highlightBbox": [
+          476.79999,
+          160.515,
+          496.79999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            475.79999,
+            158.5,
+            22.0,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 107,
+        "phaseIndex": 5,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "map",
+        "wordBbox": [
+          501.97498,
+          158.97662,
+          524.4032,
+          173.48003
+        ],
+        "highlightBbox": [
+          498.79999,
+          160.515,
+          524.79999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            497.79999,
+            158.5,
+            28.0,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 108,
+        "phaseIndex": 6,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "is",
+        "wordBbox": [
+          529.97498,
+          158.97662,
+          538.36969,
+          173.48003
+        ],
+        "highlightBbox": [
+          526.79999,
+          160.515,
+          538.54999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            525.79999,
+            158.5,
+            13.75,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 109,
+        "phaseIndex": 7,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "(",
+        "wordBbox": [
+          543.72498,
+          158.97662,
+          547.50958,
+          173.48003
+        ],
+        "highlightBbox": [
+          540.54999,
+          160.515,
+          547.67499,
+          175.24699
+        ],
+        "boxes": [
+          [
+            539.54999,
+            158.5,
+            9.125,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 110,
+        "phaseIndex": 8,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "D",
+        "wordBbox": [
+          549.67499,
+          158.97662,
+          558.5777,
+          173.48003
+        ],
+        "highlightBbox": [
+          549.67499,
+          160.515,
+          558.54999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            548.67499,
+            158.5,
+            10.875,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 111,
+        "phaseIndex": 9,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": ")",
+        "wordBbox": [
+          560.54999,
+          158.97662,
+          564.33459,
+          173.48003
+        ],
+        "highlightBbox": [
+          560.54999,
+          160.515,
+          564.29999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            559.54999,
+            158.5,
+            5.75,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 112,
+        "phaseIndex": 10,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "Saint",
+        "wordBbox": [
+          569.47498,
+          158.97662,
+          595.77667,
+          173.48003
+        ],
+        "highlightBbox": [
+          566.29999,
+          160.515,
+          596.17499,
+          175.24699
+        ],
+        "boxes": [
+          [
+            565.29999,
+            158.5,
+            31.875,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 113,
+        "phaseIndex": 11,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "Lucia",
+        "wordBbox": [
+          601.34998,
+          158.97662,
+          629.45508,
+          173.48003
+        ],
+        "highlightBbox": [
+          598.17499,
+          160.515,
+          629.92499,
+          175.24699
+        ],
+        "boxes": [
+          [
+            597.17499,
+            158.5,
+            33.75,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 114,
+        "phaseIndex": 12,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": ".",
+        "wordBbox": [
+          631.92499,
+          158.97662,
+          634.71899,
+          173.48003
+        ],
+        "highlightBbox": [
+          631.92499,
+          160.515,
+          634.79999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            630.92499,
+            158.5,
+            4.875,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 115,
+        "phaseIndex": 13,
+        "durationMs": 30.833333333333332
+      },
+      {
+        "token": "The",
+        "wordBbox": [
+          639.97498,
+          158.97662,
+          660.06635,
+          173.48003
+        ],
+        "highlightBbox": [
+          636.79999,
+          160.515,
+          660.29999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            635.79999,
+            158.5,
+            25.5,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 116,
+        "phaseIndex": 14,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "green",
+        "wordBbox": [
+          665.47498,
+          158.92975,
+          694.78662,
+          173.43315
+        ],
+        "highlightBbox": [
+          662.29999,
+          160.515,
+          695.17499,
+          175.24699
+        ],
+        "boxes": [
+          [
+            661.29999,
+            158.5,
+            34.875,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 117,
+        "phaseIndex": 15,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "box",
+        "wordBbox": [
+          700.34998,
+          158.97662,
+          719.23492,
+          173.48003
+        ],
+        "highlightBbox": [
+          697.17499,
+          160.515,
+          719.42499,
+          175.24699
+        ],
+        "boxes": [
+          [
+            696.17499,
+            158.5,
+            24.25,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 118,
+        "phaseIndex": 16,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "is",
+        "wordBbox": [
+          724.59998,
+          158.97662,
+          732.99469,
+          173.48003
+        ],
+        "highlightBbox": [
+          721.42499,
+          160.515,
+          733.17499,
+          175.24699
+        ],
+        "boxes": [
+          [
+            720.42499,
+            158.5,
+            13.75,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 119,
+        "phaseIndex": 17,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "located",
+        "wordBbox": [
+          738.34998,
+          158.97662,
+          775.45941,
+          173.48003
+        ],
+        "highlightBbox": [
+          735.17499,
+          160.515,
+          775.79999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            734.17499,
+            158.5,
+            42.625,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 120,
+        "phaseIndex": 18,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "in",
+        "wordBbox": [
+          780.97498,
+          158.97662,
+          791.30011,
+          173.48003
+        ],
+        "highlightBbox": [
+          777.79999,
+          160.515,
+          791.54999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            776.79999,
+            158.5,
+            15.75,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 121,
+        "phaseIndex": 19,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "the",
+        "wordBbox": [
+          796.72498,
+          158.97662,
+          813.24768,
+          173.48003
+        ],
+        "highlightBbox": [
+          793.54999,
+          160.515,
+          813.54999,
+          175.24699
+        ],
+        "boxes": [
+          [
+            792.54999,
+            158.5,
+            22.0,
+            17.509
+          ]
+        ],
+        "phase": "answer",
+        "row": 8,
+        "tokenIndex": 122,
+        "phaseIndex": 20,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "eastern",
+        "wordBbox": [
+          326.97498,
+          175.23262,
+          364.7067,
+          189.73602
+        ],
+        "highlightBbox": [
+          323.79999,
+          176.771,
+          365.29999,
+          191.50299
+        ],
+        "boxes": [
+          [
+            322.79999,
+            176.009,
+            43.5,
+            17.891
+          ]
+        ],
+        "phase": "answer",
+        "row": 9,
+        "tokenIndex": 123,
+        "phaseIndex": 21,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "Caribbean",
+        "wordBbox": [
+          370.47498,
+          175.23262,
+          423.53558,
+          189.73602
+        ],
+        "highlightBbox": [
+          367.29999,
+          176.771,
+          424.29999,
+          191.50299
+        ],
+        "boxes": [
+          [
+            366.29999,
+            176.009,
+            59.0,
+            17.891
+          ]
+        ],
+        "phase": "answer",
+        "row": 9,
+        "tokenIndex": 124,
+        "phaseIndex": 22,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": ",",
+        "wordBbox": [
+          426.29999,
+          175.23262,
+          429.09399,
+          189.73602
+        ],
+        "highlightBbox": [
+          426.29999,
+          176.771,
+          429.04999,
+          191.50299
+        ],
+        "boxes": [
+          [
+            425.29999,
+            176.009,
+            4.75,
+            17.891
+          ]
+        ],
+        "phase": "answer",
+        "row": 9,
+        "tokenIndex": 125,
+        "phaseIndex": 23,
+        "durationMs": 30.833333333333332
+      },
+      {
+        "token": "and",
+        "wordBbox": [
+          434.22498,
+          175.23262,
+          453.3385,
+          189.73602
+        ],
+        "highlightBbox": [
+          431.04999,
+          176.771,
+          453.54999,
+          191.50299
+        ],
+        "boxes": [
+          [
+            430.04999,
+            176.009,
+            24.5,
+            17.891
+          ]
+        ],
+        "phase": "answer",
+        "row": 9,
+        "tokenIndex": 126,
+        "phaseIndex": 24,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "Saint",
+        "wordBbox": [
+          458.72498,
+          175.23262,
+          485.0267,
+          189.73602
+        ],
+        "highlightBbox": [
+          455.54999,
+          176.771,
+          485.42499,
+          191.50299
+        ],
+        "boxes": [
+          [
+            454.54999,
+            176.009,
+            31.875,
+            17.891
+          ]
+        ],
+        "phase": "answer",
+        "row": 9,
+        "tokenIndex": 127,
+        "phaseIndex": 25,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "Lucia",
+        "wordBbox": [
+          490.59998,
+          175.23262,
+          518.70508,
+          189.73602
+        ],
+        "highlightBbox": [
+          487.42499,
+          176.771,
+          519.17499,
+          191.50299
+        ],
+        "boxes": [
+          [
+            486.42499,
+            176.009,
+            33.75,
+            17.891
+          ]
+        ],
+        "phase": "answer",
+        "row": 9,
+        "tokenIndex": 128,
+        "phaseIndex": 26,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "fits",
+        "wordBbox": [
+          524.34998,
+          175.23262,
+          540.69489,
+          189.73602
+        ],
+        "highlightBbox": [
+          521.17499,
+          176.771,
+          541.04999,
+          191.50299
+        ],
+        "boxes": [
+          [
+            520.17499,
+            176.009,
+            21.875,
+            17.891
+          ]
+        ],
+        "phase": "answer",
+        "row": 9,
+        "tokenIndex": 129,
+        "phaseIndex": 27,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "this",
+        "wordBbox": [
+          546.22498,
+          175.23262,
+          565.46552,
+          189.73602
+        ],
+        "highlightBbox": [
+          543.04999,
+          176.771,
+          565.79999,
+          191.50299
+        ],
+        "boxes": [
+          [
+            542.04999,
+            176.009,
+            24.75,
+            17.891
+          ]
+        ],
+        "phase": "answer",
+        "row": 9,
+        "tokenIndex": 130,
+        "phaseIndex": 28,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": "description",
+        "wordBbox": [
+          570.97498,
+          175.23262,
+          628.9632,
+          189.73602
+        ],
+        "highlightBbox": [
+          567.79999,
+          176.771,
+          629.54999,
+          191.50299
+        ],
+        "boxes": [
+          [
+            566.79999,
+            176.009,
+            63.75,
+            17.891
+          ]
+        ],
+        "phase": "answer",
+        "row": 9,
+        "tokenIndex": 131,
+        "phaseIndex": 29,
+        "durationMs": 18.333333333333332
+      },
+      {
+        "token": ".",
+        "wordBbox": [
+          631.54999,
+          175.23262,
+          634.34399,
+          189.73602
+        ],
+        "highlightBbox": [
+          631.54999,
+          176.771,
+          634.42499,
+          191.50299
+        ],
+        "boxes": [
+          [
+            630.54999,
+            176.009,
+            4.875,
+            17.891
+          ]
+        ],
+        "phase": "answer",
+        "row": 9,
+        "tokenIndex": 132,
+        "phaseIndex": 30,
+        "durationMs": 30.833333333333332
+      }
+    ],
+    "tokenCount": 132,
+    "reasoningTokenCount": 102,
+    "answerTokenCount": 30,
+    "tokenSource": "Original PDF token-highlight cells and text words; punctuation and original subword fragments are kept in source order.",
+    "finalOriginalOverlay": false,
+    "finalFullMask": true,
+    "renderMode": "single-art-mask",
+    "fullArtRenderCount": 1
+  },
+  "integration": {
+    "mode": "Inline each staged.svg once; unique id prefixes prevent collisions. Staged SVG shows the original complete figure if scripts fail.",
+    "sequence": "Show all data-stage <= currentStage. Islands has 132 individual data-token-index steps in natural reading order; keep stage 1 visible throughout. Its source highlights appear with each token. There is no transient focus overlay.",
+    "accessibility": "Under reduced motion show all stages. Disable aria-live for per-token progress; keep Play/Pause and Replay controls available.",
+    "timing": "Use durationMs as step holds. Islands token reveal can be instant or a 10 ms opacity transition. Its final full mask reveals the unmodified original art and holds it for 3600 ms.",
+    "standalone": "The animated SVG variants contain scoped CSS loops and reduced-motion fallback, suitable for img embedding.",
+    "validation": "All original paths and embedded images remain unchanged. Token clip cells have non-overlapping interiors, include their full source highlight rectangles, and contain no neighboring token glyphs. The original art renders once beneath a shared alpha mask; every stage adds only white mask rectangles. The final full mask ensures a seamless completed figure."
+  }
+}

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ReVuE: On-Policy Visual Evidence Distillation. Reflection on how visual agents acquire, read, and ground visual evidence.">
+  <meta name="theme-color" content="#ffffff">
+  <title>ReVuE — On-Policy Visual Evidence Distillation</title>
+  <link rel="icon" type="image/svg+xml" href="assets/branding/avatar.svg?v=2">
+  <link rel="apple-touch-icon" href="assets/branding/avatar.png?v=2">
+  <link rel="preload" href="assets/fonts/space-grotesk.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#abstract">Skip to the abstract</a>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-paper" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9zM14 3v6h6M8 13h8M8 17h6"/></symbol>
+    <symbol id="icon-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></symbol>
+    <symbol id="icon-data" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+    <symbol id="icon-cube" viewBox="0 0 24 24"><path d="m12 2 9 5v10l-9 5-9-5V7zm0 10L3 7m9 5 9-5m-9 5v10M7.5 4.5l9 5"/></symbol>
+    <symbol id="icon-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="icon-expand" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6m0 6 7-7"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+  </svg>
+  <main>
+    <header class="hero container">
+      <img class="hero-logo" src="assets/branding/revue-logo.svg" alt="ReVuE" width="1518" height="378">
+      <h1>On-Policy Visual Evidence Distillation</h1>
+      <div class="author-block" id="authors" aria-label="Authors and affiliations">
+        <p class="author-list" id="author-list"><span class="author-name"><span>Shaohang Wei</span><sup>1,‡,*</sup></span><span class="author-name"><span>Feifan Song</span><sup>1</sup></span><span class="author-name"><span>Guangyue Peng</span><sup>1</sup></span><span class="author-name"><span>Wenhao Yu</span><sup>3</sup></span><span class="author-name"><span>Wei Li</span><sup>1</sup></span><span class="author-name"><span>Wen Luo</span><sup>1</sup></span><span class="author-name"><span>Yang Xu</span><sup>4</sup></span><span class="author-name"><span>Yufan Shen</span><sup>2</sup></span><span class="author-name"><span>Luke Mao</span><sup>2</sup></span><span class="author-name"><span>Yang Du</span><sup>2</sup></span><span class="author-name"><span>Asher Qin</span><sup>2</sup></span><span class="author-name"><span>Houfeng Wang</span><sup>1,†</sup></span></p>
+        <p class="affiliation-list" id="affiliation-list"><span><sup>1</sup>Peking University</span><span><sup>2</sup>Tencent</span><span><sup>3</sup>CUHK</span><span><sup>4</sup>Nanjing University</span></p>
+        <p class="author-notes" id="author-notes" hidden></p>
+      </div>
+      <nav class="resource-links" aria-label="Project resources">
+        <a class="resource-button" href="assets/documents/revue-paper.pdf" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-paper"/></svg><span>Paper</span></a>
+        <a class="resource-button" href="https://github.com/sylvain-wei/ReVuE"><svg class="icon"><use href="#icon-code"/></svg><span>Code</span></a>
+        <button class="resource-button" data-resource="data"><svg class="icon"><use href="#icon-data"/></svg><span>Data</span><span class="resource-state">TBA</span></button>
+        <button class="resource-button" data-resource="checkpoints"><svg class="icon"><use href="#icon-cube"/></svg><span>Checkpoints</span><span class="resource-state">TBA</span></button>
+      </nav>
+      <figure class="teaser animated-figure" id="overview-figure">
+        <div class="animation-canvas" id="overview-animation" data-animation="overview" aria-label="Animated ReVuE overview: top row, evidence stages, then error attribution"><img src="assets/figures/plate-evidence-chain.svg" alt="ReVuE overview" width="2400" height="1410"></div>
+        <div class="animation-controls" data-controls="overview"><button data-action="toggle" aria-label="Pause overview animation">Pause</button><button data-action="replay">Replay</button><button data-action="all">Show all</button><span class="animation-stage" role="status"></span><a href="assets/animations/overview-animated.svg" target="_blank" rel="noopener">Animated SVG</a><a href="assets/figures/plate-evidence-chain.pdf" target="_blank" rel="noopener">PDF</a></div>
+        <figcaption id="overview-caption"></figcaption>
+      </figure>
+    </header>
+
+    <section id="abstract" class="abstract-section container" aria-labelledby="abstract-title">
+      <div class="abstract-panel">
+        <h2 id="abstract-title">Abstract</h2>
+        <div id="abstract-copy" class="abstract-copy"></div>
+      </div>
+      <div class="tldr">
+        <h2>Too Long; Don’t Read</h2>
+        <ol id="tldr-list" class="tldr-list"></ol>
+      </div>
+    </section>
+
+    <section class="section container" id="approach" aria-labelledby="approach-title">
+      <h2 id="approach-title">From visual mistakes to better supervision</h2>
+      <p class="section-intro">Find the first failure. Give the teacher the missing context. Focus learning where that context matters.</p>
+      <div id="method-steps" class="method-steps"></div>
+      <div class="evidence-stages" aria-label="Three stages of visual evidence">
+        <div><span class="stage-name">Acquire</span><span>Look in the right place.</span></div>
+        <svg class="icon stage-arrow"><use href="#icon-arrow"/></svg>
+        <div><span class="stage-name">Read</span><span>Read what is actually there.</span></div>
+        <svg class="icon stage-arrow"><use href="#icon-arrow"/></svg>
+        <div><span class="stage-name">Ground</span><span>Use it to reach the answer.</span></div>
+      </div>
+      <p id="method-note" class="figure-note"></p>
+    </section>
+
+    <section class="section container case-flow animated-case" id="islands-case" aria-labelledby="islands-heading">
+      <div class="narrative-copy"><h2 id="islands-heading">Two islands, not one</h2><p id="islands-intro" class="case-lead"></p></div>
+      <figure class="animated-figure">
+        <div class="animation-canvas" id="islands-animation" data-animation="islands" aria-label="Token-by-token animation of the two-island student trajectory"><img src="assets/figures/two-islands.svg" alt="Two islands, not one: teacher token scores on the same student trajectory" width="2400" height="561" loading="lazy"></div>
+        <div class="animation-controls" data-controls="islands"><button data-action="toggle" aria-label="Pause two-islands animation">Pause</button><button data-action="replay">Replay</button><button data-action="all">Show all</button><span class="animation-stage" role="status"></span><a href="assets/animations/islands-animated.svg" target="_blank" rel="noopener">Animated SVG</a><a href="assets/figures/two-islands.pdf" target="_blank" rel="noopener">PDF</a></div>
+      </figure>
+      <div id="islands-explanation" class="narrative-copy"></div>
+    </section>
+
+    <section class="section results-section container" id="results" aria-labelledby="results-title">
+      <h2 id="results-title">Better results across two model families</h2>
+      <p class="section-intro" id="main-results-intro"></p>
+      <div class="table-controls">
+        <div class="tab-list family-tabs" role="tablist" aria-label="Model family">
+          <button id="family-qwen" role="tab" aria-selected="true" aria-controls="results-panel" data-family="Qwen2.5-VL-7B">Qwen2.5-VL-7B</button>
+          <button id="family-internvl" role="tab" aria-selected="false" aria-controls="results-panel" data-family="InternVL3.5-4B-Instruct" tabindex="-1">InternVL3.5-4B</button>
+        </div>
+        <div class="tab-list metric-tabs" role="group" aria-label="Benchmark group">
+          <button aria-pressed="true" data-metric="Overview">Overview</button>
+          <button aria-pressed="false" data-metric="Perception">Perception</button>
+          <button aria-pressed="false" data-metric="Math">Math</button>
+          <button aria-pressed="false" data-metric="General">General</button>
+        </div>
+      </div>
+      <div id="results-panel" role="tabpanel" aria-labelledby="family-qwen">
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Benchmark results, scroll horizontally when needed"><table id="results-table"></table></div>
+        <div class="table-foot"><p id="table-caption">Weighted-average accuracy (%). Higher is better.</p><p id="table-focus" aria-live="polite">Hover or focus a value to compare.</p></div>
+      </div>
+      <p class="figure-note">Bold values mark the best OPD result within each model family, including ties. Weighted averages account for benchmark sample counts.</p>
+      <details class="full-results"><summary>View the complete results table <svg class="icon"><use href="#icon-arrow"/></svg></summary><div class="table-scroll" tabindex="0" role="region" aria-label="Full benchmark results"><table id="full-results-table"></table></div></details>
+    </section>
+
+    <div id="findings-flow" class="container"></div>
+
+    <section class="section container" id="cases" aria-labelledby="cases-title">
+      <h2 id="cases-title">What the trajectories reveal</h2>
+      <p class="section-intro">The aggregate results raise a practical question: what does a useful reflection actually correct? These cases follow the evidence from the first observation to the final answer.</p>
+      <div id="case-gallery" class="case-flow"></div>
+    </section>
+
+    <section class="section citation-section container" id="citation" aria-labelledby="citation-title">
+      <div class="citation-heading"><h2 id="citation-title">Citation <span>(BibTeX)</span></h2><button id="copy-citation" class="copy-button"><svg class="icon"><use href="#icon-copy"/></svg><span>Copy</span></button></div>
+      <p class="citation-note">Technical report, 2026.</p>
+      <pre class="citation-block"><code id="citation-code"></code></pre>
+      <p class="copy-status" id="copy-status" role="status"></p>
+    </section>
+  </main>
+  <footer class="footer container"><img src="assets/branding/avatar.svg" alt="" width="32" height="32"><span>ReVuE · Reflection on Visual Evidence</span><a href="https://le-wm.github.io/" target="_blank" rel="noopener">Layout inspired by LeWorldModel</a></footer>
+  <dialog id="figure-dialog" class="figure-dialog" aria-labelledby="figure-dialog-title">
+    <div class="dialog-toolbar"><div><p id="figure-dialog-category" class="dialog-category"></p><h2 id="figure-dialog-title"></h2></div><button class="icon-button dialog-close" aria-label="Close figure"><svg class="icon"><use href="#icon-close"/></svg></button></div>
+    <div class="dialog-scroll"><img id="figure-dialog-image" alt=""><div class="dialog-caption"><p id="figure-dialog-caption"></p><a id="figure-dialog-pdf" target="_blank" rel="noopener">Open original figure (PDF)<svg class="icon"><use href="#icon-arrow"/></svg></a></div></div>
+  </dialog>
+  <dialog id="resource-dialog" class="resource-dialog" aria-labelledby="resource-title"><button class="icon-button dialog-close" aria-label="Close resource details"><svg class="icon"><use href="#icon-close"/></svg></button><h2 id="resource-title"></h2><p id="resource-message"></p><button class="resource-button resource-dismiss">Got it</button></dialog>
+  <noscript><p class="noscript">Enable JavaScript to view the abstract, interactive results, case gallery, and citation. The paper and code links remain available above.</p></noscript>
+</body>
+</html>

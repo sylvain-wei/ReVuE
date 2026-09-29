@@ -1,0 +1,246 @@
+{
+  "branding": {
+    "banner": {
+      "dimensions": [
+        3840,
+        1101
+      ],
+      "layout": {
+        "photo_px": [
+          3840,
+          1101
+        ],
+        "logo_width_percent": 24,
+        "logo_center_percent": [
+          50,
+          50
+        ],
+        "subtitle": "On-Policy Visual Evidence Distillation",
+        "subtitle_family": "Space Grotesk",
+        "subtitle_weight": 500,
+        "subtitle_px_at_3840": 56,
+        "subtitle_top_percent": 64,
+        "text_color": "#FFFFFF",
+        "font_bytes": 3780
+      },
+      "font_sha256": "a21f0fec94a5662a91f26257288507c0081d95d2ab4ad3d4d3c2f379cc8a622c",
+      "approved_html_sha256": "ccef439e1349daba6ca1513c36ea8f4678ac6de75985e64117a1bac26ba88b98",
+      "subtitle_advance_px": 995.4,
+      "subtitle_baseline_px": 757.616,
+      "logo_box": [
+        1459.2,
+        445.60243902439026,
+        921.5999999999999,
+        209.7951219512195
+      ]
+    },
+    "avatar": {
+      "dimensions": [
+        512,
+        512
+      ],
+      "main": "#275EE8",
+      "echo": "#99BAEF",
+      "source": "approved original blue double-V paths",
+      "crop_source": "existing square avatar crop"
+    },
+    "social_preview": {
+      "dimensions": [
+        1280,
+        640
+      ]
+    },
+    "source_hashes": {
+      "website/app.js": "a5c419a5c3e522161133864c1ade2d2fd28855c1292a3fbc7d2788057e045150",
+      "website/assets/animations/metadata.json": "2af5e4fe4ccba54463b84d2857036492b9aca193704a36efcc910334873d08e1",
+      "website/assets/figures/efficiency.svg": "c2b4ecbc691876697d00ffcc5e71ef344070fe4c2532686bb7174e9b42177dcf",
+      "website/assets/figures/efficiency.pdf": "6137539938b53a5a3557e40d4f95a181f9e5d895f45fd825c005759f65177bda"
+    }
+  },
+  "animations": {
+    "overview": {
+      "dimensions": [
+        1400,
+        822
+      ],
+      "bytes": 151009,
+      "encoded_frames": 7,
+      "source_stages": 7,
+      "duration_ms": 15000,
+      "source_duration_ms": 15000,
+      "palette_colors": 256,
+      "loop_forever": true,
+      "final_frame_matches_quantized_source": true,
+      "timing_note": "GIF frame holds are quantized to 10 ms with a 20 ms minimum for reliable browser playback."
+    },
+    "two-islands": {
+      "dimensions": [
+        1800,
+        420
+      ],
+      "bytes": 211917,
+      "encoded_frames": 135,
+      "source_stages": 135,
+      "duration_ms": 7910,
+      "source_duration_ms": 7720,
+      "palette_colors": 256,
+      "loop_forever": true,
+      "final_frame_matches_quantized_source": true,
+      "timing_note": "GIF frame holds are quantized to 10 ms with a 20 ms minimum for reliable browser playback."
+    }
+  },
+  "outputs": {
+    "README.md": {
+      "bytes": 2804,
+      "sha256": "af028616d760a49b4e66f848534cbf97f2832f6991b8e0b069843b3c658f8af0"
+    },
+    "SpaceGrotesk-OFL.txt": {
+      "bytes": 4495,
+      "sha256": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72"
+    },
+    "animations/islands-animated.svg": {
+      "bytes": 497823,
+      "sha256": "101ab38528b44e26da49f1dfc2117a07e7f7c007db392a914b2d71471f11263d"
+    },
+    "animations/islands-staged.svg": {
+      "bytes": 475987,
+      "sha256": "06757c7ad9837ef3a4a534a802497930dc0df0fbd6a74aefe40e4ce2fbd130dd"
+    },
+    "animations/metadata.json": {
+      "bytes": 160224,
+      "sha256": "2af5e4fe4ccba54463b84d2857036492b9aca193704a36efcc910334873d08e1"
+    },
+    "animations/overview-animated.svg": {
+      "bytes": 1775885,
+      "sha256": "87a27e0b4f526cb74903844c2d39e6d0b6d9f56ce0cb4ccca97ef8fade2f3fff"
+    },
+    "animations/overview-staged.svg": {
+      "bytes": 1774531,
+      "sha256": "66567432a2f98cdbbbd251c9370c3429ec78c8bc20accfa868db802ccfa4c5b7"
+    },
+    "avatar-blue.png": {
+      "bytes": 28060,
+      "sha256": "33957afee19b3ca39a3dfae61d7285472b161bb614401d3162ad17f8787694fc",
+      "dimensions": [
+        1024,
+        1024
+      ]
+    },
+    "avatar-blue.svg": {
+      "bytes": 5610,
+      "sha256": "3026fd5a738d6f5f4f34b54125aa2ff5e5c45c12d688f6281a52916830b40b1e"
+    },
+    "efficiency.png": {
+      "bytes": 259185,
+      "sha256": "7897592d9333a261f14bfea6cef213903f99714c5725b6f2278f139a67199fd2",
+      "dimensions": [
+        2400,
+        1663
+      ]
+    },
+    "figures/anchor-break-point.svg": {
+      "bytes": 1430271,
+      "sha256": "aaa4b32c4ba96ea42d90ab2623de4d8f90be291b4e4a76a948d37ada9b5588ad"
+    },
+    "figures/efficiency.pdf": {
+      "bytes": 29913,
+      "sha256": "6137539938b53a5a3557e40d4f95a181f9e5d895f45fd825c005759f65177bda"
+    },
+    "figures/efficiency.svg": {
+      "bytes": 53119,
+      "sha256": "c2b4ecbc691876697d00ffcc5e71ef344070fe4c2532686bb7174e9b42177dcf"
+    },
+    "figures/evidence-failures.svg": {
+      "bytes": 1237997,
+      "sha256": "2593889efb98f058e631a779e2173d5859e6cf38c126032f9d1140a2e1b0cd14"
+    },
+    "figures/impact-sparsity.svg": {
+      "bytes": 42059,
+      "sha256": "6df4f7b928e914bf6112c779d8ada0ecde4b4ba6b1bc299eb0864267972ee4f4"
+    },
+    "figures/plate-evidence-chain.svg": {
+      "bytes": 1747892,
+      "sha256": "d478a8ab7190b267e698098f7923384cd98b22113f1205a0083a8223d6436452"
+    },
+    "figures/same-evidence-different-errors.svg": {
+      "bytes": 727810,
+      "sha256": "8c6effd025b17bf1935e0f45caf9c5d248575295b30225219bddd21d5f8ff15c"
+    },
+    "figures/same-plot-different-errors.svg": {
+      "bytes": 4828252,
+      "sha256": "92f41341e68becb23a390a9ab8fab04faf4627b202bf3d81dd08a6d720c191e0"
+    },
+    "figures/two-islands.svg": {
+      "bytes": 427231,
+      "sha256": "d8aeee4063045909fbbb40b36a0184da24dbdae9b4113b23ee9ac66ae54e4f43"
+    },
+    "hero.jpg": {
+      "bytes": 994061,
+      "sha256": "e3509afc0fe9105bdc432ea60dca11049257fc225178181ec85b0f5121f065a4",
+      "dimensions": [
+        3840,
+        1101
+      ]
+    },
+    "hero.png": {
+      "bytes": 6599177,
+      "sha256": "c18156e1870ecd77b143d426fa489c3253e4803f124d38a9ecc9efb4b49df9f0",
+      "dimensions": [
+        3840,
+        1101
+      ]
+    },
+    "overview.gif": {
+      "bytes": 151009,
+      "sha256": "ff5322425366d93f8addee730dc570f91eaad74e632aefef8eb2dc76e2baa349",
+      "dimensions": [
+        1400,
+        822
+      ]
+    },
+    "overview.png": {
+      "bytes": 433687,
+      "sha256": "cd8f553db2609375949d86d5080d8e918ad6127f4ca9a58e2ed84c2a82fc2a2a",
+      "dimensions": [
+        1600,
+        939
+      ]
+    },
+    "overview.svg": {
+      "bytes": 1747892,
+      "sha256": "d478a8ab7190b267e698098f7923384cd98b22113f1205a0083a8223d6436452"
+    },
+    "social-preview.png": {
+      "bytes": 14816,
+      "sha256": "58b5c44ae61afac636046d63963c16b0bc4b7ba8db2fec67ad14bb4f4da4a0ba",
+      "dimensions": [
+        1280,
+        640
+      ]
+    },
+    "social-preview.svg": {
+      "bytes": 5797,
+      "sha256": "246030110494d98bcbb21ee661ae0b3f7f5801e26bc1922ac0ec1b1dc31aa675"
+    },
+    "two-islands.gif": {
+      "bytes": 211917,
+      "sha256": "b3db28f67405091c49573ffd9dc158499687d6dfe07af03468d0862b3645b80d",
+      "dimensions": [
+        1800,
+        420
+      ]
+    },
+    "two-islands.png": {
+      "bytes": 221072,
+      "sha256": "a2377fc1ccc256e7d8f9d1e00c53d6642522f5373d023d5d8d8b43c5329cf21f",
+      "dimensions": [
+        1800,
+        420
+      ]
+    },
+    "two-islands.svg": {
+      "bytes": 427231,
+      "sha256": "d8aeee4063045909fbbb40b36a0184da24dbdae9b4113b23ee9ac66ae54e4f43"
+    }
+  }
+}

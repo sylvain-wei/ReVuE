@@ -1,0 +1,31 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Downloaded model/data resources and generated experiment outputs.
+/thyme-infer/data/
+/thyme-infer/checkpoints/
+/thyme-infer/outputs/
+/outputs/
+/checkpoints/
+/logs/
+/wandb/
+temp_processed_images/
+sandbox_scratch/
+*.safetensors
+*.ckpt
+events.out.tfevents.*
+
+# Local build and preview products.
+/build/
+/dist/
+/tmp/

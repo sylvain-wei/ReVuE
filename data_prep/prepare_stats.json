@@ -1,0 +1,46 @@
+{
+  "stages": {
+    "stage1": {
+      "rows": 332996,
+      "shards": 167,
+      "dir": "/path/to/..."
+    },
+    "stage2": {
+      "rows": 12309,
+      "shards": 7,
+      "dir": "/path/to/..."
+    }
+  },
+  "splits": {
+    "wo_thinking_thyme_single_round": {
+      "seen": 181277,
+      "kept": 180652,
+      "dropped": {
+        "unbalanced_code": 625
+      }
+    },
+    "2round": {
+      "seen": 152354,
+      "kept": 152344,
+      "dropped": {
+        "img_mismatch": 2,
+        "unbalanced_think": 8
+      }
+    },
+    "computation": {
+      "seen": 12342,
+      "kept": 12309,
+      "dropped": {
+        "unbalanced_think": 19,
+        "unbalanced_sandbox_output": 3,
+        "unbalanced_answer": 11
+      }
+    }
+  },
+  "args": {
+    "out_root": "/path/to/...",
+    "max_chars": 60000,
+    "limit_per_split": 0,
+    "shard_rows": 2000
+  }
+}

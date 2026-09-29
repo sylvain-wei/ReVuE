@@ -1,0 +1,1155 @@
+{
+  "title": "On-Policy Visual Evidence Distillation",
+  "project_name": "ReVuE",
+  "expanded_name": "Reflection on Visual Evidence",
+  "abstract": "Visual agents solve problems by interleaving reasoning with image operations, and on-policy distillation (OPD) provides guidance from a strong teacher on student-generated interaction trajectories. However, image operations change the evidence available for subsequent reasoning, so local errors in evidence acquisition (Acquire), reading (Read), or answer grounding (Ground) can propagate through the trajectory and lead to incorrect answers. Existing multimodal OPD methods primarily construct or contrast auxiliary views of the original image to strengthen supervision, without explicitly modeling the connections between student actions, resulting observations, and subsequent reasoning. This limits their ability to provide corrections tailored to different failure stages. We introduce Reflection on Visual Evidence (ReVuE), an on-policy distillation method for visual agents. ReVuE compares multiple student-generated trajectories for the same query, summarizes the observed visual evidence, and diagnoses the first failure across the Acquire, Read, and Ground stages. The resulting reflections provide training-time context for the teacher. We group and reweight token-level distillation losses according to how strongly these reflections affect the teacher's predictions. This design translates trajectory-level evidence diagnosis into targeted token-level supervision, guiding students to improve their visual evidence acquisition and reasoning. Across 11 benchmarks spanning the Qwen2.5-VL and InternVL3.5 model families, ReVuE outperforms all evaluated OPD baselines in weighted-average scores for perception, mathematical reasoning, and general tasks. ReVuE also reduces redundancy in reasoning and tool calls while improving tool-call accuracy and task accuracy.",
+  "abstract_sentences": [
+    "Visual agents solve problems by interleaving reasoning with image operations, and on-policy distillation (OPD) provides guidance from a strong teacher on student-generated interaction trajectories.",
+    "However, image operations change the evidence available for subsequent reasoning, so local errors in evidence acquisition (Acquire), reading (Read), or answer grounding (Ground) can propagate through the trajectory and lead to incorrect answers.",
+    "Existing multimodal OPD methods primarily construct or contrast auxiliary views of the original image to strengthen supervision, without explicitly modeling the connections between student actions, resulting observations, and subsequent reasoning.",
+    "This limits their ability to provide corrections tailored to different failure stages.",
+    "We introduce Reflection on Visual Evidence (ReVuE), an on-policy distillation method for visual agents.",
+    "ReVuE compares multiple student-generated trajectories for the same query, summarizes the observed visual evidence, and diagnoses the first failure across the Acquire, Read, and Ground stages.",
+    "The resulting reflections provide training-time context for the teacher.",
+    "We group and reweight token-level distillation losses according to how strongly these reflections affect the teacher's predictions.",
+    "This design translates trajectory-level evidence diagnosis into targeted token-level supervision, guiding students to improve their visual evidence acquisition and reasoning.",
+    "Across 11 benchmarks spanning the Qwen2.5-VL and InternVL3.5 model families, ReVuE outperforms all evaluated OPD baselines in weighted-average scores for perception, mathematical reasoning, and general tasks.",
+    "ReVuE also reduces redundancy in reasoning and tool calls while improving tool-call accuracy and task accuracy."
+  ],
+  "tldr": [
+    "Compare multiple attempts to locate where visual evidence is acquired, read, or used incorrectly.",
+    "Use these reflections to guide the teacher and prioritize tokens whose predictions change most.",
+    "Improve weighted-average scores across perception, math, and general tasks in both evaluated model families."
+  ],
+  "method_footnote": "Reflections guide the teacher during training; the student keeps its original interaction history.",
+  "cases": [
+    {
+      "id": "plate-evidence-chain",
+      "title": "Higher accuracy with shorter responses",
+      "short_description": "Crop the blue car, read S QT 911, and map the plate number to option C.",
+      "category": "Evidence chain",
+      "caption": "ReVuE overview (with HRBench-8K results) and an agentic vision example.",
+      "image": "assets/figures/plate-evidence-chain.svg",
+      "pdf": "assets/figures/plate-evidence-chain.pdf",
+      "preview_dimensions": [
+        2400,
+        1410
+      ],
+      "main_text_reference": "Figure 1; Section 3",
+      "lead": "The aggregate result and the worked example connect performance to how an agent uses visual evidence.",
+      "paragraphs": [
+        "On HRBench 8K, ReVuE reaches 74.00% accuracy with 382 mean response tokens, compared with the RL Expert's 71.75% and 458 tokens. Read the upper panels together: they compare overall performance, tool-use frequency, and accuracy on samples with and without tool use.",
+        "The lower example makes the evidence chain concrete. The agent crops the blue car, reads S QT 911, and selects option C. This illustrates the acquisition, reading, and grounding behaviors that ReVuE targets; Section 5 measures the resulting accuracy and efficiency across benchmarks."
+      ]
+    },
+    {
+      "id": "two-islands",
+      "title": "Teacher scores shift at the intermediate mistake",
+      "short_description": "Reflection reduces support for the mistaken one-island judgment before the final answer.",
+      "category": "Token impact",
+      "caption": "Token impact on a trajectory with a reading error. The student misreads two islands as one, answering Saint Lucia instead of Saint Kitts and Nevis. Reflection identifies two islands and lowers support for the underlined island, one, and first Lucia. Blue/orange denote increased/decreased teacher support; darker shading indicates larger absolute log-probability shifts. Both evaluations score the same student trajectory; the final Lucia changes little under the fixed erroneous prefix.",
+      "image": "assets/figures/two-islands.svg",
+      "pdf": "assets/figures/two-islands.pdf",
+      "preview_dimensions": [
+        2400,
+        561
+      ],
+      "main_text_reference": "Figure 3; Sections 4.2 and 6",
+      "lead": "The mistaken one-island judgment changes more than the final answer under its existing prefix.",
+      "paragraphs": [
+        "The crop contains two islands, but the student describes one and answers Saint Lucia instead of Saint Kitts and Nevis. Reflection lowers teacher support for island, one, and the first Lucia. The final Lucia changes little under the already erroneous reasoning prefix.",
+        "Read the colors as score differences with and without reflection on this same trajectory, rather than successive student attempts. The highlighted intermediate words illustrate Section 6's finding that useful supervision can concentrate before the final answer, motivating greater weight on high-impact positions."
+      ]
+    },
+    {
+      "id": "evidence-failures",
+      "title": "Errors arise at different stages of evidence use",
+      "short_description": "A crop misses the dogs; a curve is misread; correctly read numbers are summed incorrectly.",
+      "category": "Acquire / Read / Ground",
+      "caption": "In Acquire, the crop misses the queried dogs; in Read, the model describes a curve above the x-axis as lying below it; in Ground, it reads the table correctly but miscalculates the sum. The panels retain post-crop thinking in (a), full thinking in (b), and the complete reasoning-bearing final answer in (c). Red text marks errors and their consequences.",
+      "image": "assets/figures/evidence-failures.svg",
+      "pdf": "assets/figures/evidence-failures.pdf",
+      "preview_dimensions": [
+        2400,
+        3218
+      ],
+      "main_text_reference": "Section 4.1 points to Appendix Case Study",
+      "lead": "A wrong answer may begin with the crop, the visual reading, or the reasoning that follows.",
+      "paragraphs": [
+        "Read the three panels from top to bottom. The first crop misses the dogs entirely. The second response describes a curve above the x-axis as lying below it. The third reads all eight table values correctly, then computes the wrong sum and mean.",
+        "Compare each response with its human evidence check: the required correction changes with the failure stage. These examples explain why ReVuE diagnoses Acquire, Read, and Ground separately, providing concrete context for the evidence-use guidance evaluated in Section 5."
+      ]
+    },
+    {
+      "id": "same-evidence-different-errors",
+      "title": "The same image can require different corrections",
+      "short_description": "Both trajectories answer No. One misreads the slice rank; the other misapplies the lower-median rule.",
+      "category": "Diagnosing the error",
+      "caption": "Medium Blue is the fourth-largest slice, making it the lower median of six slices. The left trajectory misreads the rank (Read); the right trajectory reads it correctly but misapplies the lower-median rule (Ground). Both complete thinking traces and final answers are shown, with errors in red.",
+      "image": "assets/figures/same-evidence-different-errors.svg",
+      "pdf": "assets/figures/same-evidence-different-errors.pdf",
+      "preview_dimensions": [
+        2400,
+        2900
+      ],
+      "main_text_reference": "Section 4.1; Appendix Different Errors with the Same Evidence",
+      "lead": "Identical visual evidence and identical final answers can conceal distinct reasoning failures.",
+      "paragraphs": [
+        "Both trajectories inspect the same six-slice pie chart without calling tools, and both answer No. The left trajectory places Medium Blue fifth. The right places it fourth correctly, but applies the lower-median rule incorrectly. The reference answer is Yes.",
+        "Read the slice ranking separately from the rule used to produce the answer. One attempt needs a corrected visual rank; the other needs a corrected interpretation. This supports the paper's decision to diagnose actions and reasoning alongside images when constructing the reflections analyzed in Section 6."
+      ]
+    },
+    {
+      "id": "anchor-break-point",
+      "title": "A reflection links the reference to the failed inference",
+      "short_description": "The same crop leads to different answers. The reflection supplies the correct reference and identifies the failed interpretation.",
+      "category": "Reflection",
+      "caption": "A concrete visual-evidence reflection supplied to the teacher. The mixed group contains seven correct attempts and one incorrect attempt; one of each is shown with its post-tool reasoning and answer. Both attempts receive identical tool crops. The Anchor uses the incorrect attempt's own crop, and the Break Point records the critic's Ground diagnosis.",
+      "image": "assets/figures/anchor-break-point.svg",
+      "pdf": "assets/figures/anchor-break-point.pdf",
+      "preview_dimensions": [
+        2400,
+        3233
+      ],
+      "main_text_reference": "Section 4.1; Appendix A Visual-Evidence Reflection Example",
+      "lead": "The teacher receives both the evidence to use and a diagnosis of how the student departed from it.",
+      "paragraphs": [
+        "The two attempts receive identical tool crops but interpret the central notation differently, choosing D and C. Below them, the Anchor combines the supporting crop with the relevant visual fact and its interpretation. The Break Point identifies the incorrect attempt's Ground failure.",
+        "Read the reflection as context supplied to the teacher for scoring the sampled attempt. It makes the reflection component in Section 6's ablation concrete: a reference for correct evidence use, paired with a diagnosis of the particular student's mistake."
+      ]
+    },
+    {
+      "id": "same-plot-different-errors",
+      "title": "The same wrong answer can follow different mistakes",
+      "short_description": "One trajectory misidentifies the age contours; another reverses the meaning of a correctly located point.",
+      "category": "Diagnosing the error",
+      "caption": "Both trajectories answer B (RRATs), whereas the reference answer is A (AXPs and SGRs). The left misidentifies green lines as age contours; the right correctly places AXPs and SGRs above the age contour but interprets that position as older. Their different crops and all natural-language thinking are shown; tool code is summarized.",
+      "image": "assets/figures/same-plot-different-errors.svg",
+      "pdf": "assets/figures/same-plot-different-errors.pdf",
+      "preview_dimensions": [
+        2400,
+        3259
+      ],
+      "main_text_reference": "Section 4.1 points to Appendix Case Study; related to Section 6 age example",
+      "lead": "Reading the full trajectory reveals which part of the evidence-to-answer reasoning failed.",
+      "paragraphs": [
+        "Both attempts answer RRATs to the neutron-star question, although the reference is AXPs and SGRs. The left mistakes green lines for age contours. The right correctly locates AXPs and SGRs above the relevant contour, then interprets that position as older rather than younger.",
+        "Follow each column through its own crop and reasoning; the tool crops differ. Comparing only the final answers would hide these distinctions. This example explains the trajectory context needed for the stage diagnoses whose agreement is evaluated in Section 6."
+      ]
+    }
+  ],
+  "method_steps": [
+    {
+      "number": "01",
+      "title": "Observe the attempts",
+      "description": "Sample several student trajectories for the same question, including their image operations, observations, and reasoning."
+    },
+    {
+      "number": "02",
+      "title": "Reflect on the evidence",
+      "description": "Extract a correct evidence reference and diagnose the first Acquire, Read, or Ground failure in each incorrect attempt."
+    },
+    {
+      "number": "03",
+      "title": "Focus the supervision",
+      "description": "Compare teacher predictions with and without reflection, then give more weight to positions with larger changes."
+    }
+  ],
+  "results": {
+    "columns": [
+      {
+        "id": "hr4k",
+        "label": "HRBench 4K",
+        "category": "Perception",
+        "sample_count": 800
+      },
+      {
+        "id": "hr8k",
+        "label": "HRBench 8K",
+        "category": "Perception",
+        "sample_count": 800
+      },
+      {
+        "id": "vstar",
+        "label": "V*Bench",
+        "category": "Perception",
+        "sample_count": 191
+      },
+      {
+        "id": "treebench",
+        "label": "TreeBench",
+        "category": "Perception",
+        "sample_count": 405
+      },
+      {
+        "id": "visualprobe",
+        "label": "VisualProbe",
+        "category": "Perception",
+        "sample_count": 515
+      },
+      {
+        "id": "perception_avg",
+        "label": "Wtd. Avg.",
+        "category": "Perception",
+        "sample_count": null
+      },
+      {
+        "id": "mathvista",
+        "label": "MathVista",
+        "category": "Math",
+        "sample_count": 1000
+      },
+      {
+        "id": "mathverse",
+        "label": "MathVerse",
+        "category": "Math",
+        "sample_count": 788
+      },
+      {
+        "id": "visulogic",
+        "label": "VisuLogic",
+        "category": "Math",
+        "sample_count": 1000
+      },
+      {
+        "id": "math_avg",
+        "label": "Wtd. Avg.",
+        "category": "Math",
+        "sample_count": null
+      },
+      {
+        "id": "hallusionbench",
+        "label": "HallusionBench",
+        "category": "General",
+        "sample_count": 1129
+      },
+      {
+        "id": "chartqapro",
+        "label": "ChartQA-Pro",
+        "category": "General",
+        "sample_count": 1948
+      },
+      {
+        "id": "infovqa",
+        "label": "InfographicVQA",
+        "category": "General",
+        "sample_count": 2801
+      },
+      {
+        "id": "general_avg",
+        "label": "Wtd. Avg.",
+        "category": "General",
+        "sample_count": null
+      }
+    ],
+    "rows": [
+      {
+        "family": "Off-the-Shelf Models",
+        "method": "GPT-4o",
+        "values": {
+          "hr4k": "61.00",
+          "hr8k": "54.00",
+          "vstar": "61.78",
+          "treebench": "49.88",
+          "visualprobe": "23.88",
+          "perception_avg": "50.28",
+          "mathvista": "58.83",
+          "mathverse": "39.21",
+          "visulogic": "25.20",
+          "math_avg": "41.22",
+          "hallusionbench": "51.37",
+          "chartqapro": "28.67",
+          "infovqa": "71.17",
+          "general_avg": "53.28"
+        },
+        "best_opd_columns": []
+      },
+      {
+        "family": "Off-the-Shelf Models",
+        "method": "Gemini3.1FL",
+        "values": {
+          "hr4k": "46.00",
+          "hr8k": "43.00",
+          "vstar": "64.92",
+          "treebench": "51.85",
+          "visualprobe": "27.96",
+          "perception_avg": "43.89",
+          "mathvista": "80.80",
+          "mathverse": "77.92",
+          "visulogic": "32.40",
+          "math_avg": "62.63",
+          "hallusionbench": "59.92",
+          "chartqapro": "37.03",
+          "infovqa": "83.50",
+          "general_avg": "63.57"
+        },
+        "best_opd_columns": []
+      },
+      {
+        "family": "Off-the-Shelf Models",
+        "method": "Qwen2.5-32B",
+        "values": {
+          "hr4k": "75.13",
+          "hr8k": "69.25",
+          "vstar": "78.01",
+          "treebench": "48.40",
+          "visualprobe": "45.05",
+          "perception_avg": "63.89",
+          "mathvista": "77.00",
+          "mathverse": "53.05",
+          "visulogic": "25.90",
+          "math_avg": "51.90",
+          "hallusionbench": "50.74",
+          "chartqapro": "30.02",
+          "infovqa": "83.10",
+          "general_avg": "59.29"
+        },
+        "best_opd_columns": []
+      },
+      {
+        "family": "Off-the-Shelf Models",
+        "method": "Qwen3-30B-T",
+        "values": {
+          "hr4k": "77.13",
+          "hr8k": "71.38",
+          "vstar": "80.10",
+          "treebench": "45.43",
+          "visualprobe": "36.89",
+          "perception_avg": "63.26",
+          "mathvista": "80.20",
+          "mathverse": "66.12",
+          "visulogic": "25.80",
+          "math_avg": "56.71",
+          "hallusionbench": "61.82",
+          "chartqapro": "35.46",
+          "infovqa": "85.68",
+          "general_avg": "64.45"
+        },
+        "best_opd_columns": []
+      },
+      {
+        "family": "Off-the-Shelf Models",
+        "method": "InternVL-38B",
+        "values": {
+          "hr4k": "71.50",
+          "hr8k": "62.13",
+          "vstar": "65.97",
+          "treebench": "41.98",
+          "visualprobe": "20.97",
+          "perception_avg": "54.34",
+          "mathvista": "70.90",
+          "mathverse": "48.48",
+          "visulogic": "27.20",
+          "math_avg": "48.89",
+          "hallusionbench": "50.74",
+          "chartqapro": "26.98",
+          "infovqa": "77.70",
+          "general_avg": "55.71"
+        },
+        "best_opd_columns": []
+      },
+      {
+        "family": "Qwen2.5-VL-7B",
+        "method": "Base Model",
+        "values": {
+          "hr4k": "69.00",
+          "hr8k": "63.50",
+          "vstar": "75.39",
+          "treebench": "37.04",
+          "visualprobe": "41.17",
+          "perception_avg": "57.77",
+          "mathvista": "69.10",
+          "mathverse": "44.04",
+          "visulogic": "25.40",
+          "math_avg": "46.34",
+          "hallusionbench": "40.91",
+          "chartqapro": "20.79",
+          "infovqa": "75.10",
+          "general_avg": "50.53"
+        },
+        "best_opd_columns": []
+      },
+      {
+        "family": "Qwen2.5-VL-7B",
+        "method": "Cold-start",
+        "values": {
+          "hr4k": "74.38",
+          "hr8k": "66.62",
+          "vstar": "80.10",
+          "treebench": "37.28",
+          "visualprobe": "41.56",
+          "perception_avg": "60.72",
+          "mathvista": "68.00",
+          "mathverse": "44.29",
+          "visulogic": "26.40",
+          "math_avg": "46.38",
+          "hallusionbench": "41.73",
+          "chartqapro": "21.12",
+          "infovqa": "79.05",
+          "general_avg": "52.68"
+        },
+        "best_opd_columns": []
+      },
+      {
+        "family": "Qwen2.5-VL-7B",
+        "method": "RL Expert",
+        "values": {
+          "hr4k": "75.50",
+          "hr8k": "71.75",
+          "vstar": "83.77",
+          "treebench": "40.25",
+          "visualprobe": "44.85",
+          "perception_avg": "63.89",
+          "mathvista": "70.60",
+          "mathverse": "45.43",
+          "visulogic": "26.20",
+          "math_avg": "47.56",
+          "hallusionbench": "43.83",
+          "chartqapro": "21.69",
+          "infovqa": "79.74",
+          "general_avg": "53.60"
+        },
+        "best_opd_columns": []
+      },
+      {
+        "family": "Qwen2.5-VL-7B",
+        "method": "RFT",
+        "values": {
+          "hr4k": "75.38",
+          "hr8k": "72.00",
+          "vstar": "81.20",
+          "treebench": "40.00",
+          "visualprobe": "41.75",
+          "perception_avg": "63.12",
+          "mathvista": "69.50",
+          "mathverse": "45.81",
+          "visulogic": "24.60",
+          "math_avg": "46.70",
+          "hallusionbench": "42.33",
+          "chartqapro": "21.18",
+          "infovqa": "79.57",
+          "general_avg": "53.07"
+        },
+        "best_opd_columns": []
+      },
+      {
+        "family": "Qwen2.5-VL-7B",
+        "method": "Vanilla OPD",
+        "values": {
+          "hr4k": "75.40",
+          "hr8k": "70.50",
+          "vstar": "81.20",
+          "treebench": "38.02",
+          "visualprobe": "42.91",
+          "perception_avg": "62.61",
+          "mathvista": "70.60",
+          "mathverse": "46.07",
+          "visulogic": "26.00",
+          "math_avg": "47.67",
+          "hallusionbench": "42.88",
+          "chartqapro": "21.69",
+          "infovqa": "79.44",
+          "general_avg": "53.28"
+        },
+        "best_opd_columns": []
+      },
+      {
+        "family": "Qwen2.5-VL-7B",
+        "method": "GT-Privileged",
+        "values": {
+          "hr4k": "73.62",
+          "hr8k": "70.50",
+          "vstar": "79.58",
+          "treebench": "39.75",
+          "visualprobe": "43.10",
+          "perception_avg": "62.26",
+          "mathvista": "71.20",
+          "mathverse": "45.69",
+          "visulogic": "25.20",
+          "math_avg": "47.49",
+          "hallusionbench": "43.45",
+          "chartqapro": "20.84",
+          "infovqa": "79.70",
+          "general_avg": "53.23"
+        },
+        "best_opd_columns": []
+      },
+      {
+        "family": "Qwen2.5-VL-7B",
+        "method": "Vision-OPD",
+        "values": {
+          "hr4k": "73.00",
+          "hr8k": "65.62",
+          "vstar": "76.44",
+          "treebench": "39.01",
+          "visualprobe": "41.36",
+          "perception_avg": "59.98",
+          "mathvista": "67.70",
+          "mathverse": "42.39",
+          "visulogic": "25.70",
+          "math_avg": "45.48",
+          "hallusionbench": "39.89",
+          "chartqapro": "20.79",
+          "infovqa": "78.75",
+          "general_avg": "52.08"
+        },
+        "best_opd_columns": []
+      },
+      {
+        "family": "Qwen2.5-VL-7B",
+        "method": "V-Zero",
+        "values": {
+          "hr4k": "75.62",
+          "hr8k": "69.50",
+          "vstar": "78.01",
+          "treebench": "37.28",
+          "visualprobe": "43.10",
+          "perception_avg": "62.08",
+          "mathvista": "69.80",
+          "mathverse": "43.91",
+          "visulogic": "26.60",
+          "math_avg": "46.99",
+          "hallusionbench": "42.16",
+          "chartqapro": "21.08",
+          "infovqa": "79.12",
+          "general_avg": "52.79"
+        },
+        "best_opd_columns": [
+          "visulogic"
+        ]
+      },
+      {
+        "family": "Qwen2.5-VL-7B",
+        "method": "VAD",
+        "values": {
+          "hr4k": "74.75",
+          "hr8k": "67.75",
+          "vstar": "76.96",
+          "treebench": "41.98",
+          "visualprobe": "43.89",
+          "perception_avg": "62.08",
+          "mathvista": "69.00",
+          "mathverse": "45.56",
+          "visulogic": "22.30",
+          "math_avg": "45.62",
+          "hallusionbench": "44.24",
+          "chartqapro": "21.73",
+          "infovqa": "79.65",
+          "general_avg": "53.65"
+        },
+        "best_opd_columns": [
+          "treebench"
+        ]
+      },
+      {
+        "family": "Qwen2.5-VL-7B",
+        "method": "ReVuE (Ours)",
+        "values": {
+          "hr4k": "77.10",
+          "hr8k": "74.00",
+          "vstar": "82.20",
+          "treebench": "41.12",
+          "visualprobe": "44.66",
+          "perception_avg": "65.01",
+          "mathvista": "71.60",
+          "mathverse": "47.08",
+          "visulogic": "26.50",
+          "math_avg": "48.49",
+          "hallusionbench": "45.12",
+          "chartqapro": "21.81",
+          "infovqa": "80.27",
+          "general_avg": "54.14"
+        },
+        "best_opd_columns": [
+          "hr4k",
+          "hr8k",
+          "vstar",
+          "visualprobe",
+          "perception_avg",
+          "mathvista",
+          "mathverse",
+          "math_avg",
+          "hallusionbench",
+          "chartqapro",
+          "infovqa",
+          "general_avg"
+        ]
+      },
+      {
+        "family": "InternVL3.5-4B-Instruct",
+        "method": "Base Model",
+        "values": {
+          "hr4k": "62.00",
+          "hr8k": "55.00",
+          "vstar": "68.59",
+          "treebench": "40.49",
+          "visualprobe": "20.58",
+          "perception_avg": "49.32",
+          "mathvista": "68.50",
+          "mathverse": "28.93",
+          "visulogic": "25.80",
+          "math_avg": "42.00",
+          "hallusionbench": "40.04",
+          "chartqapro": "26.01",
+          "infovqa": "66.04",
+          "general_avg": "47.78"
+        },
+        "best_opd_columns": []
+      },
+      {
+        "family": "InternVL3.5-4B-Instruct",
+        "method": "Cold-start",
+        "values": {
+          "hr4k": "69.50",
+          "hr8k": "63.25",
+          "vstar": "66.49",
+          "treebench": "40.99",
+          "visualprobe": "29.90",
+          "perception_avg": "55.66",
+          "mathvista": "69.30",
+          "mathverse": "47.21",
+          "visulogic": "25.80",
+          "math_avg": "47.45",
+          "hallusionbench": "48.50",
+          "chartqapro": "26.24",
+          "infovqa": "72.98",
+          "general_avg": "52.79"
+        },
+        "best_opd_columns": []
+      },
+      {
+        "family": "InternVL3.5-4B-Instruct",
+        "method": "RL Expert",
+        "values": {
+          "hr4k": "72.62",
+          "hr8k": "64.62",
+          "vstar": "71.73",
+          "treebench": "40.74",
+          "visualprobe": "34.56",
+          "perception_avg": "58.20",
+          "mathvista": "69.30",
+          "mathverse": "46.32",
+          "visulogic": "26.90",
+          "math_avg": "47.60",
+          "hallusionbench": "46.92",
+          "chartqapro": "30.59",
+          "infovqa": "73.93",
+          "general_avg": "54.38"
+        },
+        "best_opd_columns": []
+      },
+      {
+        "family": "InternVL3.5-4B-Instruct",
+        "method": "RFT",
+        "values": {
+          "hr4k": "71.25",
+          "hr8k": "66.00",
+          "vstar": "71.73",
+          "treebench": "40.25",
+          "visualprobe": "35.00",
+          "perception_avg": "58.22",
+          "mathvista": "70.00",
+          "mathverse": "45.94",
+          "visulogic": "24.30",
+          "math_avg": "46.81",
+          "hallusionbench": "47.78",
+          "chartqapro": "29.39",
+          "infovqa": "74.17",
+          "general_avg": "54.26"
+        },
+        "best_opd_columns": []
+      },
+      {
+        "family": "InternVL3.5-4B-Instruct",
+        "method": "Vanilla OPD",
+        "values": {
+          "hr4k": "71.13",
+          "hr8k": "65.87",
+          "vstar": "73.30",
+          "treebench": "40.25",
+          "visualprobe": "33.79",
+          "perception_avg": "58.02",
+          "mathvista": "68.40",
+          "mathverse": "43.40",
+          "visulogic": "26.60",
+          "math_avg": "46.34",
+          "hallusionbench": "46.85",
+          "chartqapro": "30.46",
+          "infovqa": "72.16",
+          "general_avg": "53.48"
+        },
+        "best_opd_columns": [
+          "vstar"
+        ]
+      },
+      {
+        "family": "InternVL3.5-4B-Instruct",
+        "method": "GT-Privileged",
+        "values": {
+          "hr4k": "71.25",
+          "hr8k": "64.88",
+          "vstar": "70.16",
+          "treebench": "39.75",
+          "visualprobe": "33.20",
+          "perception_avg": "57.36",
+          "mathvista": "71.30",
+          "mathverse": "39.34",
+          "visulogic": "26.20",
+          "math_avg": "46.09",
+          "hallusionbench": "49.29",
+          "chartqapro": "29.90",
+          "infovqa": "72.48",
+          "general_avg": "53.91"
+        },
+        "best_opd_columns": []
+      },
+      {
+        "family": "InternVL3.5-4B-Instruct",
+        "method": "Vision-OPD",
+        "values": {
+          "hr4k": "66.25",
+          "hr8k": "60.00",
+          "vstar": "65.97",
+          "treebench": "37.78",
+          "visualprobe": "28.93",
+          "perception_avg": "53.04",
+          "mathvista": "66.60",
+          "mathverse": "44.54",
+          "visulogic": "26.60",
+          "math_avg": "46.02",
+          "hallusionbench": "44.57",
+          "chartqapro": "30.46",
+          "infovqa": "74.47",
+          "general_avg": "54.14"
+        },
+        "best_opd_columns": [
+          "infovqa"
+        ]
+      },
+      {
+        "family": "InternVL3.5-4B-Instruct",
+        "method": "V-Zero",
+        "values": {
+          "hr4k": "68.13",
+          "hr8k": "61.75",
+          "vstar": "67.02",
+          "treebench": "40.25",
+          "visualprobe": "28.35",
+          "perception_avg": "54.45",
+          "mathvista": "68.80",
+          "mathverse": "46.95",
+          "visulogic": "26.80",
+          "math_avg": "47.56",
+          "hallusionbench": "49.03",
+          "chartqapro": "28.65",
+          "infovqa": "73.61",
+          "general_avg": "53.99"
+        },
+        "best_opd_columns": []
+      },
+      {
+        "family": "InternVL3.5-4B-Instruct",
+        "method": "VAD",
+        "values": {
+          "hr4k": "67.50",
+          "hr8k": "61.00",
+          "vstar": "67.02",
+          "treebench": "39.01",
+          "visualprobe": "27.96",
+          "perception_avg": "53.78",
+          "mathvista": "68.30",
+          "mathverse": "46.07",
+          "visulogic": "27.70",
+          "math_avg": "47.45",
+          "hallusionbench": "48.05",
+          "chartqapro": "31.44",
+          "infovqa": "73.36",
+          "general_avg": "54.61"
+        },
+        "best_opd_columns": []
+      },
+      {
+        "family": "InternVL3.5-4B-Instruct",
+        "method": "ReVuE (Ours)",
+        "values": {
+          "hr4k": "73.25",
+          "hr8k": "67.37",
+          "vstar": "73.30",
+          "treebench": "41.48",
+          "visualprobe": "36.12",
+          "perception_avg": "59.72",
+          "mathvista": "71.60",
+          "mathverse": "47.46",
+          "visulogic": "28.10",
+          "math_avg": "49.17",
+          "hallusionbench": "49.38",
+          "chartqapro": "32.27",
+          "infovqa": "73.35",
+          "general_avg": "55.13"
+        },
+        "best_opd_columns": [
+          "hr4k",
+          "hr8k",
+          "vstar",
+          "treebench",
+          "visualprobe",
+          "perception_avg",
+          "mathvista",
+          "mathverse",
+          "visulogic",
+          "math_avg",
+          "hallusionbench",
+          "chartqapro",
+          "general_avg"
+        ]
+      }
+    ]
+  },
+  "citation": {
+    "bibtex": "@misc{revue,\n  author = {Shaohang Wei and Feifan Song and Guangyue Peng and\n            Wenhao Yu and Wei Li and Wen Luo and\n            Yang Xu and Yufan Shen and Luke Mao and\n            Yang Du and Asher Qin and Houfeng Wang},\n  title  = {On-Policy Visual Evidence Distillation},\n  year   = {2026},\n  note   = {Technical report}\n}"
+  },
+  "findings": [
+    {
+      "id": "results-across-models",
+      "title": "Gains extend across two model families and three task categories",
+      "sentences": [
+        "Across 11 benchmarks, ReVuE exceeds every evaluated OPD baseline in all three weighted category averages for both Qwen2.5-VL-7B and InternVL3.5-4B.",
+        "Perception improves over Vanilla OPD from 62.61% to 65.01% (+2.40%) for Qwen and from 58.02% to 59.72% (+1.70%) for InternVL.",
+        "Both trained students also surpass their own RL Expert teachers in all three category averages."
+      ],
+      "body": "Across 11 benchmarks, ReVuE exceeds every evaluated OPD baseline in all three weighted category averages for both Qwen2.5-VL-7B and InternVL3.5-4B. Perception improves over Vanilla OPD from 62.61% to 65.01% (+2.40%) for Qwen and from 58.02% to 59.72% (+1.70%) for InternVL. Both trained students also surpass their own RL Expert teachers in all three category averages."
+    },
+    {
+      "id": "accuracy-and-efficiency",
+      "title": "Higher accuracy comes with shorter responses and less frequent tool use",
+      "sentences": [
+        "Across all five perception benchmarks, Qwen2.5-VL-7B gains accuracy over Vanilla OPD while producing shorter responses and using tools less often.",
+        "On HRBench 8K, ReVuE produces 382 tokens versus the RL Expert’s 458, while accuracy rises from 71.75% to 74.00%.",
+        "On TreeBench, tool use falls from 64.7% to 15.8% and responses shorten by 46.09%, while accuracy improves from 38.02% to 41.12% over Vanilla OPD."
+      ],
+      "body": "Across all five perception benchmarks, Qwen2.5-VL-7B gains accuracy over Vanilla OPD while producing shorter responses and using tools less often. On HRBench 8K, ReVuE produces 382 tokens versus the RL Expert’s 458, while accuracy rises from 71.75% to 74.00%. On TreeBench, tool use falls from 64.7% to 15.8% and responses shorten by 46.09%, while accuracy improves from 38.02% to 41.12% over Vanilla OPD."
+    },
+    {
+      "id": "components",
+      "title": "Reflection improves all task categories; reweighting adds perception and math gains",
+      "sentences": [
+        "On Qwen2.5-VL-7B, reflection alone improves all three category averages and nine of 11 benchmark scores over Vanilla OPD.",
+        "Adding impact reweighting then raises perception from 63.70% to 65.01% and math from 47.78% to 48.49%.",
+        "The general-task average falls from 54.42% to 54.14%, but the complete method still exceeds Vanilla OPD on all 11 benchmarks."
+      ],
+      "body": "On Qwen2.5-VL-7B, reflection alone improves all three category averages and nine of 11 benchmark scores over Vanilla OPD. Adding impact reweighting then raises perception from 63.70% to 65.01% and math from 47.78% to 48.49%. The general-task average falls from 54.42% to 54.14%, but the complete method still exceeds Vanilla OPD on all 11 benchmarks.",
+      "table": {
+        "columns": [
+          "Method",
+          "Perception",
+          "Math",
+          "General"
+        ],
+        "rows": [
+          {
+            "method": "Vanilla OPD",
+            "values": [
+              "62.61",
+              "47.67",
+              "53.28"
+            ]
+          },
+          {
+            "method": "+ reflection",
+            "values": [
+              "63.70",
+              "47.78",
+              "54.42"
+            ]
+          },
+          {
+            "method": "+ impact reweighting",
+            "values": [
+              "65.01",
+              "48.49",
+              "54.14"
+            ]
+          }
+        ],
+        "best_by_column": [
+          [
+            "+ impact reweighting"
+          ],
+          [
+            "+ impact reweighting"
+          ],
+          [
+            "+ reflection"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sparse-impact",
+      "title": "Sparse high-impact positions are worth prioritizing",
+      "sentences": [
+        "The top 20% of pooled early-training positions carry 97.6% of total token impact.",
+        "With the group fractions and loss weights fixed, impact-based selection beats random selection by 1.37% in perception and 1.07% in math on Qwen2.5-VL-7B.",
+        "Masking the highest-impact 20% yields 62.26% perception accuracy, compared with 65.18% when the lowest-impact 20% is masked."
+      ],
+      "body": "The top 20% of pooled early-training positions carry 97.6% of total token impact. With the group fractions and loss weights fixed, impact-based selection beats random selection by 1.37% in perception and 1.07% in math on Qwen2.5-VL-7B. Masking the highest-impact 20% yields 62.26% perception accuracy, compared with 65.18% when the lowest-impact 20% is masked.",
+      "table": {
+        "columns": [
+          "Method",
+          "Perception",
+          "Math",
+          "General"
+        ],
+        "rows": [
+          {
+            "method": "Vanilla OPD",
+            "values": [
+              "62.61",
+              "47.67",
+              "53.28"
+            ]
+          },
+          {
+            "method": "Random select 20%",
+            "values": [
+              "63.64",
+              "47.42",
+              "54.10"
+            ]
+          },
+          {
+            "method": "Mask random 20%",
+            "values": [
+              "63.85",
+              "47.35",
+              "53.78"
+            ]
+          },
+          {
+            "method": "Mask low 20%",
+            "values": [
+              "65.18",
+              "48.42",
+              "53.97"
+            ]
+          },
+          {
+            "method": "Mask top 20%",
+            "values": [
+              "62.26",
+              "47.17",
+              "52.51"
+            ]
+          },
+          {
+            "method": "ReVuE",
+            "values": [
+              "65.01",
+              "48.49",
+              "54.14"
+            ]
+          }
+        ],
+        "best_by_column": [
+          [
+            "Mask low 20%"
+          ],
+          [
+            "ReVuE"
+          ],
+          [
+            "ReVuE"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "impact-fraction",
+      "title": "Prioritizing 20% gives the strongest perception and math averages",
+      "sentences": [
+        "Among five tested fractions on Qwen2.5-VL-7B, prioritizing the top 20% yields the highest perception and math averages: 65.01% and 48.49%.",
+        "Narrowing the group to 5% or 10% does not improve either average.",
+        "General tasks favor the 100% setting at 54.42%, compared with 54.14% for 20%, showing that the best allocation depends on the task."
+      ],
+      "body": "Among five tested fractions on Qwen2.5-VL-7B, prioritizing the top 20% yields the highest perception and math averages: 65.01% and 48.49%. Narrowing the group to 5% or 10% does not improve either average. General tasks favor the 100% setting at 54.42%, compared with 54.14% for 20%, showing that the best allocation depends on the task.",
+      "table": {
+        "columns": [
+          "High-impact fraction",
+          "Perception",
+          "Math",
+          "General"
+        ],
+        "rows": [
+          {
+            "method": "Top 5%",
+            "values": [
+              "64.70",
+              "47.49",
+              "54.12"
+            ]
+          },
+          {
+            "method": "Top 10%",
+            "values": [
+              "64.55",
+              "46.92",
+              "53.85"
+            ]
+          },
+          {
+            "method": "Top 20% (ReVuE)",
+            "values": [
+              "65.01",
+              "48.49",
+              "54.14"
+            ]
+          },
+          {
+            "method": "Top 50%",
+            "values": [
+              "64.33",
+              "47.42",
+              "54.18"
+            ]
+          },
+          {
+            "method": "Top 100%",
+            "values": [
+              "63.70",
+              "47.78",
+              "54.42"
+            ]
+          }
+        ],
+        "best_by_column": [
+          [
+            "Top 20% (ReVuE)"
+          ],
+          [
+            "Top 20% (ReVuE)"
+          ],
+          [
+            "Top 100%"
+          ]
+        ]
+      }
+    }
+  ],
+  "authors": [
+    {
+      "name": "Shaohang Wei",
+      "affiliations": [
+        "1"
+      ],
+      "marks": [
+        "‡",
+        "*"
+      ]
+    },
+    {
+      "name": "Feifan Song",
+      "affiliations": [
+        "1"
+      ],
+      "marks": []
+    },
+    {
+      "name": "Guangyue Peng",
+      "affiliations": [
+        "1"
+      ],
+      "marks": []
+    },
+    {
+      "name": "Wenhao Yu",
+      "affiliations": [
+        "3"
+      ],
+      "marks": []
+    },
+    {
+      "name": "Wei Li",
+      "affiliations": [
+        "1"
+      ],
+      "marks": []
+    },
+    {
+      "name": "Wen Luo",
+      "affiliations": [
+        "1"
+      ],
+      "marks": []
+    },
+    {
+      "name": "Yang Xu",
+      "affiliations": [
+        "4"
+      ],
+      "marks": []
+    },
+    {
+      "name": "Yufan Shen",
+      "affiliations": [
+        "2"
+      ],
+      "marks": []
+    },
+    {
+      "name": "Luke Mao",
+      "affiliations": [
+        "2"
+      ],
+      "marks": []
+    },
+    {
+      "name": "Yang Du",
+      "affiliations": [
+        "2"
+      ],
+      "marks": []
+    },
+    {
+      "name": "Asher Qin",
+      "affiliations": [
+        "2"
+      ],
+      "marks": []
+    },
+    {
+      "name": "Houfeng Wang",
+      "affiliations": [
+        "1"
+      ],
+      "marks": [
+        "†"
+      ]
+    }
+  ],
+  "affiliations": [
+    {
+      "id": "1",
+      "name": "Peking University"
+    },
+    {
+      "id": "2",
+      "name": "Tencent"
+    },
+    {
+      "id": "3",
+      "name": "CUHK"
+    },
+    {
+      "id": "4",
+      "name": "Nanjing University"
+    }
+  ],
+  "author_notes": [
+    "‡ Project leader",
+    "† Corresponding authors",
+    "* Work done during the internship at Tencent."
+  ],
+  "correspondence": {
+    "email": "shaohang@stu.pku.edu.cn"
+  }
+}

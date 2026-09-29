@@ -1,0 +1,35 @@
+# ReVuE project website
+
+The interactive companion to **On-Policy Visual Evidence Distillation**, with staged figure animations, token-by-token evidence examples, complete benchmark tables, and the technical report. The site is static and needs no package installation or build step.
+
+## Preview locally
+
+From the repository root:
+
+```bash
+python3 -m http.server 8000 --bind 127.0.0.1 --directory website
+```
+
+Open <http://127.0.0.1:8000>. Use a local server because the page loads its content and animation assets with `fetch`.
+
+## Publish with GitHub Pages
+
+1. In the repository's **Settings → Pages**, choose **GitHub Actions** as the publishing source.
+2. Open **Actions → Project website → Run workflow** on `main`.
+3. Use the deployment URL reported by GitHub. Update the README Website badge only after the deployment is available.
+
+The workflow in [pages.yml](../.github/workflows/pages.yml) uploads only this website directory. See [GitHub's custom workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+
+## Files
+
+- `content.json`: Report-derived metadata, abstract, results, findings, and citation.
+- `index.html`, `styles.css`, `app.js`: Layout, tables, figure dialogs, and playback controls.
+- `assets/branding/`: ReVuE wordmark and blue double-V favicon.
+- `assets/fonts/`: Local Space Grotesk and its OFL license.
+- `assets/figures/`: Static SVG figures and original PDFs.
+- `assets/animations/`: Staged and standalone animations, with timing metadata.
+- `assets/documents/revue-paper.pdf`: Technical report. The original PDF still contains provisional Website / Code button destinations; the site's Code button links to this repository.
+
+The overview reveals the upper result panels, then **Acquire → Read → Ground → error attribution**. The island example keeps its map and crop visible while revealing 132 tokens and their score changes. Both teacher evaluations score the same fixed student trajectory. Pause, replay, and show-all controls are available; reduced-motion preferences show complete figures.
+
+Data and checkpoint downloads remain TBA. No arXiv identifier has been assigned in the report metadata.

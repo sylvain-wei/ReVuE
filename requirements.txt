@@ -1,0 +1,37 @@
+# Minimal environment for ReVuE training + evaluation
+# Target versions supplied with the release; server confirmation and clean-environment validation pending.
+# Python 3.10, CUDA 12.6 toolchain expected.
+
+# --- core framework ---
+torch==2.7.0
+torchvision==0.22.0
+transformers==4.52.4
+accelerate==1.13.0
+deepspeed==0.19.2
+trl==0.19.1
+peft==0.15.2
+datasets==3.3.2
+# flash-attn==2.8.3 is installed separately after torch; see docs/ENVIRONMENT.md.
+
+# --- rollout / inference ---
+vllm==0.9.2
+qwen-vl-utils==0.0.14
+
+# --- vision / IO / math scoring used by the pipeline ---
+pillow==12.2.0
+numpy==2.2.6
+decord==0.6.0
+av==17.0.1
+timm==1.0.27
+sentencepiece==0.2.1
+einops==0.8.2
+openai==1.90.0
+httpx==0.28.1
+math-verify==0.9.0
+latex2sympy2_extended
+timeout-decorator==0.5.0
+pandas==2.3.3
+# Online experiment logging is disabled in the supplied launch configuration.
+tensorboard==2.21.0
+# Use one OpenCV distribution, matching the vendored VLMEvalKit metadata.
+opencv-python==4.13.0.92

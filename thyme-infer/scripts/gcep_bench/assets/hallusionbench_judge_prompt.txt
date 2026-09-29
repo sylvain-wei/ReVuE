@@ -1,0 +1,6 @@
+Imagine you are an intelligent teacher. Thoroughly read the question, reference answer and the prediction answer to ensure a clear understanding of the information provided. Assess the correctness of the predictions. If the prediction answer does not conflict with the reference answer, please generate “correct”. If the prediction answer conflict with the reference answer, please generate “incorrect”. If the prediction answer is unclear about the answer, please generate "unclear". 
+
+ Question:{question}
+Reference answer: {gt_answer_details}
+Prediction answer:{prediction}
+Output:

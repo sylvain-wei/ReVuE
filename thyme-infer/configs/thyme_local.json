@@ -1,0 +1,49 @@
+{
+  "_comment": "VLMEvalKit config for Phase 2 Thyme inference. Overrides the upstream Thyme-7B's model_path from 'yifanzhang114/Thyme' to our local Thyme-RL checkpoint. The 'class: Thyme' tells VLMEvalKit to use vlmeval/vlm/thyme/model.py:Thyme; all other kwargs match upstream config.py:thyme_series['Thyme-7B'].",
+
+  "model": {
+    "Thyme-RL-local": {
+      "class": "Thyme",
+      "model_path": "/path/to/your/Thyme-SFT-or-RL-checkpoint",
+      "max_iterations": 5,
+      "max_retry": 5,
+      "use_custom_prompt": true,
+      "post_process": true,
+      "verbose": true
+    },
+    "Thyme-InternVL-local": {
+      "class": "ThymeInternVL",
+      "model_path": "/path/to/your/InternVL3.5-4B-Thyme-SFT-ckpt288",
+      "max_iterations": 5,
+      "max_retry": 5,
+      "use_custom_prompt": true,
+      "post_process": true,
+      "verbose": true,
+      "input_size": 448,
+      "max_num": 12,
+      "use_thumbnail": true,
+      "min_num": 1,
+      "attn_implementation": "sdpa"
+    },
+    "Thyme-Qwen3VL-local": {
+      "class": "ThymeQwen3VL",
+      "model_path": "/path/to/your/Metis-8B-ColdStart",
+      "max_iterations": 5,
+      "max_retry": 5,
+      "use_custom_prompt": true,
+      "post_process": true,
+      "verbose": true
+    }
+  },
+
+  "data": {
+    "MathVista_MINI": {
+      "class": "MathVista",
+      "dataset": "MathVista_MINI"
+    },
+    "VStarBench": {
+      "class": "ImageMCQDataset",
+      "dataset": "VStarBench"
+    }
+  }
+}

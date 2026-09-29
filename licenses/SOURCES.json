@@ -1,0 +1,511 @@
+{
+  "verification_date": "2026-09-26",
+  "scope": "Vendored frameworks and explicitly copied/adapted prompts or code; not a list of installed import dependencies.",
+  "version_note": "A license_snapshot_ref identifies the official license text checked, not the original code version unless recorded_source_ref is present. Short commit prefixes are retained where that is all the adapter records.",
+  "components": [
+    {
+      "component": "HallusionBench",
+      "repository": "https://github.com/tianyi-lab/HallusionBench",
+      "scope": [
+        "thyme-infer/scripts/gcep_bench/scorers/hallusionbench.py",
+        "thyme-infer/scripts/gcep_bench/assets/hallusionbench_judge_prompt.txt"
+      ],
+      "source_files": "utils.py",
+      "recorded_source_ref": "744007c232c292942c7f80eb61edb2465482da31",
+      "source_ref_status": "recorded in adapter; license retrieved at that ref",
+      "license": "BSD-3-Clause",
+      "license_snapshot_ref": "744007c232c292942c7f80eb61edb2465482da31",
+      "license_files": [
+        {
+          "local_path": "licenses/HallusionBench/LICENSE.md",
+          "source_url": "https://raw.githubusercontent.com/tianyi-lab/HallusionBench/744007c232c292942c7f80eb61edb2465482da31/LICENSE.md",
+          "sha256": "48e21451501644e832448a7691243db1d49ae37d1ac9971afa15c056be2e4c1e"
+        }
+      ]
+    },
+    {
+      "component": "MathVerse",
+      "repository": "https://github.com/ZrrSkywalker/MathVerse",
+      "scope": [
+        "thyme-infer/scripts/gcep_bench/scorers/mathverse_vo.py",
+        "thyme-infer/scripts/gcep_bench/assets/mathverse_demo_prompt_extract.txt",
+        "thyme-infer/scripts/gcep_bench/assets/mathverse_demo_prompt_score.txt"
+      ],
+      "source_files": "evaluation/prompts.py; evaluation/score_answer_s2.py",
+      "recorded_source_ref": "937b090597aeafb8e82b35d310a4bc5b9e2ea29d",
+      "source_ref_status": "recorded in adapter; license retrieved at that ref",
+      "license": "MIT",
+      "license_snapshot_ref": "937b090597aeafb8e82b35d310a4bc5b9e2ea29d",
+      "license_files": [
+        {
+          "local_path": "licenses/MathVerse/LICENSE",
+          "source_url": "https://raw.githubusercontent.com/ZrrSkywalker/MathVerse/937b090597aeafb8e82b35d310a4bc5b9e2ea29d/LICENSE",
+          "sha256": "5d8aab7da8b9b4972ec3f4793bf968904557061bfc003e0d78e32f36306cf84a"
+        }
+      ]
+    },
+    {
+      "component": "PerceptionBench",
+      "repository": "https://github.com/MoonshotAI/PerceptionBench",
+      "scope": [
+        "thyme-infer/scripts/gcep_bench/scorers/perceptionbench.py",
+        "thyme-infer/scripts/gcep_bench/assets/perceptionbench_judge_prompt.txt"
+      ],
+      "source_files": "eval/eval.py; eval/judge_prompt.txt",
+      "recorded_source_ref": "ba032c06",
+      "source_ref_status": "recorded in adapter; license retrieved at that ref",
+      "license": "Apache-2.0",
+      "license_snapshot_ref": "ba032c06",
+      "license_files": [
+        {
+          "local_path": "licenses/PerceptionBench/LICENSE",
+          "source_url": "https://raw.githubusercontent.com/MoonshotAI/PerceptionBench/ba032c06/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "component": "Mini-o3",
+      "repository": "https://github.com/Mini-o3/Mini-o3",
+      "scope": [
+        "thyme-infer/scripts/gcep_bench/scorers/visualprobe.py"
+      ],
+      "source_files": "verl/utils/reward_score/general_qa_tool.py",
+      "recorded_source_ref": "2c5a0dedb5279eff2c0e6049aac05de97bf7a2b3",
+      "source_ref_status": "recorded in adapter; license retrieved at that ref",
+      "license": "Apache-2.0",
+      "license_snapshot_ref": "2c5a0dedb5279eff2c0e6049aac05de97bf7a2b3",
+      "license_files": [
+        {
+          "local_path": "licenses/Mini-o3/LICENSE",
+          "source_url": "https://raw.githubusercontent.com/Mini-o3/Mini-o3/2c5a0dedb5279eff2c0e6049aac05de97bf7a2b3/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "component": "VisuLogic",
+      "repository": "https://github.com/VisuLogic-Benchmark/VisuLogic-Eval",
+      "scope": [
+        "thyme-infer/scripts/gcep_bench/scorers/visulogic_gcep.py"
+      ],
+      "source_files": "evaluation/eval_model.py",
+      "recorded_source_ref": "00fba6dd",
+      "source_ref_status": "recorded in adapter; license retrieved at that ref",
+      "license": "Apache-2.0",
+      "license_snapshot_ref": "00fba6dd",
+      "license_files": [
+        {
+          "local_path": "licenses/VisuLogic/LICENSE",
+          "source_url": "https://raw.githubusercontent.com/VisuLogic-Benchmark/VisuLogic-Eval/00fba6dd/LICENSE",
+          "sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1"
+        }
+      ]
+    },
+    {
+      "component": "ZoomBench",
+      "repository": "https://github.com/inclusionAI/Zooming-without-Zooming",
+      "scope": [
+        "thyme-infer/scripts/gcep_bench/scorers/zoombench.py"
+      ],
+      "source_files": "judge_qwenlm.py (filename recorded by the adapter)",
+      "recorded_source_ref": "fdc0ba1",
+      "source_ref_status": "recorded in adapter; license retrieved at that ref",
+      "license": "Apache-2.0",
+      "license_snapshot_ref": "fdc0ba1",
+      "license_files": [
+        {
+          "local_path": "licenses/ZoomBench/LICENSE",
+          "source_url": "https://raw.githubusercontent.com/inclusionAI/Zooming-without-Zooming/fdc0ba1/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "component": "ChartQAPro",
+      "repository": "https://github.com/vis-nlp/ChartQAPro",
+      "scope": [
+        "thyme-infer/scripts/gcep_bench/scorers/chartqapro.py"
+      ],
+      "source_files": "evaluate_predictions.py",
+      "recorded_source_ref": null,
+      "source_ref_status": "original vendoring/port commit not recorded in the supplied archive",
+      "license": "MIT",
+      "license_snapshot_ref": "f0c861b695adce63ffc76e247a49919d2dcaed8b",
+      "license_files": [
+        {
+          "local_path": "licenses/ChartQAPro/LICENSE",
+          "source_url": "https://raw.githubusercontent.com/vis-nlp/ChartQAPro/f0c861b695adce63ffc76e247a49919d2dcaed8b/LICENSE",
+          "sha256": "5d4f41bc5c9d0df5553524f50d86adffd0d929d733a0663200e0306bb48e0394"
+        }
+      ]
+    },
+    {
+      "component": "ReasonMap",
+      "repository": "https://github.com/fscdc/ReasonMap",
+      "scope": [
+        "thyme-infer/scripts/gcep_bench/scorers/reasonmap_plus.py"
+      ],
+      "source_files": "main_plus.py; cal_metrics.py",
+      "recorded_source_ref": null,
+      "source_ref_status": "original vendoring/port commit not recorded in the supplied archive",
+      "license": "MIT",
+      "license_snapshot_ref": "273225f637786952f6e2f92060d2d7c3a2c6f793",
+      "license_files": [
+        {
+          "local_path": "licenses/ReasonMap/LICENSE",
+          "source_url": "https://raw.githubusercontent.com/fscdc/ReasonMap/273225f637786952f6e2f92060d2d7c3a2c6f793/LICENSE",
+          "sha256": "6ed020d1f83efc836af7ffd45ebb89a3b84fdde83f3d5084aaac7ed7962f509b"
+        }
+      ]
+    },
+    {
+      "component": "LoRA",
+      "repository": "https://github.com/microsoft/LoRA",
+      "scope": [
+        "thyme-infer/Thyme/swift/tuners/lora.py",
+        "thyme-infer/Thyme/swift/tuners/lora_layers.py"
+      ],
+      "source_files": "Microsoft LoRA portions identified by retained copyright headers",
+      "recorded_source_ref": null,
+      "source_ref_status": "original vendoring/port commit not recorded in the supplied archive",
+      "license": "MIT",
+      "license_snapshot_ref": "c4593f060e6a368d7bb5af5273b8e42810cdef90",
+      "license_files": [
+        {
+          "local_path": "licenses/LoRA/LICENSE.md",
+          "source_url": "https://raw.githubusercontent.com/microsoft/LoRA/c4593f060e6a368d7bb5af5273b8e42810cdef90/LICENSE.md",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "component": "Donut",
+      "repository": "https://github.com/clovaai/donut",
+      "scope": [
+        "thyme-infer/Thyme/eval/VLMEvalKit/vlmeval/dataset/utils/ccocr_evaluator/kie_evaluator.py"
+      ],
+      "source_files": "Donut portions identified by retained NAVER copyright header",
+      "recorded_source_ref": null,
+      "source_ref_status": "original vendoring/port commit not recorded in the supplied archive",
+      "license": "MIT",
+      "license_snapshot_ref": "4cfcf972560e1a0f26eb3e294c8fc88a0d336626",
+      "license_files": [
+        {
+          "local_path": "licenses/Donut/LICENSE",
+          "source_url": "https://raw.githubusercontent.com/clovaai/donut/4cfcf972560e1a0f26eb3e294c8fc88a0d336626/LICENSE",
+          "sha256": "9f90bc7d608d2b3ccbc3e862be52c7cb976616d1b125fe9682bc7ed19adfcfdc"
+        }
+      ]
+    },
+    {
+      "component": "VQA",
+      "repository": "https://github.com/GT-Vision-Lab/VQA",
+      "scope": [
+        "thyme-infer/Thyme/eval/VLMEvalKit/vlmeval/dataset/utils/vqa_eval.py"
+      ],
+      "source_files": "PythonEvaluationTools/vqaEvaluation/vqaEval.py",
+      "recorded_source_ref": null,
+      "source_ref_status": "original vendoring/port commit not recorded in the supplied archive",
+      "license": "BSD-style two-clause terms with additional disclaimer",
+      "license_snapshot_ref": "a013f0043c1e2cdc995922dfe257f7149aa9af06",
+      "license_files": [
+        {
+          "local_path": "licenses/VQA/license.txt",
+          "source_url": "https://raw.githubusercontent.com/GT-Vision-Lab/VQA/a013f0043c1e2cdc995922dfe257f7149aa9af06/license.txt",
+          "sha256": "4bf86fe8b104b69fc72caaa095b2fff4bade0d3d9a7970c6a5fd01fb736cad04"
+        }
+      ]
+    },
+    {
+      "component": "prm800k",
+      "repository": "https://github.com/openai/prm800k",
+      "scope": [
+        "thyme-infer/Thyme/swift/plugin/math_normalize.py"
+      ],
+      "source_files": "prm800k/grading/math_normalize.py",
+      "recorded_source_ref": null,
+      "source_ref_status": "original vendoring/port commit not recorded in the supplied archive",
+      "license": "MIT",
+      "license_snapshot_ref": "7ecc794703b2877f63226f2477a49b34f9b25163",
+      "license_files": [
+        {
+          "local_path": "licenses/prm800k/LICENSE",
+          "source_url": "https://raw.githubusercontent.com/openai/prm800k/7ecc794703b2877f63226f2477a49b34f9b25163/LICENSE",
+          "sha256": "22d61a2226e035da51c56149c3358c36d1f61716435866bc6e6fe0e54c7270db"
+        }
+      ]
+    },
+    {
+      "component": "MATH",
+      "repository": "https://github.com/hendrycks/math",
+      "scope": [
+        "thyme-infer/Thyme/swift/plugin/math_normalize.py"
+      ],
+      "source_files": "MATH math-equivalence normalization, as identified by the retained source header",
+      "recorded_source_ref": null,
+      "source_ref_status": "original vendoring/port commit not recorded in the supplied archive",
+      "license": "MIT",
+      "license_snapshot_ref": "985bdc1696e88e8643f081a0ff4719da39f2ae2a",
+      "license_files": [
+        {
+          "local_path": "licenses/MATH/LICENSE",
+          "source_url": "https://raw.githubusercontent.com/hendrycks/math/985bdc1696e88e8643f081a0ff4719da39f2ae2a/LICENSE",
+          "sha256": "8f6401fb0b1fbfcac17aac8d61e4e1b0d2de9aa190d8aa655fedc5fd783b2ace"
+        }
+      ]
+    },
+    {
+      "component": "TableVQABench",
+      "repository": "https://github.com/naver-ai/tablevqabench",
+      "scope": [
+        "thyme-infer/Thyme/eval/VLMEvalKit/vlmeval/dataset/utils/tablevqabench.py"
+      ],
+      "source_files": "TableVQA-Bench evaluation portions; upstream also credits allennlp-semparse",
+      "recorded_source_ref": null,
+      "source_ref_status": "original vendoring/port commit not recorded in the supplied archive",
+      "license": "MIT",
+      "license_snapshot_ref": "87d38e7907e268ea18c7d9c318e95e3a43009cea",
+      "license_files": [
+        {
+          "local_path": "licenses/TableVQABench/LICENSE",
+          "source_url": "https://raw.githubusercontent.com/naver-ai/tablevqabench/87d38e7907e268ea18c7d9c318e95e3a43009cea/LICENSE",
+          "sha256": "4a9b4f353a7a8aa71562cac28079a04b7c425d784c4f92709ebf581d049b68cb"
+        },
+        {
+          "local_path": "licenses/TableVQABench/NOTICE",
+          "source_url": "https://raw.githubusercontent.com/naver-ai/tablevqabench/87d38e7907e268ea18c7d9c318e95e3a43009cea/NOTICE",
+          "sha256": "815273fa4b054196f929d820fdc5ebec8f243a25826f10c5cece434ade125c0f"
+        }
+      ]
+    },
+    {
+      "component": "Thyme",
+      "repository": "https://github.com/Kwai-Keye/Thyme",
+      "scope": [
+        "thyme-infer/Thyme/"
+      ],
+      "recorded_source_ref": null,
+      "source_ref_status": "original vendoring/borrowed-source commit not recorded in supplied archive; license snapshot is not an assertion of code version",
+      "license": "Apache-2.0",
+      "license_snapshot_ref": "2ac429521639ec9083d690554fdcdfd4fc989b69",
+      "verified_license_url": "https://raw.githubusercontent.com/Kwai-Keye/Thyme/2ac429521639ec9083d690554fdcdfd4fc989b69/LICENSE",
+      "verified_license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "license_files": [
+        {
+          "local_path": "thyme-infer/Thyme/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "component": "ms-swift",
+      "repository": "https://github.com/modelscope/ms-swift",
+      "scope": [
+        "thyme-infer/Thyme/swift/"
+      ],
+      "recorded_source_ref": null,
+      "source_ref_status": "original vendoring/borrowed-source commit not recorded in supplied archive; license snapshot is not an assertion of code version",
+      "license": "Apache-2.0",
+      "license_snapshot_ref": "c08110b30a1ccb60bcfb70adf87d2cd72f5b9f3c",
+      "verified_license_url": "https://raw.githubusercontent.com/modelscope/ms-swift/c08110b30a1ccb60bcfb70adf87d2cd72f5b9f3c/LICENSE",
+      "verified_license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "license_files": [
+        {
+          "local_path": "thyme-infer/Thyme/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "component": "VLMEvalKit",
+      "repository": "https://github.com/open-compass/VLMEvalKit",
+      "scope": [
+        "thyme-infer/Thyme/eval/VLMEvalKit/"
+      ],
+      "recorded_source_ref": null,
+      "source_ref_status": "original vendoring/borrowed-source commit not recorded in supplied archive; license snapshot is not an assertion of code version",
+      "license": "Apache-2.0",
+      "license_snapshot_ref": "6f0370704932cec0d9aa1e73f01954cd786c57ea",
+      "verified_license_url": "https://raw.githubusercontent.com/open-compass/VLMEvalKit/6f0370704932cec0d9aa1e73f01954cd786c57ea/LICENSE",
+      "verified_license_sha256": "5f0538b314b13e062d1fed3991ec1868cc71c49d0838cd7bc6ef563be06a5ad3",
+      "license_files": [
+        {
+          "local_path": "thyme-infer/Thyme/eval/VLMEvalKit/LICENSE",
+          "sha256": "5f0538b314b13e062d1fed3991ec1868cc71c49d0838cd7bc6ef563be06a5ad3"
+        }
+      ]
+    },
+    {
+      "component": "TRL",
+      "repository": "https://github.com/huggingface/trl",
+      "scope": [
+        "thyme-infer/Thyme/swift/trainers/rlhf_trainer/grpo_trainer.py"
+      ],
+      "recorded_source_ref": null,
+      "source_ref_status": "original vendoring/borrowed-source commit not recorded in supplied archive; license snapshot is not an assertion of code version",
+      "license": "Apache-2.0",
+      "license_snapshot_ref": "v0.19.1",
+      "verified_license_url": "https://raw.githubusercontent.com/huggingface/trl/v0.19.1/LICENSE",
+      "verified_license_sha256": "1d90ecbf7bb80ff27ef67b7785f621480b652b82e46c72d8a5730b0db65bf355",
+      "license_files": [
+        {
+          "local_path": "thyme-infer/Thyme/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "component": "Transformers",
+      "repository": "https://github.com/huggingface/transformers",
+      "scope": [
+        "thyme-infer/Thyme/swift/trainers/{utils,mixin,trainers}.py; swift/tuners/longlora/llama.py"
+      ],
+      "recorded_source_ref": null,
+      "source_ref_status": "original vendoring/borrowed-source commit not recorded in supplied archive; license snapshot is not an assertion of code version",
+      "license": "Apache-2.0",
+      "license_snapshot_ref": "v4.52.4",
+      "verified_license_url": "https://raw.githubusercontent.com/huggingface/transformers/v4.52.4/LICENSE",
+      "verified_license_sha256": "77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049",
+      "license_files": [
+        {
+          "local_path": "thyme-infer/Thyme/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "component": "GaLore",
+      "repository": "https://github.com/jiaweizzhao/GaLore",
+      "scope": [
+        "thyme-infer/Thyme/swift/trainers/optimizers/galore/"
+      ],
+      "recorded_source_ref": null,
+      "source_ref_status": "original vendoring/borrowed-source commit not recorded in supplied archive; license snapshot is not an assertion of code version",
+      "license": "Apache-2.0",
+      "license_snapshot_ref": "2cc66f88cce189e505affbb91042a8e77f5bf4e9",
+      "verified_license_url": "https://raw.githubusercontent.com/jiaweizzhao/GaLore/2cc66f88cce189e505affbb91042a8e77f5bf4e9/LICENSE",
+      "verified_license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "license_files": [
+        {
+          "local_path": "thyme-infer/Thyme/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "component": "LongLoRA",
+      "repository": "https://github.com/dvlab-research/LongLoRA",
+      "scope": [
+        "thyme-infer/Thyme/swift/tuners/longlora/"
+      ],
+      "recorded_source_ref": null,
+      "source_ref_status": "original vendoring/borrowed-source commit not recorded in supplied archive; license snapshot is not an assertion of code version",
+      "license": "Apache-2.0",
+      "license_snapshot_ref": "d4eb344c5ccc9e91c0812a2b2aeea69070df8c33",
+      "verified_license_url": "https://raw.githubusercontent.com/dvlab-research/LongLoRA/d4eb344c5ccc9e91c0812a2b2aeea69070df8c33/LICENSE",
+      "verified_license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "license_files": [
+        {
+          "local_path": "thyme-infer/Thyme/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "component": "sentence-transformers",
+      "repository": "https://github.com/UKPLab/sentence-transformers",
+      "scope": [
+        "thyme-infer/Thyme/swift/plugin/loss.py (borrowed loss implementation)"
+      ],
+      "recorded_source_ref": null,
+      "source_ref_status": "original vendoring/borrowed-source commit not recorded in supplied archive; license snapshot is not an assertion of code version",
+      "license": "Apache-2.0",
+      "license_snapshot_ref": "4a3b5cd6ec718e421f57e824a41ed3fd99595df6",
+      "verified_license_url": "https://raw.githubusercontent.com/UKPLab/sentence-transformers/4a3b5cd6ec718e421f57e824a41ed3fd99595df6/LICENSE",
+      "verified_license_sha256": "624b030fd62b8b989dd502d5bb6322cbc0dbb524ab9c9708f32efe33d7275735",
+      "license_files": [
+        {
+          "local_path": "thyme-infer/Thyme/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "component": "MMEngine",
+      "repository": "https://github.com/open-mmlab/mmengine",
+      "scope": [
+        "thyme-infer/Thyme/swift/trainers/sequence_parallel/ulysses.py (identified borrowed portions)"
+      ],
+      "recorded_source_ref": null,
+      "source_ref_status": "original vendoring/borrowed-source commit not recorded in supplied archive; license snapshot is not an assertion of code version",
+      "license": "Apache-2.0",
+      "license_snapshot_ref": "f8a8b1b3b3051175a8babe5df9c753a981919087",
+      "verified_license_url": "https://raw.githubusercontent.com/open-mmlab/mmengine/f8a8b1b3b3051175a8babe5df9c753a981919087/LICENSE",
+      "verified_license_sha256": "874b8b2e6f12306a1ff7812c068a0dbf880418b8ac1f7190382bd6c6da9f23a1",
+      "license_files": [
+        {
+          "local_path": "thyme-infer/Thyme/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "component": "DeepSpeed",
+      "repository": "https://github.com/deepspeedai/DeepSpeed",
+      "scope": [
+        "thyme-infer/Thyme/swift/trainers/sequence_parallel/ulysses.py (identified borrowed portions)"
+      ],
+      "recorded_source_ref": null,
+      "source_ref_status": "original vendoring/borrowed-source commit not recorded in supplied archive; license snapshot is not an assertion of code version",
+      "license": "Apache-2.0",
+      "license_snapshot_ref": "bc778b8c3fd1fabc87a29202548d8b0ddfba2ace",
+      "verified_license_url": "https://raw.githubusercontent.com/deepspeedai/DeepSpeed/bc778b8c3fd1fabc87a29202548d8b0ddfba2ace/LICENSE",
+      "verified_license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "license_files": [
+        {
+          "local_path": "thyme-infer/Thyme/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "component": "XTuner",
+      "repository": "https://github.com/InternLM/xtuner",
+      "scope": [
+        "thyme-infer/Thyme/swift/trainers/sequence_parallel/ulysses.py (identified borrowed portions)"
+      ],
+      "recorded_source_ref": null,
+      "source_ref_status": "original vendoring/borrowed-source commit not recorded in supplied archive; license snapshot is not an assertion of code version",
+      "license": "Apache-2.0",
+      "license_snapshot_ref": "e7299bbcae46c8687a8f30ccfcd750428b1253a5",
+      "verified_license_url": "https://raw.githubusercontent.com/InternLM/xtuner/e7299bbcae46c8687a8f30ccfcd750428b1253a5/LICENSE",
+      "verified_license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "license_files": [
+        {
+          "local_path": "thyme-infer/Thyme/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "component": "allennlp-semparse",
+      "repository": "https://github.com/allenai/allennlp-semparse",
+      "scope": [
+        "thyme-infer/Thyme/eval/VLMEvalKit/vlmeval/dataset/utils/tablevqabench.py"
+      ],
+      "recorded_source_ref": null,
+      "source_ref_status": "original vendoring/borrowed-source commit not recorded in supplied archive; license snapshot is not an assertion of code version",
+      "license": "Apache-2.0",
+      "license_snapshot_ref": "751c25f5f59c4d7973f03dc05210f9f94752f1b5",
+      "verified_license_url": "https://raw.githubusercontent.com/allenai/allennlp-semparse/751c25f5f59c4d7973f03dc05210f9f94752f1b5/LICENSE",
+      "verified_license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "license_files": [
+        {
+          "local_path": "thyme-infer/Thyme/eval/VLMEvalKit/LICENSE",
+          "sha256": "5f0538b314b13e062d1fed3991ec1868cc71c49d0838cd7bc6ef563be06a5ad3"
+        }
+      ]
+    }
+  ]
+}
