@@ -2,7 +2,7 @@
 
 This package contains third-party frameworks, adapted evaluation code, and copied prompt templates. Their authors retain their copyrights and their respective licenses apply to those portions. Names and public upstream links below identify third-party projects and are retained for attribution.
 
-Any statement about original ReVuE code does not replace or restrict these third-party licenses. This notice grants no new license for original ReVuE code. Dataset and model-weight terms are separate from code licenses; this archive does not redistribute the benchmark datasets or model weights.
+Original ReVuE code and original code modifications are licensed under the [Apache License 2.0](LICENSE), as described in [NOTICE](NOTICE). This license does not replace or restrict the licenses and notices for third-party portions. Dataset and model-weight terms are separate from code licenses; this archive does not redistribute the benchmark datasets or model weights.
 
 The original framework LICENSE files and source-level copyright notices are retained. Additional license texts are reproduced unchanged under `licenses/`. [licenses/SOURCES.json](licenses/SOURCES.json) records official source URLs, local scope, recorded source revisions, license-verification revisions, and file hashes.
 

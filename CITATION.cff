@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 message: "If you use ReVuE, please cite the technical report below."
 type: software
+license: Apache-2.0
 repository-code: "https://github.com/sylvain-wei/ReVuE"
 url: "https://sylvain-wei.github.io/ReVuE/"
 title: "ReVuE: On-Policy Visual Evidence Distillation"
