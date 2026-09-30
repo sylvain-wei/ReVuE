@@ -32,7 +32,7 @@ authors:
     given-names: "Houfeng"
 preferred-citation:
   type: report
-  url: "https://sylvain-wei.github.io/ReVuE/assets/documents/revue-paper.pdf"
+  url: "https://arxiv.org/abs/2609.36838"
   title: "On-Policy Visual Evidence Distillation"
   year: 2026
   authors:

@@ -806,7 +806,7 @@
     ]
   },
   "citation": {
-    "bibtex": "@misc{revue,\n  author = {Shaohang Wei and Feifan Song and Guangyue Peng and\n            Wenhao Yu and Wei Li and Wen Luo and\n            Yang Xu and Yufan Shen and Luke Mao and\n            Yang Du and Asher Qin and Houfeng Wang},\n  title  = {On-Policy Visual Evidence Distillation},\n  year   = {2026},\n  note   = {Technical report}\n}"
+    "bibtex": "@misc{revue,\n  author = {Shaohang Wei and Feifan Song and Guangyue Peng and\n            Wenhao Yu and Wei Li and Wen Luo and\n            Yang Xu and Yufan Shen and Luke Mao and\n            Yang Du and Asher Qin and Houfeng Wang},\n  title  = {On-Policy Visual Evidence Distillation},\n  year   = {2026},\n  eprint = {2609.36838},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.CV},\n  url    = {https://arxiv.org/abs/2609.36838}\n}"
   },
   "findings": [
     {

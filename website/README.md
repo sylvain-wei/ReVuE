@@ -36,4 +36,4 @@ The workflow in [pages.yml](../.github/workflows/pages.yml) uploads only this we
 
 The overview reveals the upper result panels, then **Acquire → Read → Ground → error attribution**. The island example keeps its map and crop visible while revealing 132 tokens and their score changes. Both teacher evaluations score the same fixed student trajectory. Pause, replay, and show-all controls are available; reduced-motion preferences show complete figures.
 
-Data and checkpoint downloads remain TBA. No arXiv identifier has been assigned in the report metadata.
+The Paper button opens [arXiv:2609.36838](https://arxiv.org/abs/2609.36838). The website citation, repository BibTeX, and GitHub citation metadata use the same arXiv record. Data and checkpoint downloads remain TBA.

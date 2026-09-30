@@ -30,7 +30,7 @@
 </p>
 
 <p align="center">
-  <a href="website/assets/documents/revue-paper.pdf"><img src="https://img.shields.io/badge/Paper-Technical_Report-B31B1B?style=flat-square" alt="Paper: Technical report"></a>
+  <a href="https://arxiv.org/abs/2609.36838"><img src="https://img.shields.io/badge/arXiv-2609.36838-B31B1B?style=flat-square" alt="arXiv: 2609.36838"></a>
   <a href="https://sylvain-wei.github.io/ReVuE/"><img src="https://img.shields.io/badge/Website-Project_Page-275EE8?style=flat-square" alt="Project website"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/sylvain-wei/ReVuE?style=flat-square" alt="License: Apache-2.0"></a>
   <a href="docs/ENVIRONMENT.md"><img src="https://img.shields.io/badge/Python-3.10-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 3.10 target environment"></a>
@@ -434,6 +434,9 @@ Banner photograph by [Jasper Wilde on Unsplash](https://unsplash.com/photos/boys
             Yang Du and Asher Qin and Houfeng Wang},
   title  = {On-Policy Visual Evidence Distillation},
   year   = {2026},
-  note   = {Technical report}
+  eprint = {2609.36838},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CV},
+  url    = {https://arxiv.org/abs/2609.36838}
 }
 ```
