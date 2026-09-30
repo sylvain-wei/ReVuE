@@ -284,5 +284,5 @@
     }
   });
 
-  fetch('content.json').then(response => { if (!response.ok) throw new Error('Content unavailable'); return response.json(); }).then(data => { content = data; renderContent(); }).catch(() => { $('#abstract-copy').innerHTML = '<p>The page content could not be loaded. Please refresh the page or open the paper above.</p>'; });
+  fetch('content.json?v=20260930-arxiv').then(response => { if (!response.ok) throw new Error('Content unavailable'); return response.json(); }).then(data => { content = data; renderContent(); }).catch(() => { $('#abstract-copy').innerHTML = '<p>The page content could not be loaded. Please refresh the page or open the paper above.</p>'; });
 })();
